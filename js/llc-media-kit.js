@@ -6,7 +6,7 @@
  */
 var mediaKit = {
 	init: function() {
-		var pagesUrl = 'data/pages.xml';
+		var pagesUrl = 'data/dma-pages.xml';
 			$.get(pagesUrl, function(xml){
 				mediaKit.pages = $.xml2json(xml);
 				mediaKit.buildPage('home');
