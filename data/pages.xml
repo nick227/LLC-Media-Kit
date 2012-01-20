@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pages>
+	<page id="welcome_page" order="1">
+		<name><![CDATA[Welcome]]></name>
+		<layout><![CDATA[three-column]]></layout>
+		<id>4</id>
+		<titleMain><![CDATA[Specialized Marketing Opportunity]]></titleMain>
+		<titleSecondary><![CDATA[Welcome to the Jungle]]></titleSecondary>
+		<titleSub><![CDATA[Advertise your Brand]]></titleSub>
+		<imageMain class="screenshot"><![CDATA[http://www.news.saltwater-dreaming.com/modules/xcgal/albums/userpics/10001/Shippies_poster240.jpg]]></imageMain>
+		<imageSecondary><![CDATA[http://www.multiview.com/images/darth/MVRV013.jpg</imageSecondary]]></imageSecondary>
+	</page>
+</pages>
