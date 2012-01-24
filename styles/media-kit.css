@@ -213,13 +213,104 @@ td { vertical-align: top; }
 .hidden{display:none;}
 .slideChange{cursor:pointer}
 
+/* HEADER SECTION */
+
+.header{
+width:100%; 
+height:80px;
+position:relative;
+}
+.header .logo-main{
+position:absolute;
+top:10px;
+left:10px;
+height:63px;
+width:140px;
+margin:left:20px;
+margin-top:2px;
+}
+.header .logo-main img{
+padding-right:10px;
+}
+.header .title-main{
+position:absolute;
+top:30px;
+left:170px;
+color:#4c4c4c;
+font-size:2.4289em;
+font-family:Verlag;
+}
+.header .nav-main{
+position:absolute;
+left:460px;
+top:44px;
+}
+.header .nav-main ul li{
+display: inline;
+list-style-type: none;
+padding-right: 20px;
+}
+.header .nav-main ul li a{
+font-family:Arial;
+color:#737373;
+font-size:1.2576545em;
+cursor:pointer;
+font-weight:500;
+}
+.header .nav-main ul li a:hover{
+color:#810d0e;
+}
+.header .logo-sub{
+position:absolute; 
+top:44px;
+left:970px;
+width:160px;
+height:22px;
+}
 
 
+/* STAGE SECTION */
 
+.stage{
+position:relative;
+clear:both;
+width:100%;
+height:555px;
+background-color:#3c080a;
+background-image:url();
+background-repeat:no-repeat;
+background-position:0 0;
+overflow:hidden;
+}
+.panel{
+clear:both;
+position:absolute;
+width:100%;
+height:252px;
+}
 
+/* INVENTORY PAGE */
 
-
-
+  <style>
+  #slideContainer { 
+  height: 470px;
+  margin-top: 100px;
+  overflow: auto;
+  background: #ff3019; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover,  #ff3019 0%, #cf0404 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#ff3019), color-stop(100%,#cf0404)); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  #ff3019 0%,#cf0404 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  #ff3019 0%,#cf0404 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  #ff3019 0%,#cf0404 100%); /* IE10+ */
+  background: radial-gradient(center, ellipse cover,  #ff3019 0%,#cf0404 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+   }
+  #ipad { background: url(../images/ipad.png) no-repeat; width: 650px; height: 918px; margin: 100px auto 20px auto; padding-top: 84px; }
+  #ipadScreen { width: 510px; height: 738px; margin: 0 auto; overflow: hidden; }
+  #contentWrap { width: 960px; margin: 0 auto; padding: 0 30px; }
+  #subNav {   }
+  </style>
+  
 
 
 

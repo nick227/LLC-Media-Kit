@@ -13,7 +13,7 @@ var feedName = 'data/dma-site.xml';
 
 var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick actions ****/
 	init: function() {
-	mediaKit.loadPage('home', 'none');
+	mediaKit.loadPage('inventory', 'none');
 	mediaKit.setupLinks();
 	},
 	loadPage: function(pageName, animationMethod){
@@ -25,6 +25,21 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 				
 				if(animationMethod=='none'){
 				$('div#container').html(res);
+				document.title = mediaKit.site.siteTitle;
+
+		$('.scroll-pane').jScrollPane();
+		$('.draggable').draggable({ axis: 'y', snapMode: 'both' }).bind( "dragstop", function(event, ui) {
+		  var height = 0-$(this).height(),
+		  	  top = ui.position.top;
+		  if (height > top - 738) {
+		    $(this).animate({top:height+738}, 300, 'swing');
+		  } else if (top > 0) {
+		    $(this).animate({top:0}, 300, 'swing');
+		  }
+		});		
+		// Ad links need this to move the slideContainer
+		// $("#slideContainer").data("jsp").scrollToY(300);
+
 				}
 				});
 		
