@@ -210,9 +210,8 @@ td { vertical-align: top; }
 /* ==|== primary styles =====================================================
    Author: 
    ========================================================================== */
-
-
-
+.hidden{display:none;}
+.slideChange{cursor:pointer}
 
 
 
