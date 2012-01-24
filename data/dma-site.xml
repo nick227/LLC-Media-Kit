@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+<siteName><![CDATA[DMA Media Kit]]></siteName>
+<partnerAcronym><![CDATA[DMA]]></partnerAcronym>
+<partnerFullName><![CDATA[Direct Marketing Association]]></partnerFullName>
+<logo><![CDATA[http://www.the-dma.org/graphics/DMA_logo.jpg]]></logo>
+<accentColor><![CDATA[#74A5CD]]></accentColor>
+<llcURL><![CDATA[http://dma.sclibraries.com]]></llcURL>
+	<lang>
+		<headerMain><![CDATA[Welcome old Friend!]]></headerMain>
+	</lang>
+</site>
