@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="styles/media-kit.css" />
+  <link rel="stylesheet" type="text/css" href="js/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+  
+  <style>
+  body,html { min-height: 500px; min-width: 960px; height: 100%;  }
+  #slideContainer { width: 100%; position: absolute; top: 100px; bottom: 150px; overflow: hidden; cursor: move;
+  background: #ff3019; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover,  #ff3019 0%, #cf0404 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#ff3019), color-stop(100%,#cf0404)); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  #ff3019 0%,#cf0404 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  #ff3019 0%,#cf0404 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  #ff3019 0%,#cf0404 100%); /* IE10+ */
+  background: radial-gradient(center, ellipse cover,  #ff3019 0%,#cf0404 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+   }
+  #ipadWrap { padding: 100px 0 50px; }
+  #ipad { background: url(img/ipad.png) no-repeat; width: 650px; height: 828px; margin: 0 auto; padding-top: 84px; }
+  #ipadScreen { width: 510px; height: 648px; margin: 0 auto; overflow: hidden; }
+  #ipadScreen div { position: relative; }
+  #ipadScreen a { position: absolute; }
+  #ipadScreen a.active, #ipadScreen a:hover { box-shadow: 0px 0px 10px #fcff00; }
+  #homeScreen a .zoom { background: url(img/zoom-ico.png); display: block; width: 24px; height:24px; position: absolute; top: 0px; left: 0px; }
+  #homeScreen a .img { display: block; height: 100%; }
+  #contentWrap { width: 960px; padding: 0 30px; position: absolute; bottom: 0; left: 50%; margin-left: -480px; height: 150px; }
+  #subNav {   }
+  </style>
+  <link rel="stylesheet" href="styles/jquery.jscrollpane.css" />
+  
+  <title>ipad</title>
+
+  <script src="js/modernizr-2.0.6.min.js"></script>
+</head>
+<body>
+
+  <div id="slideContainer">
+	<div id="ipadWrap" class="draggable">
+	  <div id="ipad">
+	    <div id="ipadScreen">
+	      <div id="homeScreen" class="draggable">
+	        <img class="screen" src="img/homeScreen.jpg" width="510" height="1046" alt="" />
+	        <a class="zoom ad_top_leaderboard" href="img/ad_top_leaderboard.jpg" caption="" style="width: 360px; height: 45px; left: 75px; top: 12px;">
+	          <span class="img" style="background-position: -75px -12px;"></span><span class="zoom"></span>
+	        </a>
+	        <a class="zoom ad_sponsored_media" href="img/ad_sponsored_media.jpg" caption="" style="width: 60px; height: 30px; left: 427px; top: 294px;">
+	          <span class="img" style="background-position: -427px -294px;"></span><span class="zoom"></span>
+	        </a>
+	        <a class="zoom ad_skyscraper" href="img/ad_skyscraper_L.jpg" caption="" style="width: 81px; height: 298px; left: 8px; top: 337px;">
+	          <span class="img" style="background-position: -8px -337px;"></span><span class="zoom"></span>
+	        </a>
+	        <a class="zoom ad_skyscraper" href="img/ad_skyscraper_R.jpg" caption="" style="width: 81px; height: 298px; left: 421px; top: 337px;">
+	          <span class="img" style="background-position: -421px -337px;"></span><span class="zoom"></span>
+	        </a>
+	        <a class="zoom ad_industry_partner" href="img/ad_industry_partner.jpg" caption="" style="width: 60px; height: 30px; left: 431px; top: 662px;">
+	          <span class="img" style="background-position: -431px -662px;"></span><span class="zoom"></span>
+	        </a>
+	        <a class="zoom ad_low_leaderboard" href="img/ad_low_leaderboard.jpg" caption="" style="width: 360px; height: 45px; left: 75px; top: 966px;">
+	          <span class="img" style="background-position: -75px -966px;"></span><span class="zoom"></span>
+	        </a>
+	      </div>
+	    </div>
+	   </div>
+  	</div>
+  </div>
+  <div id="contentWrap">
+  	<ul id="subNav">
+  	  <li><a href="#ad_top_leaderboard" rel="0,0" id="top_leaderboard">Top Leaderboard</a></li>
+  	  <li><a href="#ad_skyscraper" rel="-300,-150" id="skyscraper">Skyscraper</a></li>
+  	  <li><a href="#ad_low_leaderboard" rel="-320,-400" id="low_leaderboard">Lower Leaderboard</a></li>
+  	  <li><a href="#ad_industry_partner" rel="-300,-300" id="industry_partner">Industry Partner</a></li>
+  	  <li><a href="#ad_sponsored_media" rel="-270,-100" id="sponsored_media">Sponsored Media</a></li>
+  	</ul>
+  	<div id="content"></div>
+  </div>
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+  <script src="js/jquery.mousewheel.min.js"></script>
+  <script type="text/javascript" src="js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+  
+  <script type="text/javascript">
+	//<![CDATA[ 
+	$(document).ready(function() {
+		
+		// fade screen images
+		$("#ipadScreen .screen").fadeTo(0,0.5);
+		
+		// set bg, fade ads, ad events
+		$("#ipadScreen a .img").each(function() {
+			
+			var par = $(this).parent(),
+				src = par.siblings(".screen").attr('src');
+			
+			// set bg image				
+			$(this).css('background-image','url('+src+')').fadeTo(0,0);
+			
+			// Click ad event
+			$(this).add(this.nextSibling).click(function(event){
+				if (!par.is('.active')) {
+					var c = par.attr('class').replace('ad_','').replace('zoom ','');
+					$('#'+c).trigger('click');
+					return false
+				}				
+			});
+			
+		});
+		
+		$("a.zoom").fancybox({
+			'titlePosition'	: 'inside',
+			'opacity'		: true,
+			'overlayShow'	: false,
+			'transitionIn'	: 'elastic',
+			'type'          : 'image',
+			'transitionOut'	: 'none'
+		});
+		
+		// setup draggables 	
+		$('.draggable').draggable({ axis: 'y', snapMode: 'both' }).bind( "dragstop", function(event, ui) {
+		  
+		  var height = -$(this).height(),
+		  	  top = ui.position.top,
+		  	  parHeight = $(this).parent().height();
+		  
+		  // SlideContainer rebound
+		  if ($(this).is('#ipadWrap') && height > top - parHeight + 50) {
+		  	
+		  	$(this).animate({top:height+parHeight-50}, 300, 'swing');
+		  
+		  } 
+		  // iPadScreen rebound
+		  else if (!$(this).is('#ipadWrap') && height > top - parHeight) {
+		  
+		  	  $(this).animate({top:height+parHeight}, 300, 'swing');
+		  			  
+		  }
+		  // Top rebound (both)
+		  else if (top > 0) {
+		    
+		    $(this).animate({top:0}, 300, 'swing');
+		  
+		  }
+		  
+		  // Keep child drag from triggering parrent
+		  event.stopPropagation();
+		  		  
+		}); 
+				
+		// Sub Nav actions
+		$("#subNav a").each(function() {
+		
+			$(this).click(function() {
+				
+				var c = $(this).attr('href').replace('#',''),
+					y1 = $(this).attr('rel').split(',')[0],
+					y2 = $(this).attr('rel').split(',')[1],
+					ad = $('#ipadScreen .'+c),
+					bg = ad.siblings('.screen').attr('src');
+					
+				// y1 = container position 
+				$("#ipadWrap").animate({top:y1}, 300);
+				// y2 = screen position
+				$("#ipadScreen .draggable").animate({top:y2}, 300);
+				
+				// hide ads
+				$('#ipadScreen a').each(function(){
+					$(this).removeClass('active').find('.img').fadeTo(0, 0)
+				});
+				
+				// show triggered ad
+				ad.addClass('active').find('.img').fadeTo(0,1);
+				
+				// Remove active class
+				$(this)
+				.parent()
+				.siblings()
+				.add(this.parentNode)
+				.find('a').removeClass('active');
+				
+				// Add active class to selected
+				$(this).addClass('active');
+				
+			});
+			
+		})
+		.eq(0).trigger('click'); // first link make active on load
+		
+	});
+	
+	//]]>
+  </script>
+  
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 5 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+</body>
+</html>
