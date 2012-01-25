@@ -1,25 +1,57 @@
 <header id="inventory-header" class="header">
-	<div class="logo-main"><img src="<%=logo%>" /></div>
-	<div class="title-main">Knowledge Center</div>
-	<nav id="inventory-nav-main" class="nav-main">
-		<ul>
-		<li><a class="" rel="">Intro</a></li>
-		<li><a class="" rel="">Message</a></li>
-		<li><a class="" rel="">Audience</a></li>
-		<li><a class="" rel="">Benefits</a></li>
-		<li><a class="" rel="">Inventory</a></li>
-		<li><a class="" rel="">Get Started</a></li>
-		</ul>
-	</nav>
-	<div class="logo-sub"><img src="http://dma.sclibraries.com/images/logo.png" /></div>
+	<div class="header-contents">
+		<div class="logo-main"><img src="<%=logo%>" /></div>
+		<div class="title-main">Knowledge Center</div>
+		<nav id="inventory-nav-main" class="nav-main">
+			<ul>
+				<li><a class="" rel="">Intro</a></li>
+				<li><a class="" rel="">Market</a></li>
+				<li><a class="" rel="">Audience</a></li>
+				<li><a class="" rel="">Benefits</a></li>
+				<li><a class="" rel="">Inventory</a></li>
+				<li><a class="" rel="">Get Started</a></li>
+			</ul>	
+		</nav>
+	</div>
 </header>
+<div class="header-edge-pointer"></div>
+
+
+
+
 <section id="inventory-stage" class="stage">
 
-  <div id="slideContainer" class="scroll-pane">
-  	<div id="ipad">
-  	  <div id="ipadScreen"><img class="draggable" src="./images/homeScreen.jpg" alt="" /></div>
+
+  <div id="slideContainer">
+	<div id="ipadWrap" class="draggable">
+	  <div id="ipad">
+	    <div id="ipadScreen">
+	      <div id="homeScreen" class="draggable">
+	        <img class="screen" src="images/homeScreen.jpg" width="510" height="1046" alt="" />
+	        <a class="zoom ad_top_leaderboard" href="imagesad_top_leaderboard.jpg" caption="" style="width: 360px; height: 45px; left: 75px; top: 12px;">
+	          <span class="img" style="background-position: -75px -12px;"></span><span class="zoom"></span>
+	        </a>
+	        <a class="zoom ad_sponsored_media" href="imagesad_sponsored_media.jpg" caption="" style="width: 60px; height: 30px; left: 427px; top: 294px;">
+	          <span class="img" style="background-position: -427px -294px;"></span><span class="zoom"></span>
+	        </a>
+	        <a class="zoom ad_skyscraper" href="imagesad_skyscraper_L.jpg" caption="" style="width: 81px; height: 298px; left: 8px; top: 337px;">
+	          <span class="img" style="background-position: -8px -337px;"></span><span class="zoom"></span>
+	        </a>
+	        <a class="zoom ad_skyscraper" href="imagesad_skyscraper_R.jpg" caption="" style="width: 81px; height: 298px; left: 421px; top: 337px;">
+	          <span class="img" style="background-position: -421px -337px;"></span><span class="zoom"></span>
+	        </a>
+	        <a class="zoom ad_industry_partner" href="imagesad_industry_partner.jpg" caption="" style="width: 60px; height: 30px; left: 431px; top: 662px;">
+	          <span class="img" style="background-position: -431px -662px;"></span><span class="zoom"></span>
+	        </a>
+	        <a class="zoom ad_low_leaderboard" href="imagesad_low_leaderboard.jpg" caption="" style="width: 360px; height: 45px; left: 75px; top: 966px;">
+	          <span class="img" style="background-position: -75px -966px;"></span><span class="zoom"></span>
+	        </a>
+	      </div>
+	    </div>
+	   </div>
   	</div>
   </div>
+  
 
 
 </section>
@@ -30,10 +62,11 @@
 	<section class="inner">
 	<nav class="nav-sub">
 		<ul>
-		<li class="selected">TOP LEADERBOARD</li>
-		<li>LOWER LEADERBOARD</li>
-		<li>SKYSCRAPERS</li>
-		<li>SPONSORED MEDIA</li>
+		<li rel="0,0,ad_top_leaderboard" class="selected">TOP LEADERBOARD</li>
+		<li rel="-300,-150,ad_skyscraper">SKYSCRAPERS</li>
+		<li rel="-320,-400,ad_low_leaderboard">LOWER LEADERBOARD</li>
+		<li rel="-300,-300,ad_industry_partner">INDUSTRY PARTNERS</li>
+		<li rel="-270,-100,ad_sponsored_media">SPONSORED MEDIA</li>
 		</ul>
 	</nav>
 	<section class="info-section">
