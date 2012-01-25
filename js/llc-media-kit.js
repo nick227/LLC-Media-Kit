@@ -38,6 +38,7 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 				mediaKit.setupArrowSubNav();
 				globalNavPointer = $('.header-edge-pointer');
 				console.log(globalNavPointer);
+				mediaKit.setPointerTargetX('#' + startPage + '_mainNav');
 				$(window).resize(mediaKit.setPointerX);
 				}
 				});
@@ -49,6 +50,7 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 		$('a.slideChange').live('click', function(){
 		var relPage = $(this).attr('rel');
 		mediaKit.loadPage(relPage, 'none');
+		mediaKit.setPointerTargetX(this);
 		});
 	},
 	setPointerTargetX: function(selected_btn){//*** GLOBAL NAV POINTER ANIMATION FUNCTIONS ***//
@@ -97,8 +99,14 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 				if (!par.is('.active')) {
 					var c = par.attr('class').replace('ad_','').replace('zoom ','');
 					$('#'+c).trigger('click');
-					// INSERT ARROW UPDATE HERE!!!!!!!!!!
-					return false
+					
+		var arrow = $('nav.nav-sub').find('img.pointerArrowSml');
+		var p = $('nav.nav-sub ul li').find('li.selected').position();
+		$(arrow).stop(true, true).animate({top:p.top}, 200, function(){});
+
+		
+		return false;
+
 				}				
 			});
 			
@@ -224,10 +232,7 @@ $(this).parent('ul').find('li.selected').removeClass('selected');
 $(this).addClass('selected');
 });
 
-	/*
-	$('nav.nav-sub').live('hoverIntent', function(){
-	alert('asd');
-	});*/
+
 	}
 
 }//end mediaKit var
