@@ -34,7 +34,7 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 				$('div#container').html(res);
 				document.title = mediaKit.site.siteTitle;
 				
-			//	mediaKit.setupVirtualIpad();
+				mediaKit.setupVirtualIpad(); // do we need to provision for non-inventory pages???
 				mediaKit.setupArrowSubNav();
 				globalNavPointer = $('.header-edge-pointer');
 				console.log(globalNavPointer);
@@ -97,6 +97,7 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 				if (!par.is('.active')) {
 					var c = par.attr('class').replace('ad_','').replace('zoom ','');
 					$('#'+c).trigger('click');
+					// INSERT ARROW UPDATE HERE!!!!!!!!!!
 					return false
 				}				
 			});
@@ -168,15 +169,15 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 				// show triggered ad
 				ad.addClass('active').find('.img').fadeTo(0,1);
 				
-				// Remove active class
-				$(this)
-				.parent()
-				.siblings()
-				.add(this.parentNode)
-				.find('a').removeClass('active');
-				
-				// Add active class to selected
-				$(this).addClass('active');
+//				 Remove active class
+//				$(this)
+//				.parent()
+//				.siblings()
+//				.add(this.parentNode)
+//				.find('a').removeClass('active');
+//				
+//				 Add active class to selected
+//				$(this).addClass('active');
 				
 			});
 			
