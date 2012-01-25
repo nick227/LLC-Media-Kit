@@ -208,11 +208,12 @@ td { vertical-align: top; }
 
 
 /* ==|== primary styles =====================================================
-   Author: 
+   Author(s): NJ/BV/MM ~MultiView 2012
    ========================================================================== */
 .hidden{display:none;}
 .slideChange{cursor:pointer}
-
+.spacer-10px{clear:both;height:10px;}
+.spacer-25px{clear:both;height:10px;}
 /* HEADER SECTION */
 
 .header{
@@ -275,26 +276,81 @@ height:22px;
 position:relative;
 clear:both;
 width:100%;
-height:555px;
-background-color:#3c080a;
-background-image:url();
+height:620px;
 background-repeat:no-repeat;
 background-position:0 0;
 overflow:hidden;
 }
+/* PANEL SECTION */
 .panel{
 clear:both;
 position:absolute;
 width:100%;
 height:252px;
+background-image:url(../images/faintWhiteBG.png);
+}
+.panel .inner{
+width:865px;
+height:100%;
+margin-left:auto;
+margin-right:auto;	
+}
+.nav-sub{
+width:360px;
+height:100%;
+float:left;
+
+}
+.nav-sub ul{
+
+}
+.nav-sub ul li{
+height:25px;
+font-size:1.231em;
+font-family:'Arial';
+padding:0 0 10px 29px;
+color:#747474;
+cursor:pointer;
+list-style: none;
+width:240px;
+}
+.nav-sub ul li:hover{
+color:#253b6c;
+}
+.nav-sub ul li.selected{
+color:#102961;
+background-image:url();
+background-position:0 1px;
+background-repeat:no-repeat;
+}
+.info-section{
+width:463px;
+height:100%;
+float:left;
+}
+.info-section p{
+margin:0;padding:0;
+font-family:Arial;
+font-size:1.3399em;
+line-height:1.41em;
+color:#899cab;
+}
+.specs-table th{
+color:#646c77;
+padding-right:60px;
+}
+.specs-table td{
+color:#6886a8;
+text-align:left;
 }
 
-/* INVENTORY PAGE */
+/**** INVENTORY PAGE */
 
-  <style>
-  #slideContainer { 
-  height: 470px;
-  margin-top: 100px;
+#inventory-panel .nav-sub{}
+#inventory-panel .info-section{}
+
+  #slideContainer {
+  height: 620px;
   overflow: auto;
   background: #ff3019; /* Old browsers */
   background: -moz-radial-gradient(center, ellipse cover,  #ff3019 0%, #cf0404 100%); /* FF3.6+ */
@@ -304,12 +360,12 @@ height:252px;
   background: -ms-radial-gradient(center, ellipse cover,  #ff3019 0%,#cf0404 100%); /* IE10+ */
   background: radial-gradient(center, ellipse cover,  #ff3019 0%,#cf0404 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-   }
-  #ipad { background: url(../images/ipad.png) no-repeat; width: 650px; height: 918px; margin: 100px auto 20px auto; padding-top: 84px; }
+  background-image:url(../images/ad_inventory_bg.jpg);
+  }
+  #ipad { background: url(../images/ipad.png) no-repeat; width: 650px; height: 918px; margin: 59px auto 20px auto; padding-top: 84px; }
   #ipadScreen { width: 510px; height: 738px; margin: 0 auto; overflow: hidden; }
   #contentWrap { width: 960px; margin: 0 auto; padding: 0 30px; }
-  #subNav {   }
-  </style>
+  #subNav {}
   
 
 
