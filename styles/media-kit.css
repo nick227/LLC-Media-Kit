@@ -376,29 +376,40 @@ font-style:italic;
 #inventory-panel .info-section{}
 
   
-  #slideContainer { width: 100%; position: absolute; height: 620px; overflow: hidden; cursor: move;
-  background: #ff3019; /* Old browsers */
-  background: -moz-radial-gradient(center, ellipse cover,  #ff3019 0%, #cf0404 100%); /* FF3.6+ */
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#ff3019), color-stop(100%,#cf0404)); /* Chrome,Safari4+ */
-  background: -webkit-radial-gradient(center, ellipse cover,  #ff3019 0%,#cf0404 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-radial-gradient(center, ellipse cover,  #ff3019 0%,#cf0404 100%); /* Opera 12+ */
-  background: -ms-radial-gradient(center, ellipse cover,  #ff3019 0%,#cf0404 100%); /* IE10+ */
-  background: radial-gradient(center, ellipse cover,  #ff3019 0%,#cf0404 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  background-image:url(../images/ad_inventory_bg.jpg);
-   }
-  #ipadWrap { padding: 50px 0 50px; }
-  #ipad { background: url(../images/ipad.png) no-repeat; width: 650px; height: 828px; margin: 0 auto; padding-top: 84px; }
-  #ipadScreen { width: 510px; height: 648px; margin: 0 auto; overflow: hidden; }
-  #ipadScreen div { position: relative; }
-  #ipadScreen a { position: absolute; }
-  #ipadScreen a.active, #ipadScreen a:hover { box-shadow: 0px 0px 10px #fcff00; }
-  #homeScreen a .zoom { background: url(../images/zoom-ico.png); display: block; width: 24px; height:24px; position: absolute; top: 0px; left: 0px; }
-  #homeScreen a .img { display: block; height: 100%; }
-  #contentWrap { width: 960px; padding: 0 30px; position: absolute; bottom: 0; left: 50%; margin-left: -480px; height: 150px; }
-  
-
-
+#slideContainer { width: 100%; position: absolute; height: 620px; overflow: hidden; cursor: move;
+background: #ff3019; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  #ff3019 0%, #cf0404 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#ff3019), color-stop(100%,#cf0404)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  #ff3019 0%,#cf0404 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  #ff3019 0%,#cf0404 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  #ff3019 0%,#cf0404 100%); /* IE10+ */
+background: radial-gradient(center, ellipse cover,  #ff3019 0%,#cf0404 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+background-image:url(../images/ad_inventory_bg.jpg);
+}
+#ipadWrap { padding: 50px 0 50px; }
+#ipad { background: url(../images/ipad.png) no-repeat; width: 650px; height: 828px; margin: 0 auto; padding-top: 84px; }
+#ipadScreen { width: 510px; height: 648px; margin: 0 auto; overflow: hidden; }
+#ipadScreen div { position: relative; }
+#ipadScreen a { position: absolute; }
+#ipadScreen a:hover { box-shadow: 0px 0px 10px #fcff00; }
+/*#homeScreen a .zoom { background: url(../images/zoom-ico.gif); display: block; width: 30px; height:30px; position: absolute; top: 0px; left: 0px; }*/
+#homeScreen a .zoom { display: block; width: 15px; height:15px; position: absolute; top: 5px; left: 5px; border: 3px solid #ffd458; background: #fff;
+-webkit-border-radius: 3px; /* Saf3-4, iOS 1-3.2, Android ≤1.6 */
+   -moz-border-radius: 3px; /* FF1-3.6 */
+        border-radius: 3px; /* Opera 10.5, IE9, Saf5, Chrome, FF4, iOS 4, Android 2.1+ */ 
+-webkit-box-shadow: 0px 0px 20px #ffffff; /* Saf3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+   -moz-box-shadow: 0px 0px 20px #ffffff; /* FF3.5 - 3.6 */
+        box-shadow: 0px 0px 20px #ffffff; /* Opera 10.5, IE9, FF4+, Chrome 6+, iOS 5 */
+}
+#homeScreen a .img { display: block; height: 100%; }
+#contentWrap { width: 960px; padding: 0 30px; position: absolute; bottom: 0; left: 50%; margin-left: -480px; height: 150px; }
+table.title, table.specs {font-family:Gotham; margin-top: 10px; }
+table.title th { font-size: 28px; color: #1866a2; text-transform: uppercase; }
+table.title td { font-size: 24px; color: #767474; }
+table.specs th { font-size: 14px; color: #fff; background: #656d79; text-transform: uppercase; }
+table.specs td { font-size: 14px; color: #656d79; text-transform: uppercase; }
+table.specs td em { color: #6986a1; }
 
 
 

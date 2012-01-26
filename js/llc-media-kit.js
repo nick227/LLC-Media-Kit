@@ -83,16 +83,25 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 	},
 	setupVirtualIpad: function(){ //sets up interactive ipad on inventory screen
 		// fade screen images
-		$("#ipadScreen .screen").fadeTo(0,0.5);
+		//$("#ipadScreen .screen").fadeTo(0,0.5);
+		
+		window.zoomAni = setInterval(function() {
+			$("#ipadScreen a .zoom").each(function(i){
+				$(this).delay(i*200).fadeTo(300, 0.5, function(){
+					$(this).delay(100).fadeTo(300, 1);
+				});
+			});
+		}, 3000);
 		
 		// set bg, fade ads, ad events
 		$("#ipadScreen a .img").each(function() {
 			
 			var par = $(this).parent(),
-				src = par.siblings(".screen").attr('src');
+				screen = par.siblings(".screen"),
+				src = screen.attr('src');
 			
 			// set bg image				
-			$(this).css('background-image','url('+src+')').fadeTo(0,0);
+			$(this).css('background-image','url('+src+')');
 			
 			// Click ad event
 			$(this).add(this.nextSibling).click(function(event){
@@ -100,26 +109,37 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 					var c = par.attr('class').replace('ad_','').replace('zoom ','');
 					$('#'+c).trigger('click');
 					
-		var arrow = $('nav.nav-sub').find('img.pointerArrowSml');
-		var p = $('nav.nav-sub ul li').find('li.selected').position();
-		$(arrow).stop(true, true).animate({top:p.top}, 200, function(){});
-
-		
-		return false;
+					var arrow = $('nav.nav-sub').find('img.pointerArrowSml');
+					var p = $('nav.nav-sub ul li').find('li.selected').position();
+					$(arrow).stop(true, true).animate({top:p.top}, 200, function(){});
+					//return false;
 
 				}				
 			});
 			
+			// parent rollover effect
+			$(this).parent().hover(function(){
+				// hover in
+				screen.clearQueue().fadeTo(300, 0.5);
+				$(this).siblings('a').clearQueue().fadeTo(300,0);
+				$(this).find('.zoom').fadeTo(0,0);
+			},function(){
+				// hover out
+				screen.clearQueue().fadeTo(300, 1);
+				$(this).siblings('a').clearQueue().fadeTo(300,1);
+				$(this).find('.zoom').fadeTo(0,1);
+			});
+			
 		});
 		
-		$("a.zoom").fancybox({
+		$("a.fancybox").fancybox({
 			'titlePosition'	: 'inside',
 			'opacity'		: true,
-			'overlayShow'	: false,
+			'overlayShow'	: true,
 			'transitionIn'	: 'elastic',
-			'type'          : 'image',
-			'transitionOut'	: 'none'
+			'transitionOut'	: 'elastic',
 		});
+		
 		
 		// setup draggables 	
 		$('.draggable').draggable({ axis: 'y', snapMode: 'both' }).bind( "dragstop", function(event, ui) {
@@ -170,9 +190,9 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 				$("#ipadScreen .draggable").animate({top:y2}, 300);
 				
 				// hide ads
-				$('#ipadScreen a').each(function(){
-					$(this).removeClass('active').find('.img').fadeTo(0, 0)
-				});
+//				$('#ipadScreen a').each(function(){
+//					$(this).removeClass('active').find('.img').fadeTo(0, 0)
+//				});
 				
 				// show triggered ad
 				ad.addClass('active').find('.img').fadeTo(0,1);

@@ -28,24 +28,117 @@
 	    <div id="ipadScreen">
 	      <div id="homeScreen" class="draggable">
 	        <img class="screen" src="images/homeScreen.jpg" width="510" height="1046" alt="" />
-	        <a class="zoom ad_top_leaderboard" href="images/ad_top_leaderboard.jpg" caption="" style="width: 360px; height: 45px; left: 75px; top: 12px;">
+	        <a class="fancybox ad_top_leaderboard" href="#ad_top_leaderboard" style="width: 360px; height: 45px; left: 75px; top: 12px;">
 	          <span class="img" style="background-position: -75px -12px;"></span><span class="zoom"></span>
 	        </a>
-	        <a class="zoom ad_sponsored_media" href="images/ad_sponsored_media.jpg" caption="" style="width: 60px; height: 30px; left: 427px; top: 294px;">
+	        <a class="fancybox ad_sponsored_media" href="#ad_sponsored_media" style="width: 60px; height: 30px; left: 427px; top: 294px;">
 	          <span class="img" style="background-position: -427px -294px;"></span><span class="zoom"></span>
 	        </a>
-	        <a class="zoom ad_skyscraper" href="images/ad_skyscraper_L.jpg" caption="" style="width: 81px; height: 298px; left: 8px; top: 337px;">
+	        <a class="fancybox ad_skyscraper" href="#ad_skyscraper_L" style="width: 81px; height: 298px; left: 8px; top: 337px;">
 	          <span class="img" style="background-position: -8px -337px;"></span><span class="zoom"></span>
 	        </a>
-	        <a class="zoom ad_skyscraper" href="images/ad_skyscraper_R.jpg" caption="" style="width: 81px; height: 298px; left: 421px; top: 337px;">
+	        <a class="fancybox ad_skyscraper" href="#ad_skyscraper_R" style="width: 81px; height: 298px; left: 421px; top: 337px;">
 	          <span class="img" style="background-position: -421px -337px;"></span><span class="zoom"></span>
 	        </a>
-	        <a class="zoom ad_industry_partner" href="images/ad_industry_partner.jpg" caption="" style="width: 60px; height: 30px; left: 431px; top: 662px;">
+	        <a class="fancybox ad_industry_partner" href="#ad_industry_partner" style="width: 60px; height: 30px; left: 431px; top: 662px;">
 	          <span class="img" style="background-position: -431px -662px;"></span><span class="zoom"></span>
 	        </a>
-	        <a class="zoom ad_low_leaderboard" href="images/ad_low_leaderboard.jpg" caption="" style="width: 360px; height: 45px; left: 75px; top: 966px;">
+	        <a class="fancybox ad_low_leaderboard" href="#ad_low_leaderboard" style="width: 360px; height: 45px; left: 75px; top: 966px;">
 	          <span class="img" style="background-position: -75px -966px;"></span><span class="zoom"></span>
 	        </a>
+	        <!-- Lightbox content -->
+	        <div style="display:none">
+	        	
+	        	<div id="ad_top_leaderboard">
+	        	  <img src="images/ad_top_leaderboard.jpg" />
+	        	  <div style="margin: 0 auto; width: 700px; overflow: hidden;">
+		        	<table class="title" style="float: left;" width="300">
+		        	  <tr><th colspan="2">Top Leaderboard</th></tr>
+		        	  <tr><td></td><td align="right">$3,500</td></tr>
+		        	</table>
+		        	<table class="specs" style="float: right;" width="300">
+		        	  <tr><th colspan="2">specifications:</th></tr>
+		        	  <tr><td>Dimensions</td><td><em>728 x 90</em></td></tr>
+		        	  <tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
+		        	  <tr><td>size</td><td><em>40Kb</em></td></tr>
+	        	  	</table>
+	        	  </div>
+	        	</div>
+	        	
+	        	<div id="ad_sponsored_media">
+	        	  <img src="images/ad_sponsored_media.jpg" />
+	        	  <table class="title" align="center" width="300">
+	        	  	<tr><th colspan="2">Sponsored Media</th></tr>
+	        	  	<tr><td></td><td align="right">$3,500</td></tr>
+	        	  </table>
+	        	  <table class="specs" align="center" width="300">
+	        	  	<tr><th colspan="2">specifications:</th></tr>
+	        	  	<tr><td>Dimensions</td><td><em>728 x 90</em></td></tr>
+	        	  	<tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
+	        	  	<tr><td>size</td><td><em>40Kb</em></td></tr>
+	        	  </table>
+	        	</div>
+	        	
+	        	<div id="ad_skyscraper_L">
+	        	  <img src="images/ad_skyscraper_L.jpg" style="float: left; margin-right: 20px;" />
+	        	  <table class="title" style="margin-top: 0;" align="center" width="300">
+	        	  	<tr><th colspan="2">Skyscraper</th></tr>
+	        	  	<tr><td></td><td align="right">$3,500</td></tr>
+	        	  </table>
+	        	  <table class="specs" align="center" width="300">
+	        	  	<tr><th colspan="2">specifications:</th></tr>
+	        	  	<tr><td>Dimensions</td><td><em>728 x 90</em></td></tr>
+	        	  	<tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
+	        	  	<tr><td>size</td><td><em>40Kb</em></td></tr>
+	        	  </table>
+	        	</div>
+	        	
+	        	<div id="ad_skyscraper_R">
+	        	  <img src="images/ad_skyscraper_R.jpg" style="float: left; margin-right: 20px;" />
+	        	  <table class="title" style="margin-top: 0;" align="center" width="300">
+	        	  	<tr><th colspan="2">Skyscraper</th></tr>
+	        	  	<tr><td></td><td align="right">$3,500</td></tr>
+	        	  </table>
+	        	  <table class="specs" align="center" width="300">
+	        	  	<tr><th colspan="2">specifications:</th></tr>
+	        	  	<tr><td>Dimensions</td><td><em>728 x 90</em></td></tr>
+	        	  	<tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
+	        	  	<tr><td>size</td><td><em>40Kb</em></td></tr>
+	        	  </table>
+	        	</div>
+	        	
+	        	<div id="ad_industry_partner">
+	        	  <img src="images/ad_industry_partner.jpg" />
+	        	  <table class="title" align="center" width="300">
+	        	  	<tr><th colspan="2">Industry Partner</th></tr>
+	        	  	<tr><td></td><td align="right">$3,500</td></tr>
+	        	  </table>
+	        	  <table class="specs" align="center" width="300">
+	        	  	<tr><th colspan="2">specifications:</th></tr>
+	        	  	<tr><td>Dimensions</td><td><em>728 x 90</em></td></tr>
+	        	  	<tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
+	        	  	<tr><td>size</td><td><em>40Kb</em></td></tr>
+	        	  </table>
+	        	</div>
+	        	
+	        	<div id="ad_low_leaderboard">
+	        	  <img src="images/ad_low_leaderboard.jpg" />
+	        	  <div style="margin: 0 auto; width: 700px; overflow: hidden;">
+	        	  	<table class="title" style="float: left;" width="300">
+	        	  	  <tr><th colspan="2">Lower Leaderboard</th></tr>
+	        	  	  <tr><td></td><td align="right">$3,500</td></tr>
+	        	  	</table>
+	        	  	<table class="specs" style="float: right;" width="300">
+	        	  	  <tr><th colspan="2">specifications:</th></tr>
+	        	  	  <tr><td>Dimensions</td><td><em>728 x 90</em></td></tr>
+	        	  	  <tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
+	        	  	  <tr><td>size</td><td><em>40Kb</em></td></tr>
+	        	  	</table>
+	        	  </div>
+	        	</div>
+	        	
+	        </div>
+	        <!-- end Lightbox content -->
 	      </div>
 	    </div>
 	   </div>
