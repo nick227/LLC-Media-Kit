@@ -168,7 +168,7 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 		  }
 		  
 		  // Keep child drag from triggering parrent
-		  event.stopPropagation();
+		  //event.stopPropagation();
 		  		  
 		}); 
 				
