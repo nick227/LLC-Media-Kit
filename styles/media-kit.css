@@ -404,9 +404,10 @@ background-image:url(../images/ad_inventory_bg.jpg);
 }
 #homeScreen a .img { display: block; height: 100%; }
 #contentWrap { width: 960px; padding: 0 30px; position: absolute; bottom: 0; left: 50%; margin-left: -480px; height: 150px; }
+div.inline-content img { border: 1px solid #ddd;  }
 table.title, table.specs {font-family:Gotham; margin-top: 10px; }
-table.title th { font-size: 28px; color: #1866a2; text-transform: uppercase; }
-table.title td { font-size: 24px; color: #767474; }
+table.title th { font-size: 24px; color: #1866a2; text-transform: uppercase; }
+table.title td { font-size: 20px; color: #767474; }
 table.specs th { font-size: 14px; color: #fff; background: #656d79; text-transform: uppercase; }
 table.specs td { font-size: 14px; color: #656d79; text-transform: uppercase; }
 table.specs td em { color: #6986a1; }
