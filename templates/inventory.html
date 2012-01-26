@@ -23,46 +23,145 @@
 
 
   <div id="slideContainer">
+<div class="welcome-message">
+<h1>Explore available ad spaces<br />using the iPad below.</h1>
+<div class="welcome-graphic"></div>
+</div>
 	<div id="ipadWrap" class="draggable">
 	  <div id="ipad">
 	    <div id="ipadScreen">
 	      <div id="homeScreen" class="draggable">
 	        <img class="screen" src="images/homeScreen.jpg" width="510" height="1046" alt="" />
-	        <a class="zoom ad_top_leaderboard" href="images/ad_top_leaderboard.jpg" caption="" style="width: 360px; height: 45px; left: 75px; top: 12px;">
+	        <a class="fancybox ad_top_leaderboard" href="#ad_top_leaderboard" style="width: 360px; height: 45px; left: 75px; top: 12px;">
 	          <span class="img" style="background-position: -75px -12px;"></span><span class="zoom"></span>
 	        </a>
-	        <a class="zoom ad_sponsored_media" href="images/ad_sponsored_media.jpg" caption="" style="width: 60px; height: 30px; left: 427px; top: 294px;">
+	        <a class="fancybox ad_sponsored_media" href="#ad_sponsored_media" style="width: 60px; height: 30px; left: 427px; top: 294px;">
 	          <span class="img" style="background-position: -427px -294px;"></span><span class="zoom"></span>
 	        </a>
-	        <a class="zoom ad_skyscraper" href="images/ad_skyscraper_L.jpg" caption="" style="width: 81px; height: 298px; left: 8px; top: 337px;">
+	        <a class="fancybox ad_skyscraper" href="#ad_skyscraper_L" style="width: 81px; height: 298px; left: 8px; top: 337px;">
 	          <span class="img" style="background-position: -8px -337px;"></span><span class="zoom"></span>
 	        </a>
-	        <a class="zoom ad_skyscraper" href="images/ad_skyscraper_R.jpg" caption="" style="width: 81px; height: 298px; left: 421px; top: 337px;">
+	        <a class="fancybox ad_skyscraper" href="#ad_skyscraper_R" style="width: 81px; height: 298px; left: 421px; top: 337px;">
 	          <span class="img" style="background-position: -421px -337px;"></span><span class="zoom"></span>
 	        </a>
-	        <a class="zoom ad_industry_partner" href="images/ad_industry_partner.jpg" caption="" style="width: 60px; height: 30px; left: 431px; top: 662px;">
+	        <a class="fancybox ad_industry_partner" href="#ad_industry_partner" style="width: 60px; height: 30px; left: 431px; top: 662px;">
 	          <span class="img" style="background-position: -431px -662px;"></span><span class="zoom"></span>
 	        </a>
-	        <a class="zoom ad_low_leaderboard" href="images/ad_low_leaderboard.jpg" caption="" style="width: 360px; height: 45px; left: 75px; top: 966px;">
+	        <a class="fancybox ad_low_leaderboard" href="#ad_low_leaderboard" style="width: 360px; height: 45px; left: 75px; top: 966px;">
 	          <span class="img" style="background-position: -75px -966px;"></span><span class="zoom"></span>
 	        </a>
+	        <!-- Lightbox content -->
+	        <div style="display:none">
+	        	
+	        	<div id="ad_top_leaderboard" class="inline-content">
+	        	  <img src="images/ad_top_leaderboard.jpg" />
+	        	  <div style="margin: 0 auto; width: 700px; overflow: hidden;">
+		        	<table class="title" style="float: left;" width="300">
+		        	  <tr><th colspan="2">Top Leaderboard</th></tr>
+		        	  <tr><td></td><td align="right">$3,500</td></tr>
+		        	</table>
+		        	<table class="specs" style="float: right;" width="300">
+		        	  <tr><th colspan="2">specifications:</th></tr>
+		        	  <tr><td>Dimensions</td><td><em>728 x 90</em></td></tr>
+		        	  <tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
+		        	  <tr><td>size</td><td><em>40Kb</em></td></tr>
+	        	  	</table>
+	        	  </div>
+	        	</div>
+	        	
+	        	<div id="ad_sponsored_media" class="inline-content">
+	        	  <img src="images/ad_sponsored_media.jpg" />
+	        	  <table class="title" align="center" width="300">
+	        	  	<tr><th colspan="2">Sponsored Media</th></tr>
+	        	  	<tr><td></td><td align="right">$3,500</td></tr>
+	        	  </table>
+	        	  <table class="specs" align="center" width="300">
+	        	  	<tr><th colspan="2">specifications:</th></tr>
+	        	  	<tr><td>Dimensions</td><td><em>728 x 90</em></td></tr>
+	        	  	<tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
+	        	  	<tr><td>size</td><td><em>40Kb</em></td></tr>
+	        	  </table>
+	        	</div>
+	        	
+	        	<div id="ad_skyscraper_L" style="width: 500px;" class="inline-content">
+	        	  <img src="images/ad_skyscraper_L.jpg" style="float: left; margin-right: 20px;" />
+	        	  <table class="title" style="margin-top: 0;" align="center" width="300">
+	        	  	<tr><th colspan="2">Skyscraper</th></tr>
+	        	  	<tr><td></td><td align="right">$3,500</td></tr>
+	        	  </table>
+	        	  <table class="specs" align="center" width="300">
+	        	  	<tr><th colspan="2">specifications:</th></tr>
+	        	  	<tr><td>Dimensions</td><td><em>728 x 90</em></td></tr>
+	        	  	<tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
+	        	  	<tr><td>size</td><td><em>40Kb</em></td></tr>
+	        	  </table>
+	        	</div>
+	        	
+	        	<div id="ad_skyscraper_R" style="width: 500px;" class="inline-content">
+	        	  <img src="images/ad_skyscraper_R.jpg" style="float: left; margin-right: 20px;" />
+	        	  <table class="title" style="margin-top: 0;" align="center" width="300">
+	        	  	<tr><th colspan="2">Skyscraper</th></tr>
+	        	  	<tr><td></td><td align="right">$3,500</td></tr>
+	        	  </table>
+	        	  <table class="specs" align="center" width="300">
+	        	  	<tr><th colspan="2">specifications:</th></tr>
+	        	  	<tr><td>Dimensions</td><td><em>728 x 90</em></td></tr>
+	        	  	<tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
+	        	  	<tr><td>size</td><td><em>40Kb</em></td></tr>
+	        	  </table>
+	        	</div>
+	        	
+	        	<div id="ad_industry_partner" class="inline-content">
+	        	  <img src="images/ad_industry_partner.jpg" />
+	        	  <table class="title" align="center" width="300">
+	        	  	<tr><th colspan="2">Industry Partner</th></tr>
+	        	  	<tr><td></td><td align="right">$3,500</td></tr>
+	        	  </table>
+	        	  <table class="specs" align="center" width="300">
+	        	  	<tr><th colspan="2">specifications:</th></tr>
+	        	  	<tr><td>Dimensions</td><td><em>728 x 90</em></td></tr>
+	        	  	<tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
+	        	  	<tr><td>size</td><td><em>40Kb</em></td></tr>
+	        	  </table>
+	        	</div>
+	        	
+	        	<div id="ad_low_leaderboard" class="inline-content">
+	        	  <img src="images/ad_low_leaderboard.jpg" />
+	        	  <div style="margin: 0 auto; width: 700px; overflow: hidden;">
+	        	  	<table class="title" style="float: left;" width="300">
+	        	  	  <tr><th colspan="2">Lower Leaderboard</th></tr>
+	        	  	  <tr><td></td><td align="right">$3,500</td></tr>
+	        	  	</table>
+	        	  	<table class="specs" style="float: right;" width="300">
+	        	  	  <tr><th colspan="2">specifications:</th></tr>
+	        	  	  <tr><td>Dimensions</td><td><em>728 x 90</em></td></tr>
+	        	  	  <tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
+	        	  	  <tr><td>size</td><td><em>40Kb</em></td></tr>
+	        	  	</table>
+	        	  </div>
+	        	</div>
+	        	
+	        </div>
+	        <!-- end Lightbox content -->
 	      </div>
 	    </div>
 	   </div>
   	</div>
   </div>
   
+  
 
 
 </section>
+<!-- vertical nav
 <section id="inventory-panel" class="panel">
 	<div class="spacer-10px"></div>
 	<div class="spacer-25px"></div>
 	<div class="spacer-25px"></div>
 	<section class="inner">
-	<nav class="nav-sub">
+	<nav class="nav-sub" rel="vertical">
 		<ul>
-		<li rel="0,0,ad_top_leaderboard" id="top_leaderboard" class="selected">TOP LEADERBOARD</li>
+		<li rel="0,0,ad_top_leaderboard" id="top_leaderboard" class="">TOP LEADERBOARD</li>
 		<li rel="-300,-150,ad_skyscraper" id="skyscraper">SKYSCRAPERS</li>
 		<li rel="-320,-400,ad_low_leaderboard" id="low_leaderboard">LOWER LEADERBOARD</li>
 		<li rel="-300,-300,ad_industry_partner" id="industry_partner">INDUSTRY PARTNERS</li>
@@ -80,6 +179,24 @@
 	<tr><td>728 X 90</td><td>40KB</td><td>JPG, GIF, SWF</td></tr>
 	</table>
 	</section>
+	</section>
+</section>
+-->
+<div id="presentationPrev" class="pres-arrow"><a><img src="images/presentation_arrow_left.png"/></a></div>
+<div id="presentationNext" class="pres-arrow"><a><img src="images/presentation_arrow_right.png"/></a></div>
+
+
+<section id="inventory-panel" class="panel">
+	<section class="inner">
+	<nav class="nav-sub" rel="horizontal">
+		<ul>
+		<li rel="0,0,ad_top_leaderboard" id="top_leaderboard" class="" style="">Top Leaderboard</li>
+		<li rel="-300,-150,ad_skyscraper" id="skyscraper">Skyscrapers</li>
+		<li rel="-320,-400,ad_low_leaderboard" id="low_leaderboard">Lower Leaderboard</li>
+		<li rel="-300,-300,ad_industry_partner" id="industry_partner">Industry Partners</li>
+		<li rel="-270,-100,ad_sponsored_media" id="sponsored_media">Sponsored Media</li>		
+		</ul>
+	</nav>
 	</section>
 </section>
 
