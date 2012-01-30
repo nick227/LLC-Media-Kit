@@ -329,9 +329,112 @@ border:1px solid black;
 }
 /**** BENEFITS PAGE */
 #benefits-stage{
-background-color:red;
+/* IE10 */ 
+background-image: -ms-radial-gradient(center, circle cover, #ED6D76 0%, #920707 100%);
+
+/* Mozilla Firefox */ 
+background-image: -moz-radial-gradient(center, circle cover, #ED6D76 0%, #920707 100%);
+
+/* Opera */ 
+background-image: -o-radial-gradient(center, circle cover, #ED6D76 0%, #920707 100%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(radial, center center, 0, center center, 500, color-stop(0, #ED6D76), color-stop(1, #920707));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-radial-gradient(center, circle cover, #ED6D76 0%, #920707 100%);
+
+/* Proposed W3C Markup */ 
+background-image: radial-gradient(center, circle cover, #ED6D76 0%, #920707 100%);
+
+
 border:1px solid red;
 color:#ffffff;
+}
+
+.benefitsContainer{
+	position: relative;
+	display: block;
+	margin: auto;
+	width: 720px;
+	height: 600px;
+}
+.benefit-content{
+	position: absolute;
+	height: 460px;
+}
+.benefit-content p{
+	color: #555555;
+	font-size: 11pt;
+}
+.benefitsContainer h2{
+	display: block;
+	margin-top: 11px;
+	font-family: verdana, myriad pro, helvetica, sans serif;
+	font-size: 14pt;
+	font-weight: 700;
+	color: #555555;
+}
+.benefit-box{
+	cursor: pointer;
+	border: 1px solid #555555;
+	background-color: #ffffff;
+	display: block;
+	position: absolute;
+	width: 240px;
+	height: 200px;
+	overflow: hidden;
+}
+.benefit-box-selected{
+	background-color: #eeeeee;
+}
+.benefit-box:hover{
+	background-color: #eeeeee;
+}
+.benefit-content{
+	padding: 10px 10px 0px 10px;
+}
+#benefitBox1{
+	left: 0px;
+	top: 0px;
+}
+#benefitBox2{
+	left: 240px;
+	top: 0px;
+}
+#benefitBox3{
+	left: 480px;
+	top: 0px;
+}
+#benefitBox4{
+	left: 0px;
+	top: 200px;
+}
+#benefitBox5{
+	left: 240px;
+	top: 200px;
+}
+#benefitBox6{
+	left: 480px;
+	top: 200px;
+}
+#benefitBox7{
+	left: 0px;
+	top: 400px;
+}
+#benefitBox8{
+	left: 240px;
+	top: 400px;
+}
+#benefitBox9{
+	left: 480px;
+	top: 400px;
+}
+.benefit-image-small{
+	position: absolute;
+	left: 170px;
+	top: 280px;
+	float: right;
 }
 
 /**** INVENTORY PAGE */

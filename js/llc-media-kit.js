@@ -17,6 +17,7 @@ var currentSelection;
 var pointerTargetX = 0;
 var pointerInMotion = false;
 var pointerAnimationHandler;
+var currentBenefit;
 
 
 var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick actions ****/
@@ -56,6 +57,7 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 	//BENEFITS PAGE
 		if(pageName == 'benefits'){
 			mediaKit.pageTransition('up', newPage);
+			mediaKit.setupBenefitsPage();
 			}
 	//INVENTORY PAGE
 		if(pageName == 'inventory'){
@@ -92,8 +94,7 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 	},
 	pageTransition: function(dir, newPage){
 	
-			if(dir=='up'){
-				var currentStage = $('section.stage'),
+			var currentStage = $('section.stage'),
 				currentStageHeight = currentStage.height(),
 				currentStageWidth = currentStage.width(),
 				currentStageTopPos = currentStage.position(),
@@ -102,11 +103,14 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 				newBottom = currentStageTop+currentStageHeight,
 				newRight = currentStageLeft+currentStageWidth;
 			var curStageID = $(currentStage).attr('id');
+			var animationSpeed = 1550;
+			
+			if(dir=='up'){
 			var newtop = stageHeight-80;
 			var newContainer = '<div id="temp-new-container" style="width:100%; position:absolute; top:'+stageHeight+'px">'+newPage+'</div>';
 			$('section.stage').wrap('<div id="temp-big-container" style="width:100%; height:10000px; top:0; left:0; position:absolute; z-index:1" />');
 			$('div#temp-big-container').append(newContainer).animate({marginTop:'-'+newtop}, 
-															2000, 'linear', function() {
+															animationSpeed, 'linear', function() {
 															$('#'+curStageID).remove();
 															$("#temp-new-container").unwrap();
 															$("section.stage").unwrap();
@@ -115,6 +119,21 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 			$('div#slideContainer').css('height', stageHeight);
 			
 			}
+			if(dir=='left'){
+			var newtop = stageHeight-80;
+			var newContainer = '<div id="temp-new-container" style="width:100%; position:absolute; left:'+currentStageWidth+'px">'+newPage+'</div>';
+			$('section.stage').wrap('<div id="temp-big-container" style="height:100%; width:10000px; top:0; left:0; position:absolute; z-index:1" />');
+			$('div#temp-big-container').append(newContainer).animate({left:'-'+currentStageWidth}, 
+															animationSpeed, 'linear', function() {
+															$('#'+curStageID).remove();
+															$("#temp-new-container").unwrap();
+															$("section.stage").unwrap();
+															});  
+			
+			$('div#slideContainer').css('height', stageHeight);
+			
+			}
+			
 			$('.stage').css('height', stageHeight);
 			$(window).resize(function(){
 			var stageHeight = $(document).height()-80;
@@ -157,6 +176,20 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 			pointerTargetX = $(currentSelection).offset().left + (($(currentSelection).width() - $(globalNavPointer).width())/2);
 			globalNavPointer[0].style.left = pointerTargetX + 'px';
 		}
+	},
+	setupBenefitsPage: function(){
+		$('.benefit-box').each(function(){
+			$(this).click(function(){
+				if(currentBenefit != undefined && $(currentBenefit).attr('id') != $('#' + $(this).attr('id') + ' .benefit-content').attr('id')){
+					$(currentBenefit).stop();
+					$(currentBenefit).animate({top: 0}, 200, function(){});
+					$($(currentBenefit).parent()).removeClass('benefit-box-selected');
+				}
+				currentBenefit = $('#' + $(this).attr('id') + ' .benefit-content');
+				$(this).addClass('benefit-box-selected');
+				$(currentBenefit).animate({top: -150}, 200, function(){});
+			});
+		});
 	},
 	shiftIpadScreen: function(whereTo){
 		var target = 0;
