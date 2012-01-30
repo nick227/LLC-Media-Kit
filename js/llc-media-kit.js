@@ -7,7 +7,9 @@
 
  /**** SETUP VARS HERE! ***/
 var feedName = 'data/dma-site.xml';
-var startPage = 'inventory';
+var startPage = 'audience';
+var pageNames_ar = new Array('audience', 'benefits', 'inventory', 'pricing', 'contact');
+var stageHeight = $(document).height()-80;
 
 //*** Global nav animation ***//
 var globalNavPointer;
@@ -26,46 +28,105 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 	loadPage: function(pageName, animationMethod){
 		$.get(feedName, function(xml){
 		mediaKit.site = $.xml2json(xml);
+		document.title = mediaKit.site.siteTitle;
 		var template = 'templates/'+pageName+'.html';
-				$.get(template, function(data) {
-				var res = tmpl(data, mediaKit.site);
+		if($('header#header-main').length < 1){//permanentally setup header
+		var header_t = 'templates/header.html';
+			$.get(header_t, function(data) {
+			var res = tmpl(data, mediaKit.site);
+			$('section#header-anchor').html(res);
 				
-				if(animationMethod=='none'){
-				$('div#container').html(res);
-				document.title = mediaKit.site.siteTitle;
 				
-	$('body, section, div').bind('mousedown.welcome', function() {
-	$('#inventory-stage .welcome-message').animate({
-    opacity: 0.25,
-    height: '0'
-  }, {queue:false, duration:600, easing: 'easeInExpo'}, function() {
-	$('body, section, div').unbind('mousedown.welcome');
-	$('#inventory-stage .welcome-message').remove();
-  });  
-  
-	
-	});
-	
-				mediaKit.setupArrowSubNav();
-				mediaKit.setupVirtualIpad(); // do we need to provision for non-inventory pages??? //divergent paths and a neat-o controller function
-				
-				mediaKit.initPresentationArrows('firstInit');//*** ADDED BY MIKE (1/25/12) - presentation buttons call ***//
 				globalNavPointer = $('.header-edge-pointer');
 				console.log(globalNavPointer);
 				mediaKit.setPointerTargetX('#' + startPage + '_mainNav');
-				
-				
-				$(window).resize(function(){mediaKit.setPointerX(); mediaKit.initPresentationArrows();}); //*** ADDED BY MIKE (1/25/12) replaced this resize function ***//
-				}
+				$(window).resize(function(){mediaKit.setPointerX();});
+			});
+		}
+			$.get(template, function(data) {//now for the body content
+			var newPage = tmpl(data, mediaKit.site);
+				if(animationMethod=='none'){
+				$('section#stage-anchor').html(newPage);
+				$('.stage').css('height', stageHeight);
+				}else{
+	//AUDIENCE PAGE
+		if(pageName == 'audience'){
+			mediaKit.pageTransition('up', newPage);
+			}
+	//BENEFITS PAGE
+		if(pageName == 'benefits'){
+			mediaKit.pageTransition('up', newPage);
+			}
+	//INVENTORY PAGE
+		if(pageName == 'inventory'){
+			//transition up
+			mediaKit.pageTransition('up', newPage);
+			
+				$('body, section, div').bind('mousedown.welcome', function() {
+				$('#inventory-stage .welcome-message').animate({
+    			opacity: 0.25,
+    			height: '0'
+				}, {queue:false, duration:600, easing: 'easeInExpo'}, function() {
+				$('body, section, div').unbind('mousedown.welcome');
+				$('#inventory-stage .welcome-message').remove();
+				});  
 				});
+				mediaKit.setupArrowSubNav();
+				mediaKit.setupVirtualIpad();
+		}
+
+	//PRICING PAGE
+		if(pageName == 'pricing'){
+			mediaKit.pageTransition('up', newPage);
+			}
+	//CONTACT PAGE
+		if(pageName == 'contact'){
+			mediaKit.pageTransition('up', newPage);
+			}
 		
-			return true;
-	});
+}
+		
+	return true;
+			});
+		});
+	},
+	pageTransition: function(dir, newPage){
+	
+			if(dir=='up'){
+				var currentStage = $('section.stage'),
+				currentStageHeight = currentStage.height(),
+				currentStageWidth = currentStage.width(),
+				currentStageTopPos = currentStage.position(),
+				currentStageTop = currentStageTopPos.top,
+				currentStageLeft = currentStageTopPos.left,
+				newBottom = currentStageTop+currentStageHeight,
+				newRight = currentStageLeft+currentStageWidth;
+			var curStageID = $(currentStage).attr('id');
+			var newtop = stageHeight-80;
+			var newContainer = '<div id="temp-new-container" style="width:100%; position:absolute; top:'+stageHeight+'px">'+newPage+'</div>';
+			$('section.stage').wrap('<div id="temp-big-container" style="width:100%; height:10000px; top:0; left:0; position:absolute; z-index:1" />');
+			$('div#temp-big-container').append(newContainer).animate({marginTop:'-'+newtop}, 
+															2000, 'linear', function() {
+															$('#'+curStageID).remove();
+															$("#temp-new-container").unwrap();
+															$("section.stage").unwrap();
+															});  
+			
+			$('div#slideContainer').css('height', stageHeight);
+			
+			}
+			$('.stage').css('height', stageHeight);
+			$(window).resize(function(){
+			var stageHeight = $(document).height()-80;
+			$('.stage').css('height', stageHeight);
+			});
+			
+	
 	},
 	setupLinks: function(){//super quick page navigation
 		$('a.slideChange').live('click', function(){
 		var relPage = $(this).attr('rel');
-		mediaKit.loadPage(relPage, 'none');
+		mediaKit.loadPage(relPage, 'yes');
 		mediaKit.setPointerTargetX(this);
 		});
 	},
@@ -97,7 +158,7 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 			globalNavPointer[0].style.left = pointerTargetX + 'px';
 		}
 	},
-	shiftIpadScreen: function(whereTo){ 					//*** ADDED BY MIKE (1/25/12)***//
+	shiftIpadScreen: function(whereTo){
 		var target = 0;
 		switch (whereTo){
 			case "player":
@@ -108,7 +169,7 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 		}
 		$('#homeScreen').animate({left:(target-510)}, 300, function(){});
 	},
-	initPresentationArrows: function(e){					//*** ADDED BY MIKE (1/25/12)***//
+	initPresentationArrows: function(e){
 		var prevArrowX = $('#ipad').offset().left - $('#presentationPrev').width() - 80;
 		var nextArrowX = $('#ipad').offset().left + $('#ipad').width() + $('#presentationPrev').width() + 80;
 		var leftArrow = $('#presentationPrev');
