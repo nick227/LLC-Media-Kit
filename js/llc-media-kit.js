@@ -10,6 +10,7 @@ var feedName = 'data/dma-site.xml';
 var startPage = 'audience';
 var pageNames_ar = new Array('audience', 'benefits', 'inventory', 'pricing', 'contact');
 var stageHeight = $(document).height()-80;
+var linkOrder = { "audience":1, "benefits": 2, "inventory": 3, "pricing": 4, "contact": 5};
 
 //*** Global nav animation ***//
 var globalNavPointer;
@@ -26,7 +27,7 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 	mediaKit.loadPage(startPage, 'none');
 	mediaKit.setupLinks();
 	},
-	loadPage: function(pageName, animationMethod){
+	loadPage: function(pageName, animationMethod, order){
 		$.get(feedName, function(xml){
 		mediaKit.site = $.xml2json(xml);
 		document.title = mediaKit.site.siteTitle;
@@ -46,46 +47,38 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 		}
 			$.get(template, function(data) {//now for the body content
 			var newPage = tmpl(data, mediaKit.site);
-				if(animationMethod=='none'){
+				if(animationMethod=='none'){//initial load
 				$('section#stage-anchor').html(newPage);
 				$('.stage').css('height', stageHeight);
-				}else{
+				$('body').data('activeNav', '0');
+				}else{//a nav click
+				var activeNav = $('body').data('activeNav');
+				var direction = (activeNav < order) ? 'up' : 'down';
 	//AUDIENCE PAGE
 		if(pageName == 'audience'){
-			mediaKit.pageTransition('up', newPage);
+			mediaKit.pageTransition(direction, newPage);
 			}
 	//BENEFITS PAGE
 		if(pageName == 'benefits'){
-			mediaKit.pageTransition('up', newPage);
+			mediaKit.pageTransition(direction, newPage);
 			mediaKit.setupBenefitsPage();
 			}
 	//INVENTORY PAGE
 		if(pageName == 'inventory'){
 			//transition up
-			mediaKit.pageTransition('up', newPage);
-			
-				$('body, section, div').bind('mousedown.welcome', function() {
-				$('#inventory-stage .welcome-message').animate({
-    			opacity: 0.25,
-    			height: '0'
-				}, {queue:false, duration:600, easing: 'easeInExpo'}, function() {
-				$('body, section, div').unbind('mousedown.welcome');
-				$('#inventory-stage .welcome-message').remove();
-				});  
-				});
-				mediaKit.setupArrowSubNav();
-				mediaKit.setupVirtualIpad();
-		}
-
+			mediaKit.pageTransition(direction, newPage);
+			mediaKit.setupInventoryPage();
+			}
 	//PRICING PAGE
 		if(pageName == 'pricing'){
-			mediaKit.pageTransition('up', newPage);
+			mediaKit.pageTransition(direction, newPage);
 			}
 	//CONTACT PAGE
 		if(pageName == 'contact'){
-			mediaKit.pageTransition('up', newPage);
+			mediaKit.pageTransition(direction, newPage);
 			}
-		
+
+	$('body').data('activeNav', order);		
 }
 		
 	return true;
@@ -94,6 +87,7 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 	},
 	pageTransition: function(dir, newPage){
 	
+			var pageTransitionSpeed = 1150;
 			var currentStage = $('section.stage'),
 				currentStageHeight = currentStage.height(),
 				currentStageWidth = currentStage.width(),
@@ -103,14 +97,27 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 				newBottom = currentStageTop+currentStageHeight,
 				newRight = currentStageLeft+currentStageWidth;
 			var curStageID = $(currentStage).attr('id');
-			var animationSpeed = 1550;
 			
 			if(dir=='up'){
 			var newtop = stageHeight-80;
 			var newContainer = '<div id="temp-new-container" style="width:100%; position:absolute; top:'+stageHeight+'px">'+newPage+'</div>';
 			$('section.stage').wrap('<div id="temp-big-container" style="width:100%; height:10000px; top:0; left:0; position:absolute; z-index:1" />');
 			$('div#temp-big-container').append(newContainer).animate({marginTop:'-'+newtop}, 
-															animationSpeed, 'linear', function() {
+															pageTransitionSpeed, 'linear', function() {
+															$('#'+curStageID).remove();
+															$("#temp-new-container").unwrap();
+															$("section.stage").unwrap();
+															});  
+			
+			$('div#slideContainer').css('height', stageHeight);
+			
+			}
+			if(dir=='down'){
+			var newtop = stageHeight-80;
+			var newContainer = '<div id="temp-new-container" style="width:100%; height:'+stageHeight+'px position:absolute; top:-'+stageHeight+'px"; z-index:2>'+newPage+'</div>';
+			$('section.stage').wrap('<div id="temp-big-container" style="width:100%; height:10000px; left:0; position:absolute; top:-'+stageHeight+'px"; z-index:1" />');
+			$('div#temp-big-container').prepend(newContainer).animate({marginTop:stageHeight}, 
+															pageTransitionSpeed, 'linear', function() {
 															$('#'+curStageID).remove();
 															$("#temp-new-container").unwrap();
 															$("section.stage").unwrap();
@@ -124,7 +131,7 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 			var newContainer = '<div id="temp-new-container" style="width:100%; position:absolute; left:'+currentStageWidth+'px">'+newPage+'</div>';
 			$('section.stage').wrap('<div id="temp-big-container" style="height:100%; width:10000px; top:0; left:0; position:absolute; z-index:1" />');
 			$('div#temp-big-container').append(newContainer).animate({left:'-'+currentStageWidth}, 
-															animationSpeed, 'linear', function() {
+															pageTransitionSpeed, 'linear', function() {
 															$('#'+curStageID).remove();
 															$("#temp-new-container").unwrap();
 															$("section.stage").unwrap();
@@ -142,10 +149,12 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 			
 	
 	},
-	setupLinks: function(){//super quick page navigation
+	setupLinks: function(){
+		mediaKit.linkOrder = linkOrder;
 		$('a.slideChange').live('click', function(){
-		var relPage = $(this).attr('rel');
-		mediaKit.loadPage(relPage, 'yes');
+			var relval = $(this).attr('rel');
+			var order = mediaKit.linkOrder[relval];
+		mediaKit.loadPage(relval, 'yes', order);
 		mediaKit.setPointerTargetX(this);
 		});
 	},
@@ -190,6 +199,21 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 				$(currentBenefit).animate({top: -150}, 200, function(){});
 			});
 		});
+	},
+	setupInventoryPage: function(){
+			
+				$('body, section, div').bind('mousedown.welcome', function() {
+				$('#inventory-stage .welcome-message').animate({
+    			opacity: 0.25,
+    			height: '0'
+				}, {queue:false, duration:600, easing: 'easeInExpo'}, function() {
+				$('body, section, div').unbind('mousedown.welcome');
+				$('#inventory-stage .welcome-message').remove();
+				});  
+				});
+				mediaKit.setupArrowSubNav();
+				mediaKit.setupVirtualIpad();
+		
 	},
 	shiftIpadScreen: function(whereTo){
 		var target = 0;
