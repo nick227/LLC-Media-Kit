@@ -583,9 +583,51 @@ table.specs td em { color: #6986a1; }
 /**** PRICING PAGE */
 #pricing-stage{
 background-color:green;
+font-family: GothamBook, Gotham;
 border:1px solid green;
 color:#ffffff;
+height: auto !important;
+padding-bottom: 20px;
+background: #32f0a6; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  #32f0a6 0%, #32f0a6 30%, #00bc85 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#32f0a6), color-stop(30%,#32f0a6), color-stop(100%,#00bc85)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  #32f0a6 0%,#32f0a6 30%,#00bc85 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  #32f0a6 0%,#32f0a6 30%,#00bc85 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  #32f0a6 0%,#32f0a6 30%,#00bc85 100%); /* IE10+ */
+background: radial-gradient(center, ellipse cover,  #32f0a6 0%,#32f0a6 30%,#00bc85 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32f0a6', endColorstr='#00bc85',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
+#pricing-wrap { margin: 0 auto; width: 919px; }
+#pricing-wrap h1 { margin: 0; padding: 60px 0 0 0; }
+#pricing-table { }
+#pricing-table .option { position: relative; padding: 30px 0 0 0; }
+#pricing-table .option .info { overflow: hidden; background: #fff; color: #555; padding-right: 3px; position: relative; z-index: 2; }
+#pricing-table .option .title { line-height: 40px; background-color: #069c6f; font-size: 24px; text-indent: 20px; text-transform: uppercase; color: #fff; }
+#pricing-table .option .title .price { display: block; background-color: #91ecf2; width: 160px; position: relative; margin-right: -3px; float: right; text-align: right; padding-right: 10px; color: #1f7650; }
+#pricing-table .option .bg { background: url(../images/plans_pricing_bg.png) right repeat-y; position: absolute; top: 0; right: 0; bottom: 0; }
+#pricing-table .option .desc { width: 75%; padding: 20px; float: left; }
+#pricing-table .option .buy { width: 15%; float: right; text-align: center; padding: 30px 20px; }
+#pricing-table .option .specs { background: #ececec; padding: 10px 20px; float: left; clear: both; }
+
+#pricing-table #opt-one.option { padding: 60px 0 0 0;}
+#pricing-table #opt-one.option .info { width: 870px; }
+#pricing-table #opt-one.option .bg { width: 50px; }
+
+#pricing-table #opt-two.option .info { width: 876px; }
+#pricing-table #opt-two.option .bg { width: 44px; }
+
+#pricing-table #opt-three.option .info { width: 882px; }
+#pricing-table #opt-three.option .bg { width: 38px; }
+
+#pricing-table #opt-four.option .info { width: 888px; }
+#pricing-table #opt-four.option .bg { width: 32px; }
+
+#pricing-table #opt-five.option .info { width: 894px; }
+#pricing-table #opt-five.option .bg { width: 26px; }
+
+#pricing-table #opt-six.option .info { width: 900px; }
+#pricing-table #opt-six.option .bg { width: 20px; }
+
 /**** CONTACT PAGE */
 #contact-stage{
 background-color:blue;
