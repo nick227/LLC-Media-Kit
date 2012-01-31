@@ -464,29 +464,44 @@ color:#ffffff;
 position:absolute;
 left:0;
 top:75px;
-margin-left:-166px;
+margin-left:-176px;
 width:166px;
-height:250px;
 background-color:#740d0e;
-border-top-left-radius;
--moz-border-radius-topleft;
+border-top-left-radius:20px;
+-moz-border-radius-topleft:20px;
 -webkit-border-top-left-radius: 20px;
-    -khtml-border-radius: 20px;
-    border-top-left-radius: 20px;
+-khtml-border-radius: 20px;
+border-top-left-radius: 20px;
+border-bottom-left-radius:20px;
+-moz-border-radius-bottomleft:20px;
+-webkit-border-bottom-left-radius: 20px;
+-khtml-border-bottom-left-radius: 20px;
+border-bottom-left-radius: 20px;
+background-color:#740d0e;
+text-align:right;
+padding:22px 2px 14px 8px;
+z-index:558746;
 }
 #inventory-stage .nav-sub .nav-btn{
 width:161px;
-height:27px;
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#50657e', endColorstr='#7899c0'); /* for IE */
-background: -webkit-gradient(linear, left top, left bottom, from(#50657e), to(#7899c0)); /* for webkit browsers */
-background: -moz-linear-gradient(top,  #50657e,  #7899c0); /* for firefox 3.6+ */ 
+height:21px;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7899c0', endColorstr='#50657e'); /* for IE */
+background: -webkit-gradient(linear, left top, left bottom, from(#7899c0), to(#50657e)); /* for webkit browsers */
+background: -moz-linear-gradient(top,  #7899c0,  #50657e); /* for firefox 3.6+ */ 
 font-family:'Gotham Black';
-font-color:#ffffff;
-font-size:.978em;
+color:#ffffff;
+font-size:.972em;
+vertical-align:middle;
+text-align:center;
+padding:6px 3px 0 3px;
+margin-bottom:8px;
+}
+#inventory-stage .nav-sub .nav-btn:hover{
+background-color:#f7a827 !important;
 }
 #inventory-stage .nav-sub .nav-active{
 width:159px;
-height:25px;
+height:19px;
 background-color:#f7a827 !important;
 border:1px solid #fbca43;
 }
@@ -504,8 +519,18 @@ font-family:GothamCondensedBookRegular, Gadget;
 font-size:2.91em;
 color:#ffffff;
 line-height:1.20em;
-text-shadow:1px 2px 2px #333333;
-
+margin:0;
+}
+#inventory-stage .welcome-message h2{
+padding:2px;
+font-family:GothamCondensedBookRegular, Gadget;
+font-size:1.91em;
+color:#ffffff;
+line-height:1.60em;
+margin:0;
+}
+#inventory-stage .welcome-message  table td{
+vertical-align:middle;
 }
 #inventory-stage .welcome-graphic{
 width:115px;
@@ -520,13 +545,23 @@ background: #ff3019; /* Old browsers */
 background-image:url(../images/ad_inventory_bg.png);
 }
 #ipadWrap { padding: 50px 0 50px; }
-#ipad { background: url(../images/ipad.png) no-repeat; width: 650px; height: 828px; margin: 0 auto; padding-top: 84px; }
+#ipad { background: url(../images/ipad.png) no-repeat; width: 650px; height: 828px; margin: 0 auto; padding-top: 84px; position:relative;}
 #ipadScreen { width: 510px; height: 648px; margin: 0 auto; overflow: hidden; }
 #ipadScreen div { position: relative; }
 #ipadScreen a { position: absolute; }
 #ipadScreen a:hover { box-shadow: 0px 0px 10px #fcff00; }
 /*#homeScreen a .zoom { background: url(../images/zoom-ico.gif); display: block; width: 30px; height:30px; position: absolute; top: 0px; left: 0px; }*/
-#homeScreen a .zoom { display: block; width: 15px; height:15px; position: absolute; top: 5px; left: 5px; border: 3px solid #ffd458; background: #fff;
+#homeScreen a .zoom{ 
+display: block; width: 15px; height:15px; position: absolute; top: 5px; left: 5px; border: 3px solid #ffd458; background: #fff;
+-webkit-border-radius: 3px; /* Saf3-4, iOS 1-3.2, Android ≤1.6 */
+   -moz-border-radius: 3px; /* FF1-3.6 */
+        border-radius: 3px; /* Opera 10.5, IE9, Saf5, Chrome, FF4, iOS 4, Android 2.1+ */ 
+-webkit-box-shadow: 0px 0px 20px #ffffff; /* Saf3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+   -moz-box-shadow: 0px 0px 20px #ffffff; /* FF3.5 - 3.6 */
+        box-shadow: 0px 0px 20px #ffffff; /* Opera 10.5, IE9, FF4+, Chrome 6+, iOS 5 */
+}
+span.glowingIcon { 
+display: block; width: 15px; height:15px; border: 3px solid #ffd458; background: #fff;
 -webkit-border-radius: 3px; /* Saf3-4, iOS 1-3.2, Android ≤1.6 */
    -moz-border-radius: 3px; /* FF1-3.6 */
         border-radius: 3px; /* Opera 10.5, IE9, Saf5, Chrome, FF4, iOS 4, Android 2.1+ */ 

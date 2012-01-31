@@ -38,7 +38,7 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 			$.get(header_t, function(data) {
 			var res = tmpl(data, mediaKit.site);
 			$('section#header-anchor').html(res);
-				$.get(nav_t, function(data) {
+				$.get(nav_t, function(data) {//permanentally nav buttons
 				var res = tmpl(data, mediaKit.site);
 				$('body').prepend(data);
 				});
@@ -58,6 +58,9 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 				}else{//a nav click
 				var activeNav = $('body').data('activeNav');
 				var direction = (activeNav < order) ? 'up' : 'down';
+				if(activeNav == order){
+				return true;
+				}
 	//AUDIENCE PAGE
 		if(pageName == 'audience'){
 			mediaKit.pageTransition(direction, newPage);
@@ -213,11 +216,6 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 				}, {queue:false, duration:600, easing: 'easeInExpo'}, function() {
 				$('body, section, div').unbind('mousedown.welcome');
 				$('#inventory-stage .welcome-message').remove();
-				var subnav = '<div class="nav-sub"></div>';
-				$('div#ipadWrap').prepend(subnav);
-				
-				
-				
 				});  
 				});
 				mediaKit.setupArrowSubNav();
@@ -269,7 +267,7 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 		//$("#ipadScreen .screen").fadeTo(0,0.5);
 		
 		window.zoomAni = setInterval(function() {
-			$("#ipadScreen a .zoom").each(function(i){
+			$("#ipadScreen a .zoom, span.glowingIcon").each(function(i){
 				$(this).delay(i*200).fadeTo(300, 0.5, function(){
 					$(this).delay(100).fadeTo(300, 1);
 				});
