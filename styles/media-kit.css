@@ -375,37 +375,69 @@ color:#ffffff;
 }
 
 .benefitsContainer{
+	background-image: url(../images/benefits_trans_bg.png);
 	position: relative;
 	display: block;
 	margin: auto;
-	width: 720px;
-	height: 600px;
+	width: 878px;
+	height: 620px;
 }
 .benefit-content{
+	background-image: url(../images/benefits/box-bg-gradient.png);
 	position: absolute;
+	width: 260px;
 	height: 460px;
 }
+.benefit-copy{
+	width: 266px;
+	position: absolute;
+	left: 10px;
+	top: 150px;
+}
 .benefit-content p{
+	position: absolute;
+	left: 10px;
+	top: 35px;
 	color: #555555;
 	font-size: 11pt;
 }
+.benefit-image-large{
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+.benefit-image-small{
+	position: absolute;
+	right: 10px;
+	top: 120px;
+	float: right;
+}
 .benefitsContainer h2{
 	display: block;
-	margin-top: 11px;
-	font-family: verdana, myriad pro, helvetica, sans serif;
+	text-align: center;
+	margin-top: 0px;
+	top: 0px;
+	display: block;
+	font-family: gotham book, myriad pro, helvetica, sans serif;
 	font-size: 14pt;
-	font-weight: 700;
-	color: #555555;
+	font-weight: 500;
+	color: #7d90a7;
 }
 .benefit-box{
 	cursor: pointer;
 	border: 1px solid #555555;
-	background-color: #ffffff;
+	background-color: #dddddd;
 	display: block;
 	position: absolute;
-	width: 240px;
+	width: 286px;
 	height: 200px;
 	overflow: hidden;
+}
+.benefit-box-background-texure{
+	width: 286px;
+	height: 460px;
+	background-image: url(../images/texture.png);
+	background-repeat: repeat-all;
 }
 .benefit-box-selected{
 	background-color: #eeeeee;
@@ -413,51 +445,43 @@ color:#ffffff;
 .benefit-box:hover{
 	background-color: #eeeeee;
 }
-.benefit-content{
-	padding: 10px 10px 0px 10px;
-}
 #benefitBox1{
-	left: 0px;
-	top: 0px;
+	left: 10px;
+	top: 10px;
 }
 #benefitBox2{
-	left: 240px;
-	top: 0px;
+	left: 296px;
+	top: 10px;
 }
 #benefitBox3{
-	left: 480px;
-	top: 0px;
+	left: 582px;
+	top: 10px;
 }
 #benefitBox4{
-	left: 0px;
-	top: 200px;
+	left: 10px;
+	top: 210px;
 }
 #benefitBox5{
-	left: 240px;
-	top: 200px;
+	left: 296px;
+	top: 210px;
 }
 #benefitBox6{
-	left: 480px;
-	top: 200px;
+	left: 582px;
+	top: 210px;
 }
 #benefitBox7{
-	left: 0px;
-	top: 400px;
+	left: 10px;
+	top: 410px;
 }
 #benefitBox8{
-	left: 240px;
-	top: 400px;
+	left: 296px;
+	top: 410px;
 }
 #benefitBox9{
-	left: 480px;
-	top: 400px;
+	left: 582px;
+	top: 410px;
 }
-.benefit-image-small{
-	position: absolute;
-	left: 170px;
-	top: 280px;
-	float: right;
-}
+
 
 /**** INVENTORY PAGE */
 #inventory-stage .nav-sub{

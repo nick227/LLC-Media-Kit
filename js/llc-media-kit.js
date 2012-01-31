@@ -194,7 +194,15 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 		}
 	},
 	setupBenefitsPage: function(){
+		var delayInc = 100;
 		$('.benefit-box').each(function(){
+			var targetX = $(this).position().left;
+			$(this).css({opacity: 0});
+			$(this).css({left: targetX + 400});
+			$(this).delay(1200 + delayInc).animate({opacity: 1, left: targetX},{ duration: 300, specialEasing:{
+													opacity: 'linear',
+													left: 'swing'}});
+			delayInc += 100;
 			$(this).click(function(){
 				if(currentBenefit != undefined && $(currentBenefit).attr('id') != $('#' + $(this).attr('id') + ' .benefit-content').attr('id')){
 					$(currentBenefit).stop();
@@ -203,7 +211,7 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 				}
 				currentBenefit = $('#' + $(this).attr('id') + ' .benefit-content');
 				$(this).addClass('benefit-box-selected');
-				$(currentBenefit).animate({top: -150}, 200, function(){});
+				$(currentBenefit).animate({top: -130}, 200, function(){});
 			});
 		});
 	},
