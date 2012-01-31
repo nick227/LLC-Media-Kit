@@ -395,45 +395,12 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 		
 	},
 	setupArrowSubNav: function(){
-	var dircheck = $('nav.nav-sub').attr('rel');
-	if(dircheck=='vertical'){
-	
-	$('nav.nav-sub').prepend('<img class="pointerArrowSml" src="images/blueSelArrow.png" style="position:absolute; z-index:2; display:none;" />');
-	function hoverItem(){
-	$('nav.nav-sub').find('img.pointerArrowSml').fadeIn()
-		var arrow = $(this).parents('nav.nav-sub').find('img.pointerArrowSml');
-		var p = $(this).position();
-		$(arrow).stop(true, true).animate({
-		top:p.top
-		}, 200, function(){});
-	}
-	function hoverOut(){
-			
-		if($(this).hasClass('selected')){}else{
-		
-			var arrow = $(this).parents('nav.nav-sub').find('img.pointerArrowSml');
-			var curSel = $(this).parent('ul').find('li.selected');
-			var p = $(curSel).position();
-			
-			if($(arrow).is(':animated')){}else{
-				$(arrow).delay('500').animate({
-				top:p.top
-				}, 650, function(){});
-			}
-		}
-		
-	}
-	var config = {    
-     over: hoverItem,
-     timeout: 0, 
-     out: hoverOut
-};
-
-$("nav.nav-sub ul").find('li').hoverIntent(config);
-	}
-$("nav.nav-sub ul").find('li').click(function(){
-$(this).parent('ul').find('li.selected').removeClass('selected');
-$(this).addClass('selected');
+$("div.nav-sub").delay(1234).fadeIn();
+$("div.nav-sub").find('.nav-btn').click(function(){
+$(this).parent('div').find('div.nav-active').removeClass('nav-active');
+$(this).addClass('nav-active');
+var adID = $(this).attr('id').substr($(this).attr('id').indexOf('_'), $(this).attr('id').length);
+alert(adID);
 var zoomid = 'a.ad_'+$(this).attr('id');
 $(zoomid).trigger('click');
 });

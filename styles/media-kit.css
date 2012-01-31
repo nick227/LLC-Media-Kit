@@ -461,6 +461,7 @@ color:#ffffff;
 
 /**** INVENTORY PAGE */
 #inventory-stage .nav-sub{
+display:none;
 position:absolute;
 left:0;
 top:75px;
@@ -545,7 +546,7 @@ background: #ff3019; /* Old browsers */
 background-image:url(../images/ad_inventory_bg.png);
 }
 #ipadWrap { padding: 50px 0 50px; }
-#ipad { background: url(../images/ipad.png) no-repeat; width: 650px; height: 828px; margin: 0 auto; padding-top: 84px; position:relative;}
+#ipad { background: url(../images/ipad.png) no-repeat; background-position:top right; width: 650px; height: 828px; margin: 0 auto; padding-top: 84px; position:relative;}
 #ipadScreen { width: 510px; height: 648px; margin: 0 auto; overflow: hidden; }
 #ipadScreen div { position: relative; }
 #ipadScreen a { position: absolute; }
