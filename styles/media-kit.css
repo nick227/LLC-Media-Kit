@@ -460,8 +460,36 @@ color:#ffffff;
 }
 
 /**** INVENTORY PAGE */
-#inventory-panel .nav-sub{}
-#inventory-panel .info-section{}
+#inventory-stage .nav-sub{
+position:absolute;
+left:0;
+top:75px;
+margin-left:-166px;
+width:166px;
+height:250px;
+background-color:#740d0e;
+border-top-left-radius;
+-moz-border-radius-topleft;
+-webkit-border-top-left-radius: 20px;
+    -khtml-border-radius: 20px;
+    border-top-left-radius: 20px;
+}
+#inventory-stage .nav-sub .nav-btn{
+width:161px;
+height:27px;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#50657e', endColorstr='#7899c0'); /* for IE */
+background: -webkit-gradient(linear, left top, left bottom, from(#50657e), to(#7899c0)); /* for webkit browsers */
+background: -moz-linear-gradient(top,  #50657e,  #7899c0); /* for firefox 3.6+ */ 
+font-family:'Gotham Black';
+font-color:#ffffff;
+font-size:.978em;
+}
+#inventory-stage .nav-sub .nav-active{
+width:159px;
+height:25px;
+background-color:#f7a827 !important;
+border:1px solid #fbca43;
+}
 
 #inventory-stage .welcome-message{
 width:825px;

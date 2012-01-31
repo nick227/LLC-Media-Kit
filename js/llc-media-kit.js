@@ -213,6 +213,11 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 				}, {queue:false, duration:600, easing: 'easeInExpo'}, function() {
 				$('body, section, div').unbind('mousedown.welcome');
 				$('#inventory-stage .welcome-message').remove();
+				var subnav = '<div class="nav-sub"></div>';
+				$('div#ipadWrap').prepend(subnav);
+				
+				
+				
 				});  
 				});
 				mediaKit.setupArrowSubNav();
