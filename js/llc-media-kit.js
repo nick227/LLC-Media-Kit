@@ -34,10 +34,14 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 		var template = 'templates/'+pageName+'.html';
 		if($('header#header-main').length < 1){//permanentally setup header
 		var header_t = 'templates/header.html';
+		var nav_t = 'templates/back-next-arrows.html';
 			$.get(header_t, function(data) {
 			var res = tmpl(data, mediaKit.site);
 			$('section#header-anchor').html(res);
-				
+				$.get(nav_t, function(data) {
+				var res = tmpl(data, mediaKit.site);
+				$('body').prepend(data);
+				});
 				
 				globalNavPointer = $('.header-edge-pointer');
 				console.log(globalNavPointer);

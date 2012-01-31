@@ -308,16 +308,38 @@ margin:0;
 }
 
 #presentationPrev{
+width:64px;
+height:87px;
+background-image:url(../images/siteBackBtn.png);
+background-position:0 0;
+background-repeat:no-repeat;
 	position: absolute;
-	left: 200px;
-	top:500px;
+	left: 0px;
+	top:50%;
+	margin-top:-43px;
 	cursor: pointer;
+	z-index:789;
+}
+#presentationPrev:hover{
+background-position:0 -87px;
 }
 #presentationNext{
+width:64px;
+height:87px;
+background-image:url(../images/siteNextBtn.png);
+background-position:0 0;
+background-repeat:no-repeat;
+width:64px;
+height:87px;
 	position: absolute;
-	left: 800px;
-	top:500px;
+	right: 0px;
+	top:50%;
+	margin-top:-43px;
 	cursor: pointer;
+	z-index:789;
+}
+#presentationNext:hover{
+background-position:0 -87px;
 }
 /**** AUDIENCE PAGE */
 #audience-stage{
