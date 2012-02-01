@@ -64,26 +64,36 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 
 	//AUDIENCE PAGE
 		if(pageName == 'audience'){
-			mediaKit.pageTransition(direction, newPage);
+			$('.stage-bg-gradient').animate({opacity: 0}, 400, function(){
+				mediaKit.pageTransition(direction, newPage);
+			});
 			}
 	//BENEFITS PAGE
 		if(pageName == 'benefits'){
+		$('.stage-bg-gradient').animate({opacity: 0}, 400, function(){
 			mediaKit.pageTransition(direction, newPage);
 			mediaKit.setupBenefitsPage();
+			});
 			}
 	//INVENTORY PAGE
 		if(pageName == 'inventory'){
 			//transition up
+		$('.stage-bg-gradient').animate({opacity: 0}, 400, function(){
 			mediaKit.pageTransition(direction, newPage);
 			mediaKit.setupInventoryPage();
+			});
 			}
 	//PRICING PAGE
 		if(pageName == 'pricing'){
+		$('.stage-bg-gradient').animate({opacity: 0}, 400, function(){
 			mediaKit.pageTransition(direction, newPage);
+			});
 			}
 	//CONTACT PAGE
 		if(pageName == 'contact'){
+		$('.stage-bg-gradient').animate({opacity: 0}, 400, function(){
 			mediaKit.pageTransition(direction, newPage);
+			});
 			}
 
 	$('body').data('activeNav', order);		
@@ -115,6 +125,7 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 															$('#'+curStageID).remove();
 															$("#temp-new-container").unwrap();
 															$("section.stage").unwrap();
+															mediaKit.fadeUpBgGradient();
 															});  
 			
 			$('div#slideContainer').css('height', stageHeight);
@@ -129,6 +140,7 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 															$('#'+curStageID).remove();
 															$("#temp-new-container").unwrap();
 															$("section.stage").unwrap();
+															mediaKit.fadeUpBgGradient();
 															});  
 			
 			$('div#slideContainer').css('height', stageHeight);
@@ -143,6 +155,7 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 															$('#'+curStageID).remove();
 															$("#temp-new-container").unwrap();
 															$("section.stage").unwrap();
+															mediaKit.fadeUpBgGradient();
 															});  
 			
 			$('div#slideContainer').css('height', stageHeight);
@@ -157,6 +170,16 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 			
 	
 	},	
+	fadeUpBgGradient: function(){
+		$('.stage-bg-gradient').animate({opacity: 1}, 1200);
+	},
+	adjustBgGradientPos: function(){
+		var stageHeight = $('#stage-anchor').height();
+		console.log(stageHeight);
+		var i = $('.stage-bg-gradient');
+		var s = $('#stage-anchor');
+		$(i).offset({top: -(($(i).height() - $(s).height())/2), left: -(($(i).width() - $(s).width())/2)}); // -((($(i).height() - $(s).height())/2) + s.offset().top)
+	},
 	fadeUpBgGradient: function(){
 		$('.stage-bg-gradient').animate({opacity: 1}, 1200);
 	},
