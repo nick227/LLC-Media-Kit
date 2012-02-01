@@ -481,8 +481,8 @@ height:1200px;
 }
 #inventory-stage .nav-sub{
 display:none;
-left:16.107em;
-top:28.123em;
+left:0em;
+top:155px;
 width:240px;
 height:260px;
 -moz-border-radius-topleft:2px;
@@ -497,6 +497,8 @@ background:transparent;
 text-align:right;
 padding:2px 2px 2px 0px;
 z-index:100;
+cursor:pointer;
+position:absolute;
 }
 #inventory-stage .nav-sub .nav-btn{
 width:240px;
