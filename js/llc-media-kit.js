@@ -442,8 +442,9 @@ $("div.nav-sub").delay(1234).fadeIn();
 $("div.nav-sub").find('.nav-btn').click(function(){
 $(this).parent('div').find('div.nav-active').removeClass('nav-active');
 $(this).addClass('nav-active');
-var adID = $(this).attr('id').substr($(this).attr('id').indexOf('_'), $(this).attr('id').length);
+var adID = $(this).attr('id').substr($(this).attr('id').indexOf('_')+1, $(this).attr('id').length);
 var zoomid = 'a.ad_'+adID;
+alert(zoomid);
 $(zoomid).trigger('click');
 });
 
