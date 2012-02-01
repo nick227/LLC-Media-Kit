@@ -62,7 +62,7 @@
                      $('body').data('activeNav', '0');
                  } else { //a nav click
                      var activeNav = $('body').data('activeNav');
-                     var direction = (activeNav < order) ? 'up' : 'down';
+                     var direction = (activeNav < order) ? 'left' : 'right';
                      if (activeNav == order) {
                          return true;
                      }
@@ -130,7 +130,7 @@
              newBottom = currentStageTop + currentStageHeight,
              newRight = currentStageLeft + currentStageWidth;
          var curStageID = $(currentStage).attr('id');
-         $('div.welcome-message').fadeOut();
+         $('#inventory-stage div.welcome-message, #inventory-stage div.nav-sub').fadeOut(500);
          if (dir == 'up') {
              var newtop = stageHeight - 80;
              var newContainer = '<div id="temp-new-container" style="width:100%; position:absolute; top:' + stageHeight + 'px">' + newPage + '</div>';
@@ -165,11 +165,11 @@
          }
          if (dir == 'left') {
              var newtop = stageHeight - 80;
-             var newContainer = '<div id="temp-new-container" style="width:100%; position:absolute; left:' + currentStageWidth + 'px">' + newPage + '</div>';
-             $('section.stage').wrap('<div id="temp-big-container" style="height:100%; width:10000px; top:0; left:0; position:absolute; z-index:1" />');
+             var newContainer = '<div id="temp-new-container" style="width:100%; position:absolute; top:0; left:' + currentStageWidth + 'px">' + newPage + '</div>';
+             $('section.stage').wrap('<div id="temp-big-container" style="height:100%; top:0; left:0; position:relative; z-index:1" />');
              $('div#temp-big-container').append(newContainer).animate({
                  left: '-' + currentStageWidth
-             }, pageTransitionSpeed, 'linear', function () {
+             }, pageTransitionSpeed, 'swing', function () {
                  $('#' + curStageID).remove();
                  $("#temp-new-container").unwrap();
                  $("section.stage").unwrap();
@@ -180,6 +180,23 @@
 
          }
 /*
+         if (dir == 'right') {
+            var newtop = stageHeight - 80;
+            var newContainer = '<div id="temp-new-container" style="width:100%; position:absolute; top:0; right:' + currentStageWidth + 'px">' + newPage + '</div>';
+            $('section.stage').wrap('<div id="temp-big-container" style="height:100%; top:0; right:0; position:relative; z-index:1" />');
+            $('div#temp-big-container').append(newContainer).animate({
+            	right: '-' + currentStageWidth
+            }, pageTransitionSpeed, 'swing', function () {
+                $('#' + curStageID).remove();
+                $("#temp-new-container").unwrap();
+                $("section.stage").unwrap();
+            	mediaKit.fadeUpBgGradient();
+            });
+         
+         	$('div#slideContainer').css('height', stageHeight);
+         
+         }
+
          $('.stage').css('height', stageHeight);
          $(window).resize(function () {
              var stageHeight = $(document).height() - 80;
