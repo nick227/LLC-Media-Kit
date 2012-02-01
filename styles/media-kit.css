@@ -405,7 +405,7 @@ text-align: center;
 margin-top: 0px;
 top: 0px;
 display: block;
-font-family: gotham book, myriad pro, helvetica, sans serif;
+font-family: "proxima-nova", myriad pro, helvetica, sans serif;
 font-size: 14pt;
 font-weight: 500;
 color: #7d90a7;
@@ -590,7 +590,7 @@ display: block; width: 15px; height:15px; border: 3px solid #ffd458; background:
 #homeScreen a .img { display: block; height: 100%; }
 #contentWrap { width: 960px; padding: 0 30px; position: absolute; bottom: 0; left: 50%; margin-left: -480px; height: 150px; }
 div.inline-content img { border: 1px solid #ddd;  }
-table.title, table.specs {font-family:GothamCondensedBookRegular; margin-top: 10px; }
+table.title, table.specs {font-family:"proxima-nova"; font-weight:900; margin-top: 10px; }
 table.title th { font-size: 24px; color: #1866a2; text-transform: uppercase; }
 table.title td { font-size: 20px; color: #767474; }
 table.specs th { font-size: 14px; color: #fff; background: #656d79; text-transform: uppercase; }
@@ -600,8 +600,9 @@ table.specs td em { color: #6986a1; }
 /**** PRICING PAGE */
 #pricing-stage{
 /*background-color:green;*/
-font-family: GothamBook, Gotham;
-border:1px solid green;
+font-family: "proxima-nova";
+font-weight:900;
+/*border:1px solid green;*/
 color:#ffffff;
 height: auto !important;
 padding-bottom: 20px;
@@ -642,7 +643,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32f0a6', end
 /**** CONTACT PAGE */ /*Radial gradient : inner = #e0a739, outer = #b2790b */
 #contact-stage{
 /*background-color:blue;*/
-border:1px solid blue;
+/*border:1px solid blue;*/
 padding-bottom: 20px;
 color:#ffffff;
 background: #e0a739; /* Old browsers */
@@ -658,7 +659,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0a739', end
 #contact-wrap h1 { margin: 0; padding: 0 0 0 0; text-align: center; }
 #contact-left, #contact-right { float: left; width: 40%; padding: 20px; margin-bottom: 20px; background: #a47723; }
 #contact-right { float: right; }
-#contact-left p, #contact-right p { font-family: GothamBook, Gotham; font-size: 22px; color: #f5e355; }
+#contact-left p, #contact-right p { font-family: "proxima-nova"; font-size: 22px; color: #f5e355; }
 #contact-left h2, #contact-right h2 { margin: 0 0 10px 0; font-size: 30px; color: #fff; }
 #contact-wrap a, html #contact-wrap .gc-cs-link { color: #ffef8e !important; text-decoration: underline; font-weight: bold; }
 
