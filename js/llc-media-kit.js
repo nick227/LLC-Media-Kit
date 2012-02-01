@@ -314,18 +314,32 @@
              });
              delayInc += 100;
              $(this).click(function () {
-                 if (currentBenefit != undefined && $(currentBenefit).attr('id') != $('#' + $(this).attr('id') + ' .benefit-content').attr('id')) {
-                     $(currentBenefit).stop();
-                     $(currentBenefit).animate({
-                         top: 0
-                     }, 200, function () {});
-                     $($(currentBenefit).parent()).removeClass('benefit-box-selected');
-                 }
-                 currentBenefit = $('#' + $(this).attr('id') + ' .benefit-content');
-                 $(this).addClass('benefit-box-selected');
-                 $(currentBenefit).animate({
+             	if(currentBenefit != undefined){
+             		if($(currentBenefit).attr('id') == $('#' + $(this).attr('id') + ' .benefit-content').attr('id')){
+             			$(this).removeClass('benefit-box-selected');
+             			$(currentBenefit).animate({
+                    	 top: 0
+                 		}, 200, function () {});
+                 		currentBenefit = null;
+                 		console.log(currentBenefit);
+             		}else{
+             			$(currentBenefit).stop();
+             			$(currentBenefit).animate({
+                    	 top: 0
+                 		}, 200, function () {});
+                 		$(this).addClass('benefit-box-selected');
+                 		currentBenefit = $('#' + $(this).attr('id') + ' .benefit-content');
+                 		$(currentBenefit).animate({
+                    	 top: -200
+                		 }, 200, function () {});
+             		}
+             	}else{
+             		currentBenefit = $('#' + $(this).attr('id') + ' .benefit-content');
+             		$(this).addClass('benefit-box-selected');
+             		$(currentBenefit).animate({
                      top: -200
                  }, 200, function () {});
+             	}
              });
          });
      },
