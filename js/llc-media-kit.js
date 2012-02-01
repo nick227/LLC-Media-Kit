@@ -179,13 +179,13 @@
              $('div#slideContainer').css('height', stageHeight);
 
          }
-
+/*
          $('.stage').css('height', stageHeight);
          $(window).resize(function () {
              var stageHeight = $(document).height() - 80;
              $('.stage').css('height', stageHeight);
          });
-
+*/
 
      },
      fadeUpBgGradient: function () {
