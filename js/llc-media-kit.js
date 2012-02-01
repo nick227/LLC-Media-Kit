@@ -1,4 +1,4 @@
- /**
+/**
   * MVMedia Interactive Media Kit v0.1
   * 01/19/2012 Multiview Inc,
   * 
@@ -23,12 +23,48 @@
  var pointerAnimationHandler;
  var currentBenefit;
 
+ // set ajax caching
+ $.ajaxSetup({cache: true});
 
  var mediaKit = { /*** Retrieves xml feed, runs template manager, attach onclick actions ****/
      init: function () {
          $(window).unload(function () {});
          mediaKit.loadPage(startPage, 'none');
          mediaKit.setupLinks();
+     },
+     preloadImages: function (styles) {
+     	var d = document,
+			s = [],
+     		c = d.body;
+     		
+     	for (i=0; i<styles.length; i++) {
+     		s.push(document.getElementById(styles[i]));
+     	}
+
+     	if (s && s.length > 0)
+     	{
+     		for (x=0; x < s.length; x++)
+     		{
+     			if (s[x].rules)
+     			{
+     				a = s[x].rules;
+     			}
+     			else
+     			{
+     				a = s[x].cssRules;
+     			}
+     			p = s[x].href.substr(0, s[x].href.lastIndexOf("/") + 1);
+     			for (y=0; y < a.length; y++)
+     			{
+     				t = a[y].style ? a[y].style.background + a[y].style.backgroundImage : undefined ;
+     				if (t && t.indexOf("url(") > -1)
+     				{
+     					i = p + t.substr(t.indexOf("(") + 1, t.indexOf(")") - t.indexOf("(") - 1);
+     					c.innerHTML += "<DIV STYLE=\"VISIBILITY: hidden; POSITION: absolute; TOP: 0px; LEFT: 0px; WIDTH: 0px; HEIGHT: 0px;\"><IMG SRC=\"" + i + "\" /></DIV>";
+     				}
+     			}
+     		}
+     	}
      },
      loadPage: function (pageName, animationMethod, order) {
          $.get(feedName, function (xml) {
