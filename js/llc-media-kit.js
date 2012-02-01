@@ -130,7 +130,7 @@
              newBottom = currentStageTop + currentStageHeight,
              newRight = currentStageLeft + currentStageWidth;
          var curStageID = $(currentStage).attr('id');
-         $('div.welcome-message').fadeOut();
+         $('#inventory-stage div.welcome-message, #inventory-stage div.nav-sub').fadeOut(500);
          if (dir == 'up') {
              var newtop = stageHeight - 80;
              var newContainer = '<div id="temp-new-container" style="width:100%; position:absolute; top:' + stageHeight + 'px">' + newPage + '</div>';
@@ -169,7 +169,7 @@
              $('section.stage').wrap('<div id="temp-big-container" style="height:100%; top:0; left:0; position:relative; z-index:1" />');
              $('div#temp-big-container').append(newContainer).animate({
                  left: '-' + currentStageWidth
-             }, pageTransitionSpeed, 'linear', function () {
+             }, pageTransitionSpeed, 'swing', function () {
                  $('#' + curStageID).remove();
                  $("#temp-new-container").unwrap();
                  $("section.stage").unwrap();
@@ -185,7 +185,7 @@
             $('section.stage').wrap('<div id="temp-big-container" style="height:100%; top:0; right:0; position:relative; z-index:1" />');
             $('div#temp-big-container').append(newContainer).animate({
             	right: '-' + currentStageWidth
-            }, pageTransitionSpeed, 'linear', function () {
+            }, pageTransitionSpeed, 'swing', function () {
                 $('#' + curStageID).remove();
                 $("#temp-new-container").unwrap();
                 $("section.stage").unwrap();

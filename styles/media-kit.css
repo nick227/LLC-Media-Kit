@@ -219,7 +219,9 @@ body{margin:0;padding:0;background-color: #008dbc;}
 top:80px;
 position:absolute;
 width:100%;
-padding:0
+padding:0;
+min-width: 960px;
+overflow: hidden;
 }
 .stage-bg-gradient{
 /*position: absolute;
