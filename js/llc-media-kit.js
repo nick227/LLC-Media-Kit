@@ -62,7 +62,7 @@
                      $('body').data('activeNav', '0');
                  } else { //a nav click
                      var activeNav = $('body').data('activeNav');
-                     var direction = (activeNav < order) ? 'up' : 'down';
+                     var direction = (activeNav < order) ? 'left' : 'right';
                      if (activeNav == order) {
                          return true;
                      }
@@ -165,8 +165,8 @@
          }
          if (dir == 'left') {
              var newtop = stageHeight - 80;
-             var newContainer = '<div id="temp-new-container" style="width:100%; position:absolute; left:' + currentStageWidth + 'px">' + newPage + '</div>';
-             $('section.stage').wrap('<div id="temp-big-container" style="height:100%; width:10000px; top:0; left:0; position:absolute; z-index:1" />');
+             var newContainer = '<div id="temp-new-container" style="width:100%; position:absolute; top:0; left:' + currentStageWidth + 'px">' + newPage + '</div>';
+             $('section.stage').wrap('<div id="temp-big-container" style="height:100%; top:0; left:0; position:relative; z-index:1" />');
              $('div#temp-big-container').append(newContainer).animate({
                  left: '-' + currentStageWidth
              }, pageTransitionSpeed, 'linear', function () {
@@ -178,6 +178,22 @@
 
              $('div#slideContainer').css('height', stageHeight);
 
+         }
+         if (dir == 'right') {
+            var newtop = stageHeight - 80;
+            var newContainer = '<div id="temp-new-container" style="width:100%; position:absolute; top:0; right:' + currentStageWidth + 'px">' + newPage + '</div>';
+            $('section.stage').wrap('<div id="temp-big-container" style="height:100%; top:0; right:0; position:relative; z-index:1" />');
+            $('div#temp-big-container').append(newContainer).animate({
+            	right: '-' + currentStageWidth
+            }, pageTransitionSpeed, 'linear', function () {
+                $('#' + curStageID).remove();
+                $("#temp-new-container").unwrap();
+                $("section.stage").unwrap();
+            	mediaKit.fadeUpBgGradient();
+            });
+         
+         	$('div#slideContainer').css('height', stageHeight);
+         
          }
 
          $('.stage').css('height', stageHeight);
