@@ -1,256 +1,299 @@
- 
-/**
- * MVMedia Interactive Media Kit v0.1
- * 01/19/2012 Multiview Inc,
- * 
- */
+ /**
+  * MVMedia Interactive Media Kit v0.1
+  * 01/19/2012 Multiview Inc,
+  * 
+  */ /**** SETUP VARS HERE! ***/
+ var feedName = 'data/dma-site.xml';
+ var startPage = 'audience';
+ var pageNames_ar = new Array('audience', 'benefits', 'inventory', 'pricing', 'contact');
+ var stageHeight = $(document).height() - 80;
+ var linkOrder = {
+     "audience": 1,
+     "benefits": 2,
+     "inventory": 3,
+     "pricing": 4,
+     "contact": 5
+ };
 
- /**** SETUP VARS HERE! ***/
-var feedName = 'data/dma-site.xml';
-var startPage = 'audience';
-var pageNames_ar = new Array('audience', 'benefits', 'inventory', 'pricing', 'contact');
-var stageHeight = $(document).height()-80;
-var linkOrder = { "audience":1, "benefits": 2, "inventory": 3, "pricing": 4, "contact": 5};
-
-//*** Global nav animation ***//
-var globalNavPointer;
-var currentSelection;
-var pointerTargetX = 0;
-var pointerInMotion = false;
-var pointerAnimationHandler;
-var currentBenefit;
+ //*** Global nav animation ***//
+ var globalNavPointer;
+ var currentSelection;
+ var pointerTargetX = 0;
+ var pointerInMotion = false;
+ var pointerAnimationHandler;
+ var currentBenefit;
 
 
-var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick actions ****/
-	init: function() {
-	$(window).unload( function () {} );
-	mediaKit.loadPage(startPage, 'none');
-	mediaKit.setupLinks();
-	},
-	loadPage: function(pageName, animationMethod, order){
-		$.get(feedName, function(xml){
-		mediaKit.site = $.xml2json(xml);
-		document.title = mediaKit.site.siteTitle;
-		var template = 'templates/'+pageName+'.html';
-		if($('header#header-main').length < 1){//permanentally setup header
-		var header_t = 'templates/header.html';
-		var nav_t = 'templates/back-next-arrows.html';
-			$.get(header_t, function(data) {
-			var res = tmpl(data, mediaKit.site);
-			$('section#header-anchor').html(res);
-				$.get(nav_t, function(data) {//permanentally nav buttons
-				var res = tmpl(data, mediaKit.site);
-				$('body').prepend(data);
-				});
-				
-				globalNavPointer = $('.header-edge-pointer');
-				console.log(globalNavPointer);
-				mediaKit.setPointerTargetX('#' + startPage + '_mainNav');
-				$(window).resize(function(){mediaKit.setPointerX();});
-			});
-		}
-			$.get(template, function(data) {//now for the body content
-			var newPage = tmpl(data, mediaKit.site);
-				if(animationMethod=='none'){//initial load
-				$('section#stage-anchor').html(newPage);
-				$('.stage').css('height', stageHeight);
-				$('body').data('activeNav', '0');
-				}else{//a nav click
-				var activeNav = $('body').data('activeNav');
-				var direction = (activeNav < order) ? 'up' : 'down';
-				if(activeNav == order){
-				return true;
-				}
+ var mediaKit = { /*** Retrieves xml feed, runs template manager, attach onclick actions ****/
+     init: function () {
+         $(window).unload(function () {});
+         mediaKit.loadPage(startPage, 'none');
+         mediaKit.setupLinks();
+     },
+     loadPage: function (pageName, animationMethod, order) {
+         $.get(feedName, function (xml) {
+             mediaKit.site = $.xml2json(xml);
+             document.title = mediaKit.site.siteTitle;
+             var template = 'templates/' + pageName + '.html';
+             if ($('header#header-main').length < 1) { //permanentally setup header
+                 var header_t = 'templates/header.html';
+                 var nav_t = 'templates/back-next-arrows.html';
+                 $.get(header_t, function (data) {
+                     var res = tmpl(data, mediaKit.site);
+                     $('section#header-anchor').html(res);
+                     $.get(nav_t, function (data) { //permanentally nav buttons
+                         var res = tmpl(data, mediaKit.site);
+                         $('body').prepend(data);
+                     });
 
-	//AUDIENCE PAGE
-		if(pageName == 'audience'){
-			$('.stage-bg-gradient').animate({opacity: 0}, 400, function(){
-				mediaKit.pageTransition(direction, newPage);
-			});
-			}
-	//BENEFITS PAGE
-		if(pageName == 'benefits'){
-		$('.stage-bg-gradient').animate({opacity: 0}, 400, function(){
-			mediaKit.pageTransition(direction, newPage);
-			mediaKit.setupBenefitsPage();
-			});
-			}
-	//INVENTORY PAGE
-		if(pageName == 'inventory'){
-			//transition up
-		$('.stage-bg-gradient').animate({opacity: 0}, 400, function(){
-			mediaKit.pageTransition(direction, newPage);
-			mediaKit.setupInventoryPage();
-			});
-			}
-	//PRICING PAGE
-		if(pageName == 'pricing'){
-		$('.stage-bg-gradient').animate({opacity: 0}, 400, function(){
-			mediaKit.pageTransition(direction, newPage);
-			});
-			}
-	//CONTACT PAGE
-		if(pageName == 'contact'){
-		$('.stage-bg-gradient').animate({opacity: 0}, 400, function(){
-			mediaKit.pageTransition(direction, newPage);
-			});
-			}
+                     globalNavPointer = $('.header-edge-pointer');
+                     console.log(globalNavPointer);
+                     mediaKit.setPointerTargetX('#' + startPage + '_mainNav');
+                     $(window).resize(function () {
+                         mediaKit.setPointerX();
+                     });
+                 });
+             }
+             $.get(template, function (data) { //now for the body content
+                 var newPage = tmpl(data, mediaKit.site);
+                 if (animationMethod == 'none') { //initial load
+                     $('section#stage-anchor').html(newPage);
+                     $('.stage').css('height', stageHeight);
+                     $('body').data('activeNav', '0');
+                 } else { //a nav click
+                     var activeNav = $('body').data('activeNav');
+                     var direction = (activeNav < order) ? 'up' : 'down';
+                     if (activeNav == order) {
+                         return true;
+                     }
 
-	$('body').data('activeNav', order);		
-}
-		
-	return true;
-			});
-		});
-	},
-	pageTransition: function(dir, newPage){
-	
-			var pageTransitionSpeed = 1150;
-			var currentStage = $('section.stage'),
-				currentStageHeight = currentStage.height(),
-				currentStageWidth = currentStage.width(),
-				currentStageTopPos = currentStage.position(),
-				currentStageTop = currentStageTopPos.top,
-				currentStageLeft = currentStageTopPos.left,
-				newBottom = currentStageTop+currentStageHeight,
-				newRight = currentStageLeft+currentStageWidth;
-			var curStageID = $(currentStage).attr('id');
-			$('div.welcome-message').fadeOut();
-			if(dir=='up'){
-			var newtop = stageHeight-80;
-			var newContainer = '<div id="temp-new-container" style="width:100%; position:absolute; top:'+stageHeight+'px">'+newPage+'</div>';
-			$('section.stage').wrap('<div id="temp-big-container" style="width:100%; height:10000px; top:0; left:0; position:absolute; z-index:1" />');
-			$('div#temp-big-container').append(newContainer).animate({marginTop:'-'+newtop}, 
-															pageTransitionSpeed, 'linear', function() {
-															$('#'+curStageID).remove();
-															$("#temp-new-container").unwrap();
-															$("section.stage").unwrap();
-															mediaKit.fadeUpBgGradient();
-															});  
-			
-			$('div#slideContainer').css('height', stageHeight);
-			
-			}
-			if(dir=='down'){
-			var newtop = stageHeight-80;
-			var newContainer = '<div id="temp-new-container" style="width:100%; height:'+stageHeight+'px position:absolute; top:-'+stageHeight+'px"; z-index:2>'+newPage+'</div>';
-			$('section.stage').wrap('<div id="temp-big-container" style="width:100%; height:10000px; left:0; position:absolute; top:-'+stageHeight+'px"; z-index:1" />');
-			$('div#temp-big-container').prepend(newContainer).animate({marginTop:stageHeight}, 
-															pageTransitionSpeed, 'linear', function() {
-															$('#'+curStageID).remove();
-															$("#temp-new-container").unwrap();
-															$("section.stage").unwrap();
-															mediaKit.fadeUpBgGradient();
-															});  
-			
-			$('div#slideContainer').css('height', stageHeight);
-			
-			}
-			if(dir=='left'){
-			var newtop = stageHeight-80;
-			var newContainer = '<div id="temp-new-container" style="width:100%; position:absolute; left:'+currentStageWidth+'px">'+newPage+'</div>';
-			$('section.stage').wrap('<div id="temp-big-container" style="height:100%; width:10000px; top:0; left:0; position:absolute; z-index:1" />');
-			$('div#temp-big-container').append(newContainer).animate({left:'-'+currentStageWidth}, 
-															pageTransitionSpeed, 'linear', function() {
-															$('#'+curStageID).remove();
-															$("#temp-new-container").unwrap();
-															$("section.stage").unwrap();
-															mediaKit.fadeUpBgGradient();
-															});  
-			
-			$('div#slideContainer').css('height', stageHeight);
-			
-			}
-			
-			$('.stage').css('height', stageHeight);
-			$(window).resize(function(){
-			var stageHeight = $(document).height()-80;
-			$('.stage').css('height', stageHeight);
-			});
-			
-	
-	},	
-	fadeUpBgGradient: function(){
-		$('.stage-bg-gradient').animate({opacity: 1}, 1200);
-	},
-	adjustBgGradientPos: function(){
-		var stageHeight = $('#stage-anchor').height();
-		console.log(stageHeight);
-		var i = $('.stage-bg-gradient');
-		var s = $('#stage-anchor');
-		$(i).offset({top: -(($(i).height() - $(s).height())/2), left: -(($(i).width() - $(s).width())/2)}); // -((($(i).height() - $(s).height())/2) + s.offset().top)
-	},
-	fadeUpBgGradient: function(){
-		$('.stage-bg-gradient').animate({opacity: 1}, 1200);
-	},
-	adjustBgGradientPos: function(){
-		var stageHeight = $('#stage-anchor').height();
-		console.log(stageHeight);
-		var i = $('.stage-bg-gradient');
-		var s = $('#stage-anchor');
-		$(i).offset({top: -(($(i).height() - $(s).height())/2), left: -(($(i).width() - $(s).width())/2)}); // -((($(i).height() - $(s).height())/2) + s.offset().top)
-	},
-	setupLinks: function(){
-		mediaKit.linkOrder = linkOrder;
-		$('a.slideChange').live('click', function(){
-			var relval = $(this).attr('rel');
-			var order = mediaKit.linkOrder[relval];
-		mediaKit.loadPage(relval, 'yes', order);
-		mediaKit.setPointerTargetX(this);
-		});
-	},
-	setPointerTargetX: function(selected_btn){//*** GLOBAL NAV POINTER ANIMATION FUNCTIONS ***//
-		currentSelection = selected_btn;
-		pointerTargetX = $(selected_btn).offset().left + (($(selected_btn).width() - $(globalNavPointer).width())/2);
-		if(!pointerInMotion){
-			pointerAnimationHandler = setInterval(mediaKit.animatePointer, 30);
-			pointerInMotion = true;
-		}
-	},
-	animatePointer: function(){
-		if(globalNavPointer != null){
-			var currentX = globalNavPointer.offset().left
-			var distanceToTarget = (pointerTargetX - currentX);
-			var addAmount = (distanceToTarget / 6);
-			globalNavPointer[0].style.left = currentX + addAmount + 'px';
-			if(distanceToTarget < 1 && distanceToTarget > -1){
-				globalNavPointer[0].style.left = pointerTargetX + 'px';
-				clearInterval(pointerAnimationHandler);
-				pointerInMotion = false;
-			}
-		}
-	},
-	setPointerX: function(){
-		console.log('resize');
-		if(!pointerInMotion && currentSelection != null){
-			pointerTargetX = $(currentSelection).offset().left + (($(currentSelection).width() - $(globalNavPointer).width())/2);
-			globalNavPointer[0].style.left = pointerTargetX + 'px';
-		}
-	},
-	setupBenefitsPage: function(){
-		var delayInc = 100;
-		$('.benefit-box').each(function(){
-			var targetX = $(this).position().left;
-			$(this).css({opacity: 0});
-			$(this).css({left: targetX + 400});
-			$(this).delay(1200 + delayInc).animate({opacity: 1, left: targetX},{ duration: 300, specialEasing:{
-													opacity: 'linear',
-													left: 'swing'}});
-			delayInc += 100;
-			$(this).click(function(){
-				if(currentBenefit != undefined && $(currentBenefit).attr('id') != $('#' + $(this).attr('id') + ' .benefit-content').attr('id')){
-					$(currentBenefit).stop();
-					$(currentBenefit).animate({top: 0}, 200, function(){});
-					$($(currentBenefit).parent()).removeClass('benefit-box-selected');
-				}
-				currentBenefit = $('#' + $(this).attr('id') + ' .benefit-content');
-				$(this).addClass('benefit-box-selected');
-				$(currentBenefit).animate({top: -130}, 200, function(){});
-			});
-		});
-	},
-	setupInventoryPage: function(){
-			/*
+                     //AUDIENCE PAGE
+                     if (pageName == 'audience') {
+                         $('.stage-bg-gradient').animate({
+                             opacity: 0
+                         }, 400, function () {
+                             mediaKit.pageTransition(direction, newPage);
+                         });
+                     }
+                     //BENEFITS PAGE
+                     if (pageName == 'benefits') {
+                         $('.stage-bg-gradient').animate({
+                             opacity: 0
+                         }, 400, function () {
+                             mediaKit.pageTransition(direction, newPage);
+                             mediaKit.setupBenefitsPage();
+                         });
+                     }
+                     //INVENTORY PAGE
+                     if (pageName == 'inventory') {
+                         //transition up
+                         $('.stage-bg-gradient').animate({
+                             opacity: 0
+                         }, 400, function () {
+                             mediaKit.pageTransition(direction, newPage);
+                             mediaKit.setupInventoryPage();
+                         });
+                     }
+                     //PRICING PAGE
+                     if (pageName == 'pricing') {
+                         $('.stage-bg-gradient').animate({
+                             opacity: 0
+                         }, 400, function () {
+                             mediaKit.pageTransition(direction, newPage);
+                         });
+                     }
+                     //CONTACT PAGE
+                     if (pageName == 'contact') {
+                         $('.stage-bg-gradient').animate({
+                             opacity: 0
+                         }, 400, function () {
+                             mediaKit.pageTransition(direction, newPage);
+                         });
+                     }
+
+                     $('body').data('activeNav', order);
+                 }
+
+                 return true;
+             });
+         });
+     },
+     pageTransition: function (dir, newPage) {
+
+         var pageTransitionSpeed = 1150;
+         var currentStage = $('section.stage'),
+             currentStageHeight = currentStage.height(),
+             currentStageWidth = currentStage.width(),
+             currentStageTopPos = currentStage.position(),
+             currentStageTop = currentStageTopPos.top,
+             currentStageLeft = currentStageTopPos.left,
+             newBottom = currentStageTop + currentStageHeight,
+             newRight = currentStageLeft + currentStageWidth;
+         var curStageID = $(currentStage).attr('id');
+         $('div.welcome-message').fadeOut();
+         if (dir == 'up') {
+             var newtop = stageHeight - 80;
+             var newContainer = '<div id="temp-new-container" style="width:100%; position:absolute; top:' + stageHeight + 'px">' + newPage + '</div>';
+             $('section.stage').wrap('<div id="temp-big-container" style="width:100%; height:10000px; top:0; left:0; position:absolute; z-index:1" />');
+             $('div#temp-big-container').append(newContainer).animate({
+                 marginTop: '-' + newtop
+             }, pageTransitionSpeed, 'linear', function () {
+                 $('#' + curStageID).remove();
+                 $("#temp-new-container").unwrap();
+                 $("section.stage").unwrap();
+                 mediaKit.fadeUpBgGradient();
+             });
+
+             $('div#slideContainer').css('height', stageHeight);
+
+         }
+         if (dir == 'down') {
+             var newtop = stageHeight - 80;
+             var newContainer = '<div id="temp-new-container" style="width:100%; height:' + stageHeight + 'px position:absolute; top:-' + stageHeight + 'px"; z-index:2>' + newPage + '</div>';
+             $('section.stage').wrap('<div id="temp-big-container" style="width:100%; height:10000px; left:0; position:absolute; top:-' + stageHeight + 'px"; z-index:1" />');
+             $('div#temp-big-container').prepend(newContainer).animate({
+                 marginTop: stageHeight
+             }, pageTransitionSpeed, 'linear', function () {
+                 $('#' + curStageID).remove();
+                 $("#temp-new-container").unwrap();
+                 $("section.stage").unwrap();
+                 mediaKit.fadeUpBgGradient();
+             });
+
+             $('div#slideContainer').css('height', stageHeight);
+
+         }
+         if (dir == 'left') {
+             var newtop = stageHeight - 80;
+             var newContainer = '<div id="temp-new-container" style="width:100%; position:absolute; left:' + currentStageWidth + 'px">' + newPage + '</div>';
+             $('section.stage').wrap('<div id="temp-big-container" style="height:100%; width:10000px; top:0; left:0; position:absolute; z-index:1" />');
+             $('div#temp-big-container').append(newContainer).animate({
+                 left: '-' + currentStageWidth
+             }, pageTransitionSpeed, 'linear', function () {
+                 $('#' + curStageID).remove();
+                 $("#temp-new-container").unwrap();
+                 $("section.stage").unwrap();
+                 mediaKit.fadeUpBgGradient();
+             });
+
+             $('div#slideContainer').css('height', stageHeight);
+
+         }
+
+         $('.stage').css('height', stageHeight);
+         $(window).resize(function () {
+             var stageHeight = $(document).height() - 80;
+             $('.stage').css('height', stageHeight);
+         });
+
+
+     },
+     fadeUpBgGradient: function () {
+         $('.stage-bg-gradient').animate({
+             opacity: 1
+         }, 1200);
+     },
+     adjustBgGradientPos: function () {
+         var stageHeight = $('#stage-anchor').height();
+         console.log(stageHeight);
+         var i = $('.stage-bg-gradient');
+         var s = $('#stage-anchor');
+         $(i).offset({
+             top: -(($(i).height() - $(s).height()) / 2),
+             left: -(($(i).width() - $(s).width()) / 2)
+         }); // -((($(i).height() - $(s).height())/2) + s.offset().top)
+     },
+     fadeUpBgGradient: function () {
+         $('.stage-bg-gradient').animate({
+             opacity: 1
+         }, 1200);
+     },
+     adjustBgGradientPos: function () {
+         var stageHeight = $('#stage-anchor').height();
+         console.log(stageHeight);
+         var i = $('.stage-bg-gradient');
+         var s = $('#stage-anchor');
+         $(i).offset({
+             top: -(($(i).height() - $(s).height()) / 2),
+             left: -(($(i).width() - $(s).width()) / 2)
+         }); // -((($(i).height() - $(s).height())/2) + s.offset().top)
+     },
+     setupLinks: function () {
+         mediaKit.linkOrder = linkOrder;
+         $('a.slideChange').live('click', function () {
+             var relval = $(this).attr('rel');
+             var order = mediaKit.linkOrder[relval];
+             mediaKit.loadPage(relval, 'yes', order);
+             mediaKit.setPointerTargetX(this);
+         });
+     },
+     setPointerTargetX: function (selected_btn) { //*** GLOBAL NAV POINTER ANIMATION FUNCTIONS ***//
+         currentSelection = selected_btn;
+         pointerTargetX = $(selected_btn).offset().left + (($(selected_btn).width() - $(globalNavPointer).width()) / 2);
+         if (!pointerInMotion) {
+             pointerAnimationHandler = setInterval(mediaKit.animatePointer, 30);
+             pointerInMotion = true;
+         }
+     },
+     animatePointer: function () {
+         if (globalNavPointer != null) {
+             var currentX = globalNavPointer.offset().left
+             var distanceToTarget = (pointerTargetX - currentX);
+             var addAmount = (distanceToTarget / 6);
+             globalNavPointer[0].style.left = currentX + addAmount + 'px';
+             if (distanceToTarget < 1 && distanceToTarget > -1) {
+                 globalNavPointer[0].style.left = pointerTargetX + 'px';
+                 clearInterval(pointerAnimationHandler);
+                 pointerInMotion = false;
+             }
+         }
+     },
+     setPointerX: function () {
+         console.log('resize');
+         if (!pointerInMotion && currentSelection != null) {
+             pointerTargetX = $(currentSelection).offset().left + (($(currentSelection).width() - $(globalNavPointer).width()) / 2);
+             globalNavPointer[0].style.left = pointerTargetX + 'px';
+         }
+     },
+     setupBenefitsPage: function () {
+         var delayInc = 100;
+         $('.benefit-box').each(function () {
+             var targetX = $(this).position().left;
+             $(this).css({
+                 opacity: 0
+             });
+             $(this).css({
+                 left: targetX + 400
+             });
+             $(this).delay(1200 + delayInc).animate({
+                 opacity: 1,
+                 left: targetX
+             }, {
+                 duration: 300,
+                 specialEasing: {
+                     opacity: 'linear',
+                     left: 'swing'
+                 }
+             });
+             delayInc += 100;
+             $(this).click(function () {
+                 if (currentBenefit != undefined && $(currentBenefit).attr('id') != $('#' + $(this).attr('id') + ' .benefit-content').attr('id')) {
+                     $(currentBenefit).stop();
+                     $(currentBenefit).animate({
+                         top: 0
+                     }, 200, function () {});
+                     $($(currentBenefit).parent()).removeClass('benefit-box-selected');
+                 }
+                 currentBenefit = $('#' + $(this).attr('id') + ' .benefit-content');
+                 $(this).addClass('benefit-box-selected');
+                 $(currentBenefit).animate({
+                     top: -130
+                 }, 200, function () {});
+             });
+         });
+     },
+     setupInventoryPage: function () {
+         /*
 				$('body, section, div').bind('mousedown.welcome', function() {
 				$('#inventory-stage .welcome-message').animate({
     			opacity: 0.25,
@@ -444,7 +487,6 @@ $(this).parent('div').find('div.nav-active').removeClass('nav-active');
 $(this).addClass('nav-active');
 var adID = $(this).attr('id').substr($(this).attr('id').indexOf('_')+1, $(this).attr('id').length);
 var zoomid = 'a.ad_'+adID;
-alert(zoomid);
 $(zoomid).trigger('click');
 });
 
