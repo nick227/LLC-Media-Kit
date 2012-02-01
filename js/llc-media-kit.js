@@ -30,7 +30,6 @@
      init: function () {
          $(window).unload(function () {});
          mediaKit.loadPage(startPage, 'none');
-         mediaKit.setupLinks();
      },
 //     preloadImages: function (styles) {
 //     	var d = document;
@@ -51,8 +50,8 @@
 //	     			for (y=0; y < a.length; y++) {
 //	     				t = a[y].style ? a[y].style.background + a[y].style.backgroundImage : undefined ;
 //	     				if (t && t.indexOf("url(") > -1) {
-//	     					i = p + t.substr(t.indexOf("(") + 1, t.indexOf(")") - t.indexOf("(") - 1);
-//	     					c.innerHTML += "<DIV STYLE=\"VISIBILITY: hidden; POSITION: absolute; TOP: 0px; LEFT: 0px; WIDTH: 0px; HEIGHT: 0px;\"><IMG SRC=\"" + i + "\" /></DIV>";
+//	     					i = /*p + */t.substr(t.indexOf("(") + 1, t.indexOf(")") - t.indexOf("(") - 1);
+//	     					c.innerHTML += "<DIV STYLE=\"overflow: hidden; POSITION: absolute; TOP: 0px; LEFT: 0px; WIDTH: 0px; HEIGHT: 0px;\"><IMG SRC=\"" + i + "\" /></DIV>";
 //	     				}
 //	     			}
 //     			}
@@ -70,11 +69,15 @@
                  $.get(header_t, function (data) {
                      var res = tmpl(data, mediaKit.site);
                      $('section#header-anchor').html(res);
+                     // Set nav link click events
+                     mediaKit.setupLinks();
                      $.get(nav_t, function (data) { //permanentally nav buttons
                          var res = tmpl(data, mediaKit.site);
                          $('body').prepend(data);
+                         // Set up next & prev click events
+                     	mediaKit.initPresentationArrows();
                      });
-
+                     
                      globalNavPointer = $('.header-edge-pointer');
 //                     console.log(globalNavPointer);
                      mediaKit.setPointerTargetX('#' + startPage + '_mainNav');
@@ -194,7 +197,7 @@
 
          }
          if (dir == 'left') {
-         	console.log(newPage);
+         	//console.log(newPage);
              var newtop = stageHeight - 80;
              var newContainer = '<div id="temp-new-container" style="width:100%; position:absolute; top:0; left:' + currentStageWidth + 'px">' + newPage + '</div>';
              $('#stage-anchor').prepend('<div id="temp-big-container" style="height:100%; top:0; left:0; position:relative; z-index:1"></div>');
@@ -252,11 +255,13 @@
      },
      setupLinks: function () {
          mediaKit.linkOrder = linkOrder;
-         $('a.slideChange').live('click', function () {
-             var relval = $(this).attr('rel');
-             var order = mediaKit.linkOrder[relval];
-             mediaKit.loadPage(relval, 'yes', order);
-             mediaKit.setPointerTargetX(this);
+         $('a.slideChange').each(function () {
+         	$(this).click(function () {
+         		var relval = $(this).attr('rel');
+         		var order = mediaKit.linkOrder[relval];
+         		mediaKit.loadPage(relval, 'yes', order);
+         		mediaKit.setPointerTargetX(this);
+         	});
          });
      },
      setPointerTargetX: function (selected_btn) { //*** GLOBAL NAV POINTER ANIMATION FUNCTIONS ***//
@@ -352,33 +357,41 @@
 		$('#homeScreen').animate({left:(target-510)}, 300, function(){});
 	},
 	initPresentationArrows: function(e){
-		var prevArrowX = $('#ipad').offset().left - $('#presentationPrev').width() - 80;
-		var nextArrowX = $('#ipad').offset().left + $('#ipad').width() + $('#presentationPrev').width() + 80;
+//		var prevArrowX = $('#ipad').offset().left - $('#presentationPrev').width() - 80;
+//		var nextArrowX = $('#ipad').offset().left + $('#ipad').width() + $('#presentationPrev').width() + 80;
 		var leftArrow = $('#presentationPrev');
 		var rightArrow = $('#presentationNext');
-		leftArrow.css({'left': prevArrowX});
-		rightArrow.css({'left': nextArrowX});
-		if(e=='firstInit'){
-			leftArrow.css({'opacity': 0});
-			rightArrow.css({'opacity': 0});
-			setTimeout(function(){		
-			leftArrow.animate({'opacity': 0.7}, 1000, function(){});
-			rightArrow.animate({'opacity': 0.7}, 1000, function(){});
-			}, 2000);
+//		leftArrow.css({'left': prevArrowX});
+//		rightArrow.css({'left': nextArrowX});
+//		if(e=='firstInit'){
+//			leftArrow.css({'opacity': 0});
+//			rightArrow.css({'opacity': 0});
+//			setTimeout(function(){		
+//			leftArrow.animate({'opacity': 0.7}, 1000, function(){});
+//			rightArrow.animate({'opacity': 0.7}, 1000, function(){});
+//			}, 2000);
 			
 			leftArrow.click(function(){
-				var prevSubSelection = $('ul li.selected').prev();
-				if(prevSubSelection != undefined){
-					prevSubSelection.trigger('click');
-				}
+//				var prevSubSelection = $('ul li.selected').prev();
+//				if(prevSubSelection != undefined){
+//					prevSubSelection.trigger('click');
+//				} else {
+					var activeNav = $('body').data('activeNav') == 0 ? 1 : $('body').data('activeNav');
+						activeNav = activeNav > 1 ? activeNav - 2: activeNav - 1;
+					$('#inventory-nav-main .slideChange').eq(activeNav).trigger('click');
+//				}
 			});
 			rightArrow.click(function(){
-				var nextSubSelection = $('ul li.selected').next();
-				if(nextSubSelection != undefined){
-					nextSubSelection.trigger('click');
-				}
+				console.log('next clicked');
+//				var nextSubSelection = $('ul li.selected').next();
+//				if(nextSubSelection != undefined){
+//					nextSubSelection.trigger('click');
+//				} else {
+					var activeNav = $('body').data('activeNav') == 0 ? 1 : $('body').data('activeNav');
+					$('#inventory-nav-main .slideChange').eq(activeNav).trigger('click');
+//				}
 			});
-		}		
+//		}		
 	},
 	setupVirtualIpad: function(){ //sets up interactive ipad on inventory screen
 		// fade screen images
