@@ -366,10 +366,12 @@ color:#ffffff;
 #benefits-stage{
 color:#ffffff;
 }
-#yourBenefitsAnimation{
-background-color: #8b1110;
+.your-benefits-animation{
+display: block;
+position: absolute;
 width: 286px;
 height: 200px;
+overflow: hidden;
 }
 #benefitsText_Your{
 	position: absolute;
@@ -379,7 +381,7 @@ height: 200px;
 #benefitsText_Benefits{
 	position: absolute;
 	top: 70px;
-	left: 180px;
+	left: 100px;
 }
 .benefitsContainer{
 background-image: url(../images/benefits_trans_bg.png);
