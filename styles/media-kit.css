@@ -210,11 +210,8 @@ td { vertical-align: top; }
 /* ==|== primary styles =====================================================
    Author(s): NJ/BV/MM ~MultiView 2012
    ========================================================================== */
-<<<<<<< HEAD
+
 body{margin:0;padding:0;background-color:#008DBC;}
-=======
-body{margin:0;padding:0;background-color: #008dbc;}
->>>>>>> b33e05faf50f904645d8c40df76d9a8c96680989
 .hidden{display:none;}
 .slideChange{cursor:pointer}
 .spacer-10px{clear:both;height:10px;}
@@ -608,14 +605,12 @@ table.specs td em { color: #6986a1; }
 
 /**** PRICING PAGE */
 #pricing-stage{
-<<<<<<< HEAD
 background-color:green;
 font-family: "proxima-nova";
 font-weight:900;
 =======
 /*background-color:green;*/
 font-family: GothamBook, Gotham;
->>>>>>> b33e05faf50f904645d8c40df76d9a8c96680989
 border:1px solid green;
 color:#ffffff;
 height: auto !important;
