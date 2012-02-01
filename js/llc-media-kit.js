@@ -319,7 +319,7 @@
                  currentBenefit = $('#' + $(this).attr('id') + ' .benefit-content');
                  $(this).addClass('benefit-box-selected');
                  $(currentBenefit).animate({
-                     top: -130
+                     top: -200
                  }, 200, function () {});
              });
          });
