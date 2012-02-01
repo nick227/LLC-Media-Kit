@@ -235,11 +235,6 @@
 */
 
      },
-     fadeUpBgGradient: function () {
-         $('.stage-bg-gradient').animate({
-             opacity: 1
-         }, 1200);
-     },
      adjustBgGradientPos: function () {
          var stageHeight = $('#stage-anchor').height();
          //console.log(stageHeight);
@@ -254,16 +249,6 @@
          $('.stage-bg-gradient').animate({
              opacity: 1
          }, 1200);
-     },
-     adjustBgGradientPos: function () {
-         var stageHeight = $('#stage-anchor').height();
-         //console.log(stageHeight);
-         var i = $('.stage-bg-gradient');
-         var s = $('#stage-anchor');
-         $(i).offset({
-             top: -(($(i).height() - $(s).height()) / 2),
-             left: -(($(i).width() - $(s).width()) / 2)
-         }); // -((($(i).height() - $(s).height())/2) + s.offset().top)
      },
      setupLinks: function () {
          mediaKit.linkOrder = linkOrder;
