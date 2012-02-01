@@ -210,7 +210,7 @@ td { vertical-align: top; }
 /* ==|== primary styles =====================================================
    Author(s): NJ/BV/MM ~MultiView 2012
    ========================================================================== */
-body{margin:0;padding:0;}
+body{margin:0;padding:0;background-color:#008DBC;}
 .hidden{display:none;}
 .slideChange{cursor:pointer}
 .spacer-10px{clear:both;height:10px;}
@@ -418,9 +418,9 @@ color:#ffffff;
 	margin-top: 0px;
 	top: 0px;
 	display: block;
-	font-family: gotham book, myriad pro, helvetica, sans serif;
+	font-family: "proxima-nova", myriad pro, helvetica, sans serif;
 	font-size: 14pt;
-	font-weight: 500;
+	font-weight: 600;
 	color: #7d90a7;
 }
 .benefit-box{
@@ -486,71 +486,76 @@ color:#ffffff;
 /**** INVENTORY PAGE */
 #inventory-stage .nav-sub{
 display:none;
-position:absolute;
-left:0;
-top:75px;
-margin-left:-176px;
-width:166px;
-background-color:#740d0e;
-border-top-left-radius:20px;
--moz-border-radius-topleft:20px;
--webkit-border-top-left-radius: 20px;
--khtml-border-radius: 20px;
-border-top-left-radius: 20px;
-border-bottom-left-radius:20px;
--moz-border-radius-bottomleft:20px;
--webkit-border-bottom-left-radius: 20px;
--khtml-border-bottom-left-radius: 20px;
-border-bottom-left-radius: 20px;
-background-color:#740d0e;
+position:fixed;
+left:16.107em;
+top:28.123em;
+width:240px;
+height:260px;
+-moz-border-radius-topleft:2px;
+-moz-border-radius-bottomleft:2px;
+-webkit-border-top-left-radius: 2px;
+-webkit-border-bottom-left-radius: 2px;
+-khtml-bottom-left-border-radius: 2px;
+-khtml-border-bottom-left-radius: 2px;
+border-top-left-radius: 2px;
+border-bottom-left-radius: 2px;
+//filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#413d34', endColorstr='#2c2a25'); /* for IE */
+//background: -webkit-gradient(linear, left top, left bottom, from(#413d34), to(#2c2a25)); /* for webkit browsers */
+//background: -moz-linear-gradient(top,  #413d34,  #2c2a25); /* for firefox 3.6+ */ 
+background:transparent;
 text-align:right;
-padding:22px 2px 14px 8px;
-z-index:558746;
-cursor:pointer;
+padding:2px 2px 2px 0px;
+z-index:100;
 }
 #inventory-stage .nav-sub .nav-btn{
-width:161px;
-height:21px;
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7899c0', endColorstr='#50657e'); /* for IE */
-background: -webkit-gradient(linear, left top, left bottom, from(#7899c0), to(#50657e)); /* for webkit browsers */
-background: -moz-linear-gradient(top,  #7899c0,  #50657e); /* for firefox 3.6+ */ 
-font-family:'Gotham Black';
+width:240px;
+height:35px;
+//filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7899c0', endColorstr='#50657e'); /* for IE */
+//background: -webkit-gradient(linear, left top, left bottom, from(#7899c0), to(#50657e)); /* for webkit browsers */
+//background: -moz-linear-gradient(top,  #7899c0,  #50657e); /* for firefox 3.6+ */ 
+font-family:"proxima-nova";
 color:#ffffff;
-font-size:.972em;
+font-size:1.288em;
+font-weight:800;
 vertical-align:middle;
 text-align:center;
-padding:6px 3px 0 3px;
+padding:5px 6px 0 6px;
 margin-bottom:8px;
+line-height:2em;
+background-image:url(../images/transgray3.png);
+cursor:pointer;
+z-index:101;
 }
 #inventory-stage .nav-sub .nav-btn:hover{
 background-color:#f7a827 !important;
 }
 #inventory-stage .nav-sub .nav-active{
-width:159px;
-height:19px;
+width:206px;
+height:29px;
 background-color:#f7a827 !important;
 border:1px solid #fbca43;
 }
 
 #inventory-stage .welcome-message{
 width:825px;
-margin-left:auto;
-margin-right:auto;
-text-align:center;
-margin-top:45px;
+left:16.307em;
+top:8.71em;
+text-align:left;
+position:absolute;
 }
 #inventory-stage .welcome-message h1{
 padding:0;
-font-family:GothamCondensedBookRegular, Gadget;
-font-size:2.91em;
+font-family:"proxima-nova", Gadget;
+font-weight:900;
+font-size:2.054em;
 color:#ffffff;
-line-height:1.20em;
+line-height:1.30em;
 margin:0;
 }
 #inventory-stage .welcome-message h2{
 padding:2px;
-font-family:GothamCondensedBookRegular, Gadget;
-font-size:1.91em;
+font-family:"proxima-nova", Gadget;
+font-size:1.11em;
 color:#ffffff;
 line-height:1.60em;
 margin:0;
@@ -566,12 +571,12 @@ margin-left:auto;
 margin-right:auto;
 }
   
-#slideContainer { width: 100%; position: absolute; height: 620px; overflow: hidden; cursor: move;
-background: #ff3019; /* Old browsers */
-background-image:url(../images/ad_inventory_bg.png);
+#slideContainer { width: 100%; position: absolute; height: 820px; overflow: hidden; cursor: move;
+/*background: #ff3019; /* Old browsers */
+/*background-image:url(../images/ad_inventory_bg.png);*/
 }
 #ipadWrap { padding: 50px 0 50px; }
-#ipad { background: url(../images/ipad.png) no-repeat; background-position:top right; width: 650px; height: 828px; margin: 0 auto; padding-top: 84px; position:relative;}
+#ipad { left:41.423em; background: url(../images/ipad.png) no-repeat; background-position:top right; width: 650px; height: 828px; margin: 0; padding-top: 84px; position:relative;}
 #ipadScreen { width: 510px; height: 648px; margin: 0 auto; overflow: hidden; }
 #ipadScreen div { position: relative; }
 #ipadScreen a { position: absolute; }
@@ -587,7 +592,7 @@ display: block; width: 15px; height:15px; position: absolute; top: 5px; left: 5p
         box-shadow: 0px 0px 20px #ffffff; /* Opera 10.5, IE9, FF4+, Chrome 6+, iOS 5 */
 }
 span.glowingIcon { 
-display: block; width: 15px; height:15px; border: 3px solid #ffd458; background: #fff;
+display: block; width: 15px; height:15px; border: 3px solid #ffd458; background: #fff;margin:auto auto;
 -webkit-border-radius: 3px; /* Saf3-4, iOS 1-3.2, Android ≤1.6 */
    -moz-border-radius: 3px; /* FF1-3.6 */
         border-radius: 3px; /* Opera 10.5, IE9, Saf5, Chrome, FF4, iOS 4, Android 2.1+ */ 
@@ -605,11 +610,11 @@ table.specs th { font-size: 14px; color: #fff; background: #656d79; text-transfo
 table.specs td { font-size: 14px; color: #656d79; text-transform: uppercase; }
 table.specs td em { color: #6986a1; }
 
-
 /**** PRICING PAGE */
 #pricing-stage{
 background-color:green;
-font-family: GothamBook, Gotham;
+font-family: "proxima-nova";
+font-weight:900;
 border:1px solid green;
 color:#ffffff;
 height: auto !important;

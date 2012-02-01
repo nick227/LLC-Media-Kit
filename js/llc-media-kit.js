@@ -61,6 +61,7 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 				if(activeNav == order){
 				return true;
 				}
+
 	//AUDIENCE PAGE
 		if(pageName == 'audience'){
 			mediaKit.pageTransition(direction, newPage);
@@ -104,7 +105,7 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 				newBottom = currentStageTop+currentStageHeight,
 				newRight = currentStageLeft+currentStageWidth;
 			var curStageID = $(currentStage).attr('id');
-			
+			$('div.welcome-message').fadeOut();
 			if(dir=='up'){
 			var newtop = stageHeight-80;
 			var newContainer = '<div id="temp-new-container" style="width:100%; position:absolute; top:'+stageHeight+'px">'+newPage+'</div>';
@@ -155,6 +156,16 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 			});
 			
 	
+	},	
+	fadeUpBgGradient: function(){
+		$('.stage-bg-gradient').animate({opacity: 1}, 1200);
+	},
+	adjustBgGradientPos: function(){
+		var stageHeight = $('#stage-anchor').height();
+		console.log(stageHeight);
+		var i = $('.stage-bg-gradient');
+		var s = $('#stage-anchor');
+		$(i).offset({top: -(($(i).height() - $(s).height())/2), left: -(($(i).width() - $(s).width())/2)}); // -((($(i).height() - $(s).height())/2) + s.offset().top)
 	},
 	setupLinks: function(){
 		mediaKit.linkOrder = linkOrder;
@@ -216,7 +227,7 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 		});
 	},
 	setupInventoryPage: function(){
-			
+			/*
 				$('body, section, div').bind('mousedown.welcome', function() {
 				$('#inventory-stage .welcome-message').animate({
     			opacity: 0.25,
@@ -226,6 +237,7 @@ var mediaKit = {/*** Retrieves xml feed, runs template manager, attach onclick a
 				$('#inventory-stage .welcome-message').remove();
 				});  
 				});
+				*/
 				mediaKit.setupArrowSubNav();
 				mediaKit.setupVirtualIpad();
 		
@@ -408,8 +420,7 @@ $("div.nav-sub").find('.nav-btn').click(function(){
 $(this).parent('div').find('div.nav-active').removeClass('nav-active');
 $(this).addClass('nav-active');
 var adID = $(this).attr('id').substr($(this).attr('id').indexOf('_'), $(this).attr('id').length);
-alert(adID);
-var zoomid = 'a.ad_'+$(this).attr('id');
+var zoomid = 'a.ad_'+adID;
 $(zoomid).trigger('click');
 });
 
