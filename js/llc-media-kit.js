@@ -83,7 +83,7 @@
                      });
 
                      globalNavPointer = $('.header-edge-pointer');
-                     console.log(globalNavPointer);
+//                     console.log(globalNavPointer);
                      mediaKit.setPointerTargetX('#' + startPage + '_mainNav');
                      $(window).resize(function () {
                          mediaKit.setPointerX();
@@ -159,12 +159,12 @@
          var pageTransitionSpeed = 1150;
          var currentStage = $('section.stage'),
              currentStageHeight = currentStage.height(),
-             currentStageWidth = currentStage.width(),
-             currentStageTopPos = currentStage.position(),
-             currentStageTop = currentStageTopPos.top,
-             currentStageLeft = currentStageTopPos.left,
-             newBottom = currentStageTop + currentStageHeight,
-             newRight = currentStageLeft + currentStageWidth;
+             currentStageWidth = currentStage.width();
+//             currentStageTopPos = currentStage.position(),
+//             currentStageTop = currentStageTopPos.top,
+//             currentStageLeft = currentStageTopPos.left,
+//             newBottom = currentStageTop + currentStageHeight,
+//             newRight = currentStageLeft + currentStageWidth;
          var curStageID = $(currentStage).attr('id');
          $('#inventory-stage div.welcome-message, #inventory-stage div.nav-sub').fadeOut(500);
          if (dir == 'up') {
@@ -301,7 +301,7 @@
          }
      },
      setPointerX: function () {
-         console.log('resize');
+//         console.log('resize');
          if (!pointerInMotion && currentSelection != null) {
              pointerTargetX = $(currentSelection).offset().left + (($(currentSelection).width() - $(globalNavPointer).width()) / 2);
              globalNavPointer[0].style.left = pointerTargetX + 'px';
@@ -456,7 +456,7 @@
 			'opacity'		: true,
 			'overlayShow'	: true,
 			'transitionIn'	: 'elastic',
-			'transitionOut'	: 'elastic',
+			'transitionOut'	: 'elastic'
 		});
 		
 		
