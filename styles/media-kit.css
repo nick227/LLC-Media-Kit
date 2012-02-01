@@ -557,7 +557,7 @@ margin-left:auto;
 margin-right:auto;
 }
   
-#slideContainer { width: 100%; position: absolute; height: 820px; overflow: hidden; cursor: move;
+#slideContainer { width: 100%; position: relative; height: 820px; overflow: hidden; cursor: move;
 
 /*background: #ff3019; /* Old browsers */
 /*background-image:url(../images/ad_inventory_bg.png);*/
