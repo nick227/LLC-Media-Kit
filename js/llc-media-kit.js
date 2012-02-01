@@ -320,215 +320,193 @@
 				});  
 				});
 				*/
-         mediaKit.setupArrowSubNav();
-         mediaKit.setupVirtualIpad();
+				mediaKit.setupArrowSubNav();
+				mediaKit.setupVirtualIpad();
+		
+	},
+	shiftIpadScreen: function(whereTo){
+		var target = 0;
+		switch (whereTo){
+			case "player":
+			break;
+			case "home":
+			target = 510;
+			break;
+		}
+		$('#homeScreen').animate({left:(target-510)}, 300, function(){});
+	},
+	initPresentationArrows: function(e){
+		var prevArrowX = $('#ipad').offset().left - $('#presentationPrev').width() - 80;
+		var nextArrowX = $('#ipad').offset().left + $('#ipad').width() + $('#presentationPrev').width() + 80;
+		var leftArrow = $('#presentationPrev');
+		var rightArrow = $('#presentationNext');
+		leftArrow.css({'left': prevArrowX});
+		rightArrow.css({'left': nextArrowX});
+		if(e=='firstInit'){
+			leftArrow.css({'opacity': 0});
+			rightArrow.css({'opacity': 0});
+			setTimeout(function(){		
+			leftArrow.animate({'opacity': 0.7}, 1000, function(){});
+			rightArrow.animate({'opacity': 0.7}, 1000, function(){});
+			}, 2000);
+			
+			leftArrow.click(function(){
+				var prevSubSelection = $('ul li.selected').prev();
+				if(prevSubSelection != undefined){
+					prevSubSelection.trigger('click');
+				}
+			});
+			rightArrow.click(function(){
+				var nextSubSelection = $('ul li.selected').next();
+				if(nextSubSelection != undefined){
+					nextSubSelection.trigger('click');
+				}
+			});
+		}		
+	},
+	setupVirtualIpad: function(){ //sets up interactive ipad on inventory screen
+		// fade screen images
+		//$("#ipadScreen .screen").fadeTo(0,0.5);
+		
+		window.zoomAni = setInterval(function() {
+			$("#ipadScreen a .zoom, span.glowingIcon").each(function(i){
+				$(this).delay(i*200).fadeTo(300, 0.5, function(){
+					$(this).delay(100).fadeTo(300, 1);
+				});
+			});
+		}, 3000);
+		
+		// set bg, fade ads, ad events
+		$("#ipadScreen a .img").each(function() {
+			
+			var par = $(this).parent(),
+				screen = par.siblings(".screen"),
+				src = screen.attr('src');
+			
+			// set bg image				
+			$(this).css('background-image','url('+src+')');
+			
+			// Click ad event
+			$(this).add(this.nextSibling).click(function(event){
+				if (!par.is('.active')) {
+					var c = par.attr('class').replace('ad_','').replace('zoom ','');
+					$('#'+c).trigger('click');
+					
+					var arrow = $('nav.nav-sub').find('img.pointerArrowSml');
+					var p = $('nav.nav-sub ul li').find('li.selected').position();
+					$(arrow).stop(true, true).animate({top:p.top}, 200, function(){});
+					//return false;
 
-     },
-     shiftIpadScreen: function (whereTo) {
-         var target = 0;
-         switch (whereTo) {
-         case "player":
-             break;
-         case "home":
-             target = 510;
-             break;
-         }
-         $('#homeScreen').animate({
-             left: (target - 510)
-         }, 300, function () {});
-     },
-     initPresentationArrows: function (e) {
-         var prevArrowX = $('#ipad').offset().left - $('#presentationPrev').width() - 80;
-         var nextArrowX = $('#ipad').offset().left + $('#ipad').width() + $('#presentationPrev').width() + 80;
-         var leftArrow = $('#presentationPrev');
-         var rightArrow = $('#presentationNext');
-         leftArrow.css({
-             'left': prevArrowX
-         });
-         rightArrow.css({
-             'left': nextArrowX
-         });
-         if (e == 'firstInit') {
-             leftArrow.css({
-                 'opacity': 0
-             });
-             rightArrow.css({
-                 'opacity': 0
-             });
-             setTimeout(function () {
-                 leftArrow.animate({
-                     'opacity': 0.7
-                 }, 1000, function () {});
-                 rightArrow.animate({
-                     'opacity': 0.7
-                 }, 1000, function () {});
-             }, 2000);
-
-             leftArrow.click(function () {
-                 var prevSubSelection = $('ul li.selected').prev();
-                 if (prevSubSelection != undefined) {
-                     prevSubSelection.trigger('click');
-                 }
-             });
-             rightArrow.click(function () {
-                 var nextSubSelection = $('ul li.selected').next();
-                 if (nextSubSelection != undefined) {
-                     nextSubSelection.trigger('click');
-                 }
-             });
-         }
-     },
-     setupVirtualIpad: function () { //sets up interactive ipad on inventory screen
-         // fade screen images
-         //$("#ipadScreen .screen").fadeTo(0,0.5);
-         window.zoomAni = setInterval(function () {
-             $("#ipadScreen a .zoom, span.glowingIcon").each(function (i) {
-                 $(this).delay(i * 200).fadeTo(300, 0.5, function () {
-                     $(this).delay(100).fadeTo(300, 1);
-                 });
-             });
-         }, 3000);
-
-         // set bg, fade ads, ad events
-         $("#ipadScreen a .img").each(function () {
-
-             var par = $(this).parent(),
-                 screen = par.siblings(".screen"),
-                 src = screen.attr('src');
-
-             // set bg image				
-             $(this).css('background-image', 'url(' + src + ')');
-
-             // Click ad event
-             $(this).add(this.nextSibling).click(function (event) {
-                 if (!par.is('.active')) {
-                     var c = par.attr('class').replace('ad_', '').replace('zoom ', '');
-                     $('#' + c).trigger('click');
-
-                     var arrow = $('nav.nav-sub').find('img.pointerArrowSml');
-                     var p = $('nav.nav-sub ul li').find('li.selected').position();
-                     $(arrow).stop(true, true).animate({
-                         top: p.top
-                     }, 200, function () {});
-                     //return false;
-                 }
-             });
-
-             // parent rollover effect
-             $(this).parent().hover(function () {
-                 // hover in
-                 screen.clearQueue().fadeTo(300, 0.5);
-                 $(this).siblings('a').clearQueue().fadeTo(300, 0);
-                 $(this).find('.zoom').fadeTo(0, 0);
-             }, function () {
-                 // hover out
-                 screen.clearQueue().fadeTo(300, 1);
-                 $(this).siblings('a').clearQueue().fadeTo(300, 1);
-                 $(this).find('.zoom').fadeTo(0, 1);
-             });
-
-         });
-
-         $("a.fancybox").fancybox({
-             'titlePosition': 'inside',
-             'opacity': true,
-             'overlayShow': true,
-             'transitionIn': 'elastic',
-             'transitionOut': 'elastic',
-         });
-
-
-         // setup draggables 	
-         $('.draggable').draggable({
-             axis: 'y',
-             snapMode: 'both'
-         }).bind("dragstop", function (event, ui) {
-
-             var height = -$(this).height(),
-                 top = ui.position.top,
-                 parHeight = $(this).parent().height();
-
-             // SlideContainer rebound
-             if ($(this).is('#ipadWrap') && height > top - parHeight + 50) {
-
-                 $(this).animate({
-                     top: height + parHeight - 50
-                 }, 300, 'swing');
-
-             }
-             // iPadScreen rebound
-             else if (!$(this).is('#ipadWrap') && height > top - parHeight) {
-
-                 $(this).animate({
-                     top: height + parHeight
-                 }, 300, 'swing');
-
-             }
-             // Top rebound (both)
-             else if (top > 0) {
-
-                 $(this).animate({
-                     top: 0
-                 }, 300, 'swing');
-
-             }
-
-             // Keep child drag from triggering parrent
-             //event.stopPropagation();
-         });
-
-         // Sub Nav actions
-         $("nav.nav-sub li").each(function () {
-
-             $(this).click(function () {
-
-                 var c = $(this).attr('rel').split(',')[2],
-                     y1 = $(this).attr('rel').split(',')[0],
-                     y2 = $(this).attr('rel').split(',')[1],
-                     ad = $('#ipadScreen .' + c),
-                     bg = ad.siblings('.screen').attr('src');
-
-                 // y1 = container position 
-                 $("#ipadWrap").animate({
-                     top: y1
-                 }, 300);
-                 // y2 = screen position
-                 $("#ipadScreen .draggable").animate({
-                     top: y2
-                 }, 300);
-
-                 // hide ads
-                 //				$('#ipadScreen a').each(function(){
-                 //					$(this).removeClass('active').find('.img').fadeTo(0, 0)
-                 //				});
-                 // show triggered ad
-                 ad.addClass('active').find('.img').fadeTo(0, 1);
-
-                 //				 Remove active class
-                 //				$(this)
-                 //				.parent()
-                 //				.siblings()
-                 //				.add(this.parentNode)
-                 //				.find('a').removeClass('active');
-                 //				
-                 //				 Add active class to selected
-                 //				$(this).addClass('active');
-             });
-
-         })
-         //.eq(0).trigger('click'); // first link make active on load
-     },
-     setupArrowSubNav: function () {
-         $("div.nav-sub").delay(1234).fadeIn();
-         $("div.nav-sub").find('.nav-btn').click(function () {
-             $(this).parent('div').find('div.nav-active').removeClass('nav-active');
-             $(this).addClass('nav-active');
-             var adID = $(this).attr('id').substr($(this).attr('id').indexOf('_'), $(this).attr('id').length);
-             var zoomid = 'a.ad_' + adID;
-             $(zoomid).trigger('click');
-         });
+				}				
+			});
+			
+			// parent rollover effect
+			$(this).parent().hover(function(){
+				// hover in
+				screen.clearQueue().fadeTo(300, 0.5);
+				$(this).siblings('a').clearQueue().fadeTo(300,0);
+				$(this).find('.zoom').fadeTo(0,0);
+			},function(){
+				// hover out
+				screen.clearQueue().fadeTo(300, 1);
+				$(this).siblings('a').clearQueue().fadeTo(300,1);
+				$(this).find('.zoom').fadeTo(0,1);
+			});
+			
+		});
+		
+		$("a.fancybox").fancybox({
+			'titlePosition'	: 'inside',
+			'opacity'		: true,
+			'overlayShow'	: true,
+			'transitionIn'	: 'elastic',
+			'transitionOut'	: 'elastic',
+		});
+		
+		
+		// setup draggables 	
+		$('.draggable').draggable({ axis: 'y', snapMode: 'both' }).bind( "dragstop", function(event, ui) {
+		  
+		  var height = -$(this).height(),
+		  	  top = ui.position.top,
+		  	  parHeight = $(this).parent().height();
+		  
+		  // SlideContainer rebound
+		  if ($(this).is('#ipadWrap') && height > top - parHeight + 50) {
+		  	
+		  	$(this).animate({top:height+parHeight-50}, 300, 'swing');
+		  
+		  } 
+		  // iPadScreen rebound
+		  else if (!$(this).is('#ipadWrap') && height > top - parHeight) {
+		  
+		  	  $(this).animate({top:height+parHeight}, 300, 'swing');
+		  			  
+		  }
+		  // Top rebound (both)
+		  else if (top > 0) {
+		    
+		    $(this).animate({top:0}, 300, 'swing');
+		  
+		  }
+		  
+		  // Keep child drag from triggering parrent
+		  //event.stopPropagation();
+		  		  
+		}); 
+				
+		// Sub Nav actions
+		
+		$("nav.nav-sub li").each(function() {
+		
+			$(this).click(function() {
+				
+				var c = $(this).attr('rel').split(',')[2],
+					y1 = $(this).attr('rel').split(',')[0],
+					y2 = $(this).attr('rel').split(',')[1],
+					ad = $('#ipadScreen .'+c),
+					bg = ad.siblings('.screen').attr('src');
+					
+				// y1 = container position 
+				$("#ipadWrap").animate({top:y1}, 300);
+				// y2 = screen position
+				$("#ipadScreen .draggable").animate({top:y2}, 300);
+				
+				// hide ads
+//				$('#ipadScreen a').each(function(){
+//					$(this).removeClass('active').find('.img').fadeTo(0, 0)
+//				});
+				
+				// show triggered ad
+				ad.addClass('active').find('.img').fadeTo(0,1);
+				
+//				 Remove active class
+//				$(this)
+//				.parent()
+//				.siblings()
+//				.add(this.parentNode)
+//				.find('a').removeClass('active');
+//				
+//				 Add active class to selected
+//				$(this).addClass('active');
+				
+			});
+			
+		})
+		//.eq(0).trigger('click'); // first link make active on load
+		
+	},
+	setupArrowSubNav: function(){
+$("div.nav-sub").delay(1234).fadeIn();
+$("div.nav-sub").find('.nav-btn').click(function(){
+$(this).parent('div').find('div.nav-active').removeClass('nav-active');
+$(this).addClass('nav-active');
+var adID = $(this).attr('id').substr($(this).attr('id').indexOf('_')+1, $(this).attr('id').length);
+var zoomid = 'a.ad_'+adID;
+$(zoomid).trigger('click');
+});
 
 
-     }
+	}
 
- } //end mediaKit var
+}//end mediaKit var
