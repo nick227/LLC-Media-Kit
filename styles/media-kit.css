@@ -210,13 +210,21 @@ td { vertical-align: top; }
 /* ==|== primary styles =====================================================
    Author(s): NJ/BV/MM ~MultiView 2012
    ========================================================================== */
-body{margin:0;padding:0;}
+body{margin:0;padding:0;background-color: #008dbc;}
 .hidden{display:none;}
 .slideChange{cursor:pointer}
 .spacer-10px{clear:both;height:10px;}
 .spacer-25px{clear:both;height:10px;}
-#stage-anchor{top:80px;position:absolute;width:100%;padding:0}
-
+#stage-anchor{	
+	top:80px;
+	position:absolute;
+	width:100%;
+	padding:0
+}
+.stage-bg-gradient{
+	position: absolute;
+	top: 40px;
+}
 /* HEADER SECTION */
 .header{
 height:80px;
@@ -345,32 +353,12 @@ background-position:0 -87px;
 #audience-stage{
 width:100%;
 height:100%;
-background-color:black;
+/*background-color:black;*/
 color:#ffffff;
 border:1px solid black;
 }
 /**** BENEFITS PAGE */
 #benefits-stage{
-/* IE10 */ 
-background-image: -ms-radial-gradient(center, circle cover, #ED6D76 0%, #920707 100%);
-
-/* Mozilla Firefox */ 
-background-image: -moz-radial-gradient(center, circle cover, #ED6D76 0%, #920707 100%);
-
-/* Opera */ 
-background-image: -o-radial-gradient(center, circle cover, #ED6D76 0%, #920707 100%);
-
-/* Webkit (Safari/Chrome 10) */ 
-background-image: -webkit-gradient(radial, center center, 0, center center, 500, color-stop(0, #ED6D76), color-stop(1, #920707));
-
-/* Webkit (Chrome 11+) */ 
-background-image: -webkit-radial-gradient(center, circle cover, #ED6D76 0%, #920707 100%);
-
-/* Proposed W3C Markup */ 
-background-image: radial-gradient(center, circle cover, #ED6D76 0%, #920707 100%);
-
-
-border:1px solid red;
 color:#ffffff;
 }
 
@@ -566,8 +554,8 @@ margin-right:auto;
 }
   
 #slideContainer { width: 100%; position: absolute; height: 620px; overflow: hidden; cursor: move;
-background: #ff3019; /* Old browsers */
-background-image:url(../images/ad_inventory_bg.png);
+/*background: #ff3019; /* Old browsers */
+/*background-image:url(../images/ad_inventory_bg.png);*/
 }
 #ipadWrap { padding: 50px 0 50px; }
 #ipad { background: url(../images/ipad.png) no-repeat; background-position:top right; width: 650px; height: 828px; margin: 0 auto; padding-top: 84px; position:relative;}
@@ -607,19 +595,12 @@ table.specs td em { color: #6986a1; }
 
 /**** PRICING PAGE */
 #pricing-stage{
-background-color:green;
+/*background-color:green;*/
 font-family: GothamBook, Gotham;
 border:1px solid green;
 color:#ffffff;
 height: auto !important;
 padding-bottom: 20px;
-background: #32f0a6; /* Old browsers */
-background: -moz-radial-gradient(center, ellipse cover,  #32f0a6 0%, #32f0a6 30%, #00bc85 100%); /* FF3.6+ */
-background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#32f0a6), color-stop(30%,#32f0a6), color-stop(100%,#00bc85)); /* Chrome,Safari4+ */
-background: -webkit-radial-gradient(center, ellipse cover,  #32f0a6 0%,#32f0a6 30%,#00bc85 100%); /* Chrome10+,Safari5.1+ */
-background: -o-radial-gradient(center, ellipse cover,  #32f0a6 0%,#32f0a6 30%,#00bc85 100%); /* Opera 12+ */
-background: -ms-radial-gradient(center, ellipse cover,  #32f0a6 0%,#32f0a6 30%,#00bc85 100%); /* IE10+ */
-background: radial-gradient(center, ellipse cover,  #32f0a6 0%,#32f0a6 30%,#00bc85 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32f0a6', endColorstr='#00bc85',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 #pricing-wrap { margin: 0 auto; width: 919px; }
@@ -652,10 +633,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32f0a6', end
 
 #pricing-table #opt-six.option .info { width: 900px; }
 #pricing-table #opt-six.option .bg { width: 20px; }
-
 /**** CONTACT PAGE */
 #contact-stage{
-background-color:blue;
+/*background-color:blue;*/
 border:1px solid blue;
 color:#ffffff;
 }
