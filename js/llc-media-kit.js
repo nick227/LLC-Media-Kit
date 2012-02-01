@@ -1,4 +1,4 @@
- /**
+/**
   * MVMedia Interactive Media Kit v0.1
   * 01/19/2012 Multiview Inc,
   * 
@@ -23,12 +23,48 @@
  var pointerAnimationHandler;
  var currentBenefit;
 
+ // set ajax caching
+ $.ajaxSetup({cache: true});
 
  var mediaKit = { /*** Retrieves xml feed, runs template manager, attach onclick actions ****/
      init: function () {
          $(window).unload(function () {});
          mediaKit.loadPage(startPage, 'none');
          mediaKit.setupLinks();
+     },
+     preloadImages: function (styles) {
+     	var d = document,
+			s = [],
+     		c = d.body;
+     		
+     	for (i=0; i<styles.length; i++) {
+     		s.push(document.getElementById(styles[i]));
+     	}
+
+     	if (s && s.length > 0)
+     	{
+     		for (x=0; x < s.length; x++)
+     		{
+     			if (s[x].rules)
+     			{
+     				a = s[x].rules;
+     			}
+     			else
+     			{
+     				a = s[x].cssRules;
+     			}
+     			p = s[x].href.substr(0, s[x].href.lastIndexOf("/") + 1);
+     			for (y=0; y < a.length; y++)
+     			{
+     				t = a[y].style ? a[y].style.background + a[y].style.backgroundImage : undefined ;
+     				if (t && t.indexOf("url(") > -1)
+     				{
+     					i = p + t.substr(t.indexOf("(") + 1, t.indexOf(")") - t.indexOf("(") - 1);
+     					c.innerHTML += "<DIV STYLE=\"VISIBILITY: hidden; POSITION: absolute; TOP: 0px; LEFT: 0px; WIDTH: 0px; HEIGHT: 0px;\"><IMG SRC=\"" + i + "\" /></DIV>";
+     				}
+     			}
+     		}
+     	}
      },
      loadPage: function (pageName, animationMethod, order) {
          $.get(feedName, function (xml) {
@@ -58,7 +94,7 @@
                  var newPage = tmpl(data, mediaKit.site);
                  if (animationMethod == 'none') { //initial load
                      $('section#stage-anchor').html(newPage);
-                     $('.stage').css('height', stageHeight);
+                    // $('.stage').css('height', stageHeight);
                      $('body').data('activeNav', '0');
                  } else { //a nav click
                      var activeNav = $('body').data('activeNav');
@@ -144,7 +180,7 @@
                  mediaKit.fadeUpBgGradient();
              });
 
-             $('div#slideContainer').css('height', stageHeight);
+            // $('div#slideContainer').css('height', stageHeight);
 
          }
          if (dir == 'down') {
@@ -160,7 +196,7 @@
                  mediaKit.fadeUpBgGradient();
              });
 
-             $('div#slideContainer').css('height', stageHeight);
+            // $('div#slideContainer').css('height', stageHeight);
 
          }
          if (dir == 'left') {
@@ -176,10 +212,9 @@
                  mediaKit.fadeUpBgGradient();
              });
 
-             $('div#slideContainer').css('height', stageHeight);
+            // $('div#slideContainer').css('height', stageHeight);
 
          }
-/*
          if (dir == 'right') {
             var newtop = stageHeight - 80;
             var newContainer = '<div id="temp-new-container" style="width:100%; position:absolute; top:0; right:' + currentStageWidth + 'px">' + newPage + '</div>';
@@ -193,10 +228,10 @@
             	mediaKit.fadeUpBgGradient();
             });
          
-         	$('div#slideContainer').css('height', stageHeight);
+         	//$('div#slideContainer').css('height', stageHeight);
          
          }
-
+/*
          $('.stage').css('height', stageHeight);
          $(window).resize(function () {
              var stageHeight = $(document).height() - 80;
@@ -212,7 +247,7 @@
      },
      adjustBgGradientPos: function () {
          var stageHeight = $('#stage-anchor').height();
-         console.log(stageHeight);
+         //console.log(stageHeight);
          var i = $('.stage-bg-gradient');
          var s = $('#stage-anchor');
          $(i).offset({
@@ -227,7 +262,7 @@
      },
      adjustBgGradientPos: function () {
          var stageHeight = $('#stage-anchor').height();
-         console.log(stageHeight);
+         //console.log(stageHeight);
          var i = $('.stage-bg-gradient');
          var s = $('#stage-anchor');
          $(i).offset({
