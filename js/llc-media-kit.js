@@ -285,9 +285,7 @@
          }
      },
      setupBenefitsPage: function () {
-         var delayInc = 100;
          $('.benefit-box').each(function () {
-             var targetX = $(this).position().left;
              $(this).hover(function(){
              	var icon = $('#' + $(this).attr('id') + ' .benefit-graphic');
              	var title = $('#' + $(this).attr('id') + ' h2');
@@ -303,23 +301,6 @@
          		$(icon).addClass('sprite-benefit' + id + '-off');
          		$(title).removeClass('rollover');
              });
-             $(this).css({
-                 opacity: 0
-             });
-             $(this).css({
-                 left: targetX + 400
-             });
-             $(this).delay(1200 + delayInc).animate({
-                 opacity: 1,
-                 left: targetX
-             }, {
-                 duration: 300,
-                 specialEasing: {
-                     opacity: 'linear',
-                     left: 'swing'
-                 }
-             });
-             delayInc += 100;
              $(this).click(function () {
              	if(currentBenefit != undefined){
              		if($(currentBenefit).attr('id') == $('#' + $(this).attr('id') + ' .benefit-content').attr('id')){
@@ -349,6 +330,21 @@
              	}
              });
          });
+         mediaKit.introBenefitsPage();
+     },
+     introBenefitsPage: function(){
+     	var delayInc = 100;
+		$('.benefit-box').each(function () {
+			var targetX = $(this).position().left;
+    	 	$(this).css({opacity: 0});
+    	 	$(this).css({left: targetX + 400});
+    		$(this).delay(1200 + delayInc).animate({opacity: 1,
+    												left: targetX}, 
+    												{duration: 300,
+    	             								specialEasing: {opacity: 'linear',
+    	                 											left: 'swing'}});
+    	    delayInc += 100;
+    	});
      },
      setupInventoryPage: function () {
          /*
