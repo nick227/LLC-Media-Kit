@@ -230,7 +230,6 @@ top: 40px;*/
 
 #stage-lighting-effects { overflow: hidden; width: 100%; height: 100%; position: fixed; z-index: -1; top: 0px; left: 0px; background: url(../images/bg_gradient.png) center no-repeat; }
 
-
 /* HEADER SECTION */
 .header{
 height:80px;
@@ -321,13 +320,15 @@ width:100%;
 margin:0;
 }
 
+.pres-arrow{
+position:fixed;
+}
 #presentationPrev{
 width:64px;
 height:87px;
 background-image:url(../images/siteBackBtn.png);
 background-position:0 0;
 background-repeat:no-repeat;
-position: absolute;
 left: 0px;
 top:50%;
 margin-top:-43px;
@@ -345,7 +346,6 @@ background-position:0 0;
 background-repeat:no-repeat;
 width:64px;
 height:87px;
-position: absolute;
 right: 0px;
 top:50%;
 margin-top:-43px;
@@ -422,6 +422,7 @@ top: 50px;
 margin: 0px;
 color: #555555;
 font-size: 10pt;
+padding-right:10px;
 }
 .benefit-graphic{
 background-image: url(../images/benefits/csg-4f2a92e5839df.png);
@@ -651,6 +652,7 @@ display: block; width: 15px; height:15px; position: absolute; top: 5px; left: 5p
 -webkit-box-shadow: 0px 0px 20px #ffffff; /* Saf3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
    -moz-box-shadow: 0px 0px 20px #ffffff; /* FF3.5 - 3.6 */
         box-shadow: 0px 0px 20px #ffffff; /* Opera 10.5, IE9, FF4+, Chrome 6+, iOS 5 */
+		display:none;
 }
 span.glowingIcon { 
 display: block; width: 15px; height:15px; border: 3px solid #ffd458; background: #fff;margin:auto auto;
@@ -660,6 +662,12 @@ display: block; width: 15px; height:15px; border: 3px solid #ffd458; background:
 -webkit-box-shadow: 0px 0px 20px #ffffff; /* Saf3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
    -moz-box-shadow: 0px 0px 20px #ffffff; /* FF3.5 - 3.6 */
         box-shadow: 0px 0px 20px #ffffff; /* Opera 10.5, IE9, FF4+, Chrome 6+, iOS 5 */
+}
+div.glowingIcon{
+width:28px;
+height:26px;
+background-image:url(../images/bannerIcon2.png);
+background-repeat:no-repeat;
 }
 #homeScreen a .img { display: block; height: 100%; }
 #contentWrap { width: 960px; padding: 0 30px; position: absolute; bottom: 0; left: 50%; margin-left: -480px; height: 150px; }

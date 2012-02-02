@@ -324,7 +324,7 @@
                     	 top: 0
                  		}, 200, function () {});
                  		currentBenefit = null;
-                 		console.log(currentBenefit);
+                 		//console.log(currentBenefit);
              		}else{
              			$(currentBenefit).stop();
              			$(currentBenefit).animate({
@@ -397,15 +397,22 @@
 						activeNav = activeNav > 1 ? activeNav - 2: activeNav - 1;
 					$('#inventory-nav-main .slideChange').eq(activeNav).trigger('click');
 //				}
+if($('body').data('activeNav') == 1 || $('body').data('activeNav') == 0){
+
+}
 			});
 			rightArrow.click(function(){
-				console.log('next clicked');
+			//	console.log('next clicked');
 //				var nextSubSelection = $('ul li.selected').next();
 //				if(nextSubSelection != undefined){
 //					nextSubSelection.trigger('click');
 //				} else {
+if($('body').data('activeNav') == 1 || $('body').data('activeNav') == 0){
+}
 					var activeNav = $('body').data('activeNav') == 0 ? 1 : $('body').data('activeNav');
 					$('#inventory-nav-main .slideChange').eq(activeNav).trigger('click');
+
+
 //				}
 			});
 //		}		
@@ -413,7 +420,7 @@
 	setupVirtualIpad: function(){ //sets up interactive ipad on inventory screen
 		// fade screen images
 		//$("#ipadScreen .screen").fadeTo(0,0.5);
-		
+		/*
 		window.zoomAni = setInterval(function() {
 			$("#ipadScreen a .zoom, span.glowingIcon").each(function(i){
 				$(this).delay(i*200).fadeTo(300, 0.5, function(){
@@ -421,7 +428,7 @@
 				});
 			});
 		}, 3000);
-		
+		*/
 		// set bg, fade ads, ad events
 		$("#ipadScreen a .img").each(function() {
 			
