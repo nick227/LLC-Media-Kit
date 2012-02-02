@@ -341,28 +341,41 @@ var ie = false;
          mediaKit.introBenefitsPage1();
      },
      introBenefitsPage1: function(){
+     	$('.benefit-box').each(function () {
+     		$(this).css({opacity: 0});
+     	});
      	var a = $('#benefitsText_Your');
      	var b = $('#benefitsText_Benefits');
-     	var c = $('#benefitsText_Explore')
+     	$('#benefitsText_Explore').css('opacity', '0');
      	var yourTop = $(a).position().top;
-     	var benefitsTop = $(b).position().top;
-     	var exploreTop = $(c).position().top;
-		$(a).delay(200).animate();
-     	mediaKit.introBenefitsPage2();
+     	var benefitsLeft = $(b).position().left;
+     	$(a).css('top', yourTop + 250 + 'px');
+     	$(a).css('opacity', 0);
+     	$(b).css('opacity', 0);
+     	$(b).css('left', benefitsLeft + 250 + 'px');
+     	
+     	$(a).delay(1000).animate({top: yourTop, opacity: 1}, 400, 'swing', function(){
+     		$(b).delay(100).animate({left: benefitsLeft, opacity: 1}, 400, 'swing', function(){mediaKit.introBenefitsPage2();});
+     	});
      },
      introBenefitsPage2: function(){
      	var delayInc = 100;
 		$('.benefit-box').each(function () {
 			var targetX = $(this).position().left;
-    	 	$(this).css({opacity: 0});
     	 	$(this).css({left: targetX + 400});
-    		$(this).delay(1200 + delayInc).animate({opacity: 1,
+    		$(this).delay(delayInc).animate({opacity: 1,
     												left: targetX}, 
     												{duration: 300,
     	             								specialEasing: {opacity: 'linear',
     	                 											left: 'swing'}});
     	    delayInc += 100;
     	});
+    	setTimeout(function(){mediaKit.introBenefitsPage3();}, 1000);
+     },
+     introBenefitsPage3: function(){
+		var c = $('#benefitsText_Explore');
+		console.log(c);
+		$(c).delay(200).animate({opacity: 1}, 500);
      },
      setupInventoryPage: function () {
 				mediaKit.setupArrowSubNav();
