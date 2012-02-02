@@ -286,6 +286,17 @@
      },
      setupBenefitsPage: function () {
          var delayInc = 100;
+         $('.benefit-graphic').each(function(){
+         	$(this).hover(function(){
+         		var id = $(this).attr('id').substr(-1, 1);
+         		$(this).removeClass('sprite-benefit' + id + '-off');
+         		$(this).addClass('sprite-benefit' + id);
+         	}, function(){
+         		var id = $(this).attr('id').substr(-1, 1);
+         		$(this).removeClass('sprite-benefit' + id);
+         		$(this).addClass('sprite-benefit' + id + '-off');
+         	});
+         });
          $('.benefit-box').each(function () {
              var targetX = $(this).position().left;
              $(this).css({
