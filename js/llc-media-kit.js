@@ -338,9 +338,19 @@ var ie = false;
              	}
              });
          });
-         mediaKit.introBenefitsPage();
+         mediaKit.introBenefitsPage1();
      },
-     introBenefitsPage: function(){
+     introBenefitsPage1: function(){
+     	var a = $('#benefitsText_Your');
+     	var b = $('#benefitsText_Benefits');
+     	var c = $('#benefitsText_Explore')
+     	var yourTop = $(a).position().top;
+     	var benefitsTop = $(b).position().top;
+     	var exploreTop = $(c).position().top;
+		$(a).delay(200).animate();
+     	mediaKit.introBenefitsPage2();
+     },
+     introBenefitsPage2: function(){
      	var delayInc = 100;
 		$('.benefit-box').each(function () {
 			var targetX = $(this).position().left;
