@@ -233,7 +233,7 @@ overflow: hidden;
 width: 100%; 
 height: 100%; 
 position: fixed; 
-z-index: -1; 
+z-index: -1;
 top: 0px; 
 left: 0px; 
 background: url(../images/bg_gradient.png) center no-repeat; 
