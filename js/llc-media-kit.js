@@ -398,7 +398,7 @@ var ie = false;
 				if(audienceStep==0){//top of page one
 				var destination = $('.cash_section').offset().top;
 				$("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination-140}, 1500, function(){
-				$("html, body").delay(1150).animate({ scrollTop: $(document).height()-$(window).height()-100}, 1800, 'swing' );
+				$("html, body").delay(1150).animate({ scrollTop: $(document).height()-$(window).height()-300}, 1800, 'swing' );
 				audienceStep=1;
 				});
 				}else{//bottom of page one
