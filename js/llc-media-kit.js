@@ -16,7 +16,7 @@
      "pricing": 4,
      "contact": 5
  };
-
+var w=window,d=document,e=d.documentElement,g=d.getElementsByTagName('body')[0],viewPort_width=w.innerWidth||e.clientWidth||g.clientWidth,viewPort_height=w.innerHeight||e.clientHeight||g.clientHeight;
  //*** Global nav animation ***//
  var globalNavPointer;
  var currentSelection;
@@ -97,7 +97,7 @@ var ie = false;
 
                  if (animationMethod == 'none') { //initial load
                      $('section#stage-anchor').html(newPage);
-                    // $('.stage').css('height', stageHeight);
+					 $('div.cash_section').css('top', viewPort_height);
                      $('body').data('activeNav', '0');
                  } else { //a nav click
                      var activeNav = $('body').data('activeNav');
@@ -112,6 +112,7 @@ var ie = false;
                              opacity: 0
                          }, 400, function () {
                              mediaKit.pageTransition(direction, newPage);
+							$('div.cash_section').css('top', viewPort_height); 
                          });
                      }
                      //BENEFITS PAGE
