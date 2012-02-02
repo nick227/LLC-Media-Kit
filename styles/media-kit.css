@@ -404,7 +404,7 @@ background-image: url(../images/benefits_trans_bg.png);
 position: relative;
 display: block;
 margin: auto;
-margin-top: 50px;
+margin-top: 60px;
 width: 878px;
 height: 620px;
 }
@@ -757,10 +757,71 @@ padding-bottom: 20px;
 padding-bottom: 20px;
 color:#ffffff;
 }
-#contact-wrap { margin: 0 auto; width: 919px; }
+
+#contactHeaderMain{
+position: absolute;
+height: 197px;
+top: 100px;
+}
+#contactHeaderOrange{
+position: absolute;
+top: 0px;
+left: 0px;
+background-color: #f0a726;
+width: 456px;
+height: 162px;
+}
+.contact-orange-triangle{
+position: absolute;
+top: 162px;
+left: 200px;
+}
+#contactInfo{
+background: #4698b8;
+padding: 30px;
+position: absolute;
+top: 330px;
+width: 852px;
+height: 170px;
+}
+#contactInfoLeft{
+position: absolute;
+left: 30px;
+top: 30px;
+width: 391px;
+}
+#contactInfoRight{
+position: absolute;
+right: 30px;
+top: 30px;
+width: 391px;
+}
+.contact-info, contact-p{
+margin: 0px;
+padding: 0px;
+}
+.contact-sub-text-left{
+float: left;
+clear: both;
+}
+.contact-sub-text-right{
+clear: both;
+}
+#contactInfo h2, #contactInfo p{
+font-family: "proxima-nova";
+}
+#contactInfo h2{
+font-size: 24pt;
+font-weight: bold;
+}
+#contactInfo p{
+font-size: 18pt;
+color:#f5e355;
+}
+.contact-header{font-family:KnockoutHTF26JuniorFlyweighRg; font-size:10em; PADDING:none; margin: 0px; position:absolute; display: inline; left:30px; font-weight:500;}
+.contact-header-sub{font-family:KnockoutHTF26JuniorFlyweighRg;color: #898989; font-size:4.7em; PADDING:none; margin: 0px; position:absolute; display: inline;left:270px; top:32px;line-height:.75em; font-weight:500;}
+#contact-wrap { margin: 0 auto; width: 919px; height: 800px;}
 #contact-wrap h1 { margin: 0; padding: 0 0 0 0; text-align: center; }
-#contact-left, #contact-right { float: left; width: 40%; padding: 20px; margin-bottom: 20px; background: #a47723; }
-#contact-right { float: right; }
 #contact-left p, #contact-right p { font-family: "proxima-nova"; font-size: 22px; color: #f5e355; }
 #contact-left h2, #contact-right h2 { margin: 0 0 10px 0; font-size: 30px; color: #fff; }
 #contact-wrap a, html #contact-wrap .gc-cs-link { color: #ffef8e !important; text-decoration: underline; font-weight: bold; }
