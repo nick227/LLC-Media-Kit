@@ -7,6 +7,7 @@
  var startPage = 'audience';
  var pageNames_ar = new Array('audience', 'benefits', 'inventory', 'pricing', 'contact');
  var stageHeight = $(document).height() - 80;
+ var transitionCheck = 0;
  var linkOrder = {
      "audience": 1,
      "benefits": 2,
@@ -88,6 +89,7 @@
              }
              $.get(template, function (data) { //now for the body content
                  var newPage = tmpl(data, mediaKit.site);
+				 
                  if (animationMethod == 'none') { //initial load
                      $('section#stage-anchor').html(newPage);
                     // $('.stage').css('height', stageHeight);
@@ -95,10 +97,10 @@
                  } else { //a nav click
                      var activeNav = $('body').data('activeNav');
                      var direction = (activeNav < order) ? 'left' : 'right';
-                     if (activeNav == order) {
+                     if (activeNav == order || transitionCheck == 1) {
                          return true;
                      }
-
+						transitionCheck = 1;
                      //AUDIENCE PAGE
                      if (pageName == 'audience') {
                          $('.stage-bg-gradient').animate({
@@ -170,6 +172,7 @@
                  $("#temp-new-container").unwrap();
                  $("section.stage").unwrap();
                  mediaKit.fadeUpBgGradient();
+				 transitionCheck = 0;
              });
 
 
@@ -185,6 +188,7 @@
                  $("#temp-new-container").unwrap();
                  $("section.stage").unwrap();
                  mediaKit.fadeUpBgGradient();
+				 transitionCheck = 0;
              });
 
 
@@ -201,6 +205,7 @@
                  $("#temp-new-container .stage").prependTo('#stage-anchor');
                  $("#temp-big-container").remove();
                  mediaKit.fadeUpBgGradient();
+				 transitionCheck = 0;
              });
 
 
@@ -216,6 +221,7 @@
                 $("#temp-new-container .stage").prependTo('#stage-anchor');
                 $("#temp-big-container").remove();
             	mediaKit.fadeUpBgGradient();
+				 transitionCheck = 0;
             });
          
          
@@ -241,10 +247,12 @@
          mediaKit.linkOrder = linkOrder;
          $('a.slideChange').each(function () {
          	$(this).click(function () {
+			if(transitionCheck == 0){
          		var relval = $(this).attr('rel');
          		var order = mediaKit.linkOrder[relval];
          		mediaKit.loadPage(relval, 'yes', order);
          		mediaKit.setPointerTargetX(this);
+				}
          	});
          });
      },
