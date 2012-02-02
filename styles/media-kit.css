@@ -237,8 +237,6 @@ z-index: -1;
 top: 0px; 
 left: 0px; 
 background: url(../images/bg_gradient.png) center no-repeat; 
-/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-
 background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
 background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.6)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
 background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.6) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
