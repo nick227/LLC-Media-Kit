@@ -286,19 +286,19 @@
      },
      setupBenefitsPage: function () {
          var delayInc = 100;
-         $('.benefit-graphic').each(function(){
-         	$(this).hover(function(){
-         		var id = $(this).attr('id').substr(-1, 1);
-         		$(this).removeClass('sprite-benefit' + id + '-off');
-         		$(this).addClass('sprite-benefit' + id);
-         	}, function(){
-         		var id = $(this).attr('id').substr(-1, 1);
-         		$(this).removeClass('sprite-benefit' + id);
-         		$(this).addClass('sprite-benefit' + id + '-off');
-         	});
-         });
          $('.benefit-box').each(function () {
              var targetX = $(this).position().left;
+             $(this).hover(function(){
+             	var icon = $('#' + $(this).attr('id') + ' .benefit-graphic');
+             	var id = $(icon).attr('id').substr(-1, 1);
+             	$(icon).removeClass('sprite-benefit' + id + '-off');
+             	$(icon).addClass('sprite-benefit' + id);
+             }, function(){
+             	var icon = $('#' + $(this).attr('id') + ' .benefit-graphic');
+             	var id = $(icon).attr('id').substr(-1, 1);
+             	$(icon).removeClass('sprite-benefit' + id);
+         		$(icon).addClass('sprite-benefit' + id + '-off');
+             });
              $(this).css({
                  opacity: 0
              });
