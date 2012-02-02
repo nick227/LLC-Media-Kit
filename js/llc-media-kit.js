@@ -25,6 +25,9 @@
  var pointerAnimationHandler;
  var currentBenefit;
 
+//if IE...
+var ie = false;
+
  // set ajax caching
  $.ajaxSetup({cache: true});
 
@@ -32,6 +35,7 @@
      init: function () {
          $(window).unload(function () {});
          mediaKit.loadPage(startPage, 'none');
+         ie = (/MSIE (\d+\.\d+);/).test(navigator.userAgent);
      },
 //     preloadImages: function (styles) {
 //     	var d = document;
@@ -240,9 +244,11 @@
          }); // -((($(i).height() - $(s).height())/2) + s.offset().top)
      },
      fadeUpBgGradient: function () {
-         $('.stage-bg-gradient').animate({
-             opacity: 1
-         }, 1200);
+     if(!ie){
+         	$('.stage-bg-gradient').animate({
+            	 opacity: 1
+        	 }, 1200);
+         }
      },
      setupLinks: function () {
          mediaKit.linkOrder = linkOrder;
