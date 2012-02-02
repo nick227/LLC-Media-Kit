@@ -424,66 +424,32 @@ color: #555555;
 font-size: 10pt;
 }
 .benefit-graphic{
+background-image: url(../images/benefits/csg-4f2a92e5839df.png);
 position: absolute;
 left: 72px;
 top: 17px;
 width: 122px;
 height:117px;
+overflow: hidden;
 }
-.benefit-graphic1:hover{
-background-image: url(../images/benefits/benefit1.png);
-}
-.benefit-graphic1{
-background-image: url(../images/benefits/off/benefit1.png);
-}
-.benefit-graphic2:hover{
-background-image: url(../images/benefits/benefit2.png);
-}
-.benefit-graphic2{
-background-image: url(../images/benefits/off/benefit2.png);
-}
-.benefit-graphic3:hover{
-background-image: url(../images/benefits/benefit3.png);
-}
-.benefit-graphic3{
-background-image: url(../images/benefits/off/benefit3.png);
-}
-.benefit-graphic4:hover{
-background-image: url(../images/benefits/benefit4.png);
-}
-.benefit-graphic4{
-background-image: url(../images/benefits/off/benefit4.png);
-}
-.benefit-graphic5:hover{
-background-image: url(../images/benefits/benefit5.png);
-}
-.benefit-graphic5{
-background-image: url(../images/benefits/off/benefit5.png);
-}
-.benefit-graphic6:hover{
-background-image: url(../images/benefits/benefit6.png);
-}
-.benefit-graphic6{
-background-image: url(../images/benefits/off/benefit6.png);
-}
-.benefit-graphic7:hover{
-background-image: url(../images/benefits/benefit7.png);
-}
-.benefit-graphic7{
-background-image: url(../images/benefits/off/benefit7.png);
-}
-.benefit-graphic8:hover{
-background-image: url(../images/benefits/benefit8.png);
-}
-.benefit-graphic8{
-background-image: url(../images/benefits/off/benefit8.png);
-}
-.benefit-graphic9:hover{
-background-image: url(../images/benefits/benefit9.png);
-}
-.benefit-graphic9{
-background-image: url(../images/benefits/off/benefit9.png);
-}
+.sprite-benefit1{ background-position: 0 0; width: 122px; height: 117px; } 
+.sprite-benefit1-off{ background-position: 0 -167px; width: 122px; height: 117px; } 
+.sprite-benefit2{ background-position: 0 -334px; width: 122px; height: 117px; } 
+.sprite-benefit2-off{ background-position: 0 -501px; width: 122px; height: 117px; } 
+.sprite-benefit3{ background-position: 0 -668px; width: 122px; height: 117px; } 
+.sprite-benefit3-off{ background-position: 0 -835px; width: 122px; height: 117px; } 
+.sprite-benefit4{ background-position: 0 -1002px; width: 122px; height: 117px; } 
+.sprite-benefit4-off{ background-position: 0 -1169px; width: 122px; height: 117px; } 
+.sprite-benefit5{ background-position: 0 -1336px; width: 266px; height: 140px; } 
+.sprite-benefit6{ background-position: 0 -1526px; width: 122px; height: 117px; } 
+.sprite-benefit6-off{ background-position: 0 -1693px; width: 122px; height: 117px; } 
+.sprite-benefit7{ background-position: 0 -1860px; width: 122px; height: 117px; } 
+.sprite-benefit7-off{ background-position: -316px 0; width: 122px; height: 117px; } 
+.sprite-benefit8{ background-position: -316px -167px; width: 122px; height: 117px; } 
+.sprite-benefit8-off{ background-position: -316px -334px; width: 122px; height: 117px; } 
+.sprite-benefit9{ background-position: -316px -501px; width: 122px; height: 117px; } 
+.sprite-benefit9-off{ background-position: -316px -668px; width: 122px; height: 117px; } 
+
 /*.benefit-image-large{
 position: absolute;
 left: 72px;
@@ -535,7 +501,7 @@ background-repeat: repeat-all;
 background-color: #eeeeee;
 }
 .benefit-box:hover{
-background-color: #eeeeee;
+
 }
 #benefitBox1{
 left: 10px;
