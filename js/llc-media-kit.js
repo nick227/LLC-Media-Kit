@@ -285,37 +285,22 @@
          }
      },
      setupBenefitsPage: function () {
-         var delayInc = 100;
-         $('.benefit-graphic').each(function(){
-         	$(this).hover(function(){
-         		var id = $(this).attr('id').substr(-1, 1);
-         		$(this).removeClass('sprite-benefit' + id + '-off');
-         		$(this).addClass('sprite-benefit' + id);
-         	}, function(){
-         		var id = $(this).attr('id').substr(-1, 1);
-         		$(this).removeClass('sprite-benefit' + id);
-         		$(this).addClass('sprite-benefit' + id + '-off');
-         	});
-         });
          $('.benefit-box').each(function () {
-             var targetX = $(this).position().left;
-             $(this).css({
-                 opacity: 0
+             $(this).hover(function(){
+             	var icon = $('#' + $(this).attr('id') + ' .benefit-graphic');
+             	var title = $('#' + $(this).attr('id') + ' h2');
+             	var id = $(icon).attr('id').substr(-1, 1);
+             	$(icon).removeClass('sprite-benefit' + id + '-off');
+             	$(icon).addClass('sprite-benefit' + id);
+             	$(title).addClass('rollover');
+             }, function(){
+             	var icon = $('#' + $(this).attr('id') + ' .benefit-graphic');
+             	var id = $(icon).attr('id').substr(-1, 1);
+             	var title = $('#' + $(this).attr('id') + ' h2');
+             	$(icon).removeClass('sprite-benefit' + id);
+         		$(icon).addClass('sprite-benefit' + id + '-off');
+         		$(title).removeClass('rollover');
              });
-             $(this).css({
-                 left: targetX + 400
-             });
-             $(this).delay(1200 + delayInc).animate({
-                 opacity: 1,
-                 left: targetX
-             }, {
-                 duration: 300,
-                 specialEasing: {
-                     opacity: 'linear',
-                     left: 'swing'
-                 }
-             });
-             delayInc += 100;
              $(this).click(function () {
              	if(currentBenefit != undefined){
              		if($(currentBenefit).attr('id') == $('#' + $(this).attr('id') + ' .benefit-content').attr('id')){
@@ -324,7 +309,7 @@
                     	 top: 0
                  		}, 200, function () {});
                  		currentBenefit = null;
-                 		//console.log(currentBenefit);
+                 		console.log(currentBenefit);
              		}else{
              			$(currentBenefit).stop();
              			$(currentBenefit).animate({
@@ -345,6 +330,21 @@
              	}
              });
          });
+         mediaKit.introBenefitsPage();
+     },
+     introBenefitsPage: function(){
+     	var delayInc = 100;
+		$('.benefit-box').each(function () {
+			var targetX = $(this).position().left;
+    	 	$(this).css({opacity: 0});
+    	 	$(this).css({left: targetX + 400});
+    		$(this).delay(1200 + delayInc).animate({opacity: 1,
+    												left: targetX}, 
+    												{duration: 300,
+    	             								specialEasing: {opacity: 'linear',
+    	                 											left: 'swing'}});
+    	    delayInc += 100;
+    	});
      },
      setupInventoryPage: function () {
          /*
