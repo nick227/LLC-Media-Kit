@@ -333,11 +333,6 @@
                  }, 200, function () {});
              	}
              });
-             $(this).hover(function(){
-             	console.log($(this));
-             }, function(){
-             
-             });
          });
      },
      setupInventoryPage: function () {

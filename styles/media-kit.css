@@ -423,11 +423,72 @@ margin: 0px;
 color: #555555;
 font-size: 10pt;
 }
-.benefit-image-large{
+.benefit-graphic{
 position: absolute;
 left: 72px;
 top: 17px;
+width: 122px;
+height:117px;
 }
+.benefit-graphic1:hover{
+background-image: url(../images/benefits/benefit1.png);
+}
+.benefit-graphic1{
+background-image: url(../images/benefits/off/benefit1.png);
+}
+.benefit-graphic2:hover{
+background-image: url(../images/benefits/benefit2.png);
+}
+.benefit-graphic2{
+background-image: url(../images/benefits/off/benefit2.png);
+}
+.benefit-graphic3:hover{
+background-image: url(../images/benefits/benefit3.png);
+}
+.benefit-graphic3{
+background-image: url(../images/benefits/off/benefit3.png);
+}
+.benefit-graphic4:hover{
+background-image: url(../images/benefits/benefit4.png);
+}
+.benefit-graphic4{
+background-image: url(../images/benefits/off/benefit4.png);
+}
+.benefit-graphic5:hover{
+background-image: url(../images/benefits/benefit5.png);
+}
+.benefit-graphic5{
+background-image: url(../images/benefits/off/benefit5.png);
+}
+.benefit-graphic6:hover{
+background-image: url(../images/benefits/benefit6.png);
+}
+.benefit-graphic6{
+background-image: url(../images/benefits/off/benefit6.png);
+}
+.benefit-graphic7:hover{
+background-image: url(../images/benefits/benefit7.png);
+}
+.benefit-graphic7{
+background-image: url(../images/benefits/off/benefit7.png);
+}
+.benefit-graphic8:hover{
+background-image: url(../images/benefits/benefit8.png);
+}
+.benefit-graphic8{
+background-image: url(../images/benefits/off/benefit8.png);
+}
+.benefit-graphic9:hover{
+background-image: url(../images/benefits/benefit9.png);
+}
+.benefit-graphic9{
+background-image: url(../images/benefits/off/benefit9.png);
+}
+/*.benefit-image-large{
+position: absolute;
+left: 72px;
+top: 17px;
+}*/
 .benefit-image-small{
 position: absolute;
 left: 10px;
