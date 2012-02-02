@@ -374,14 +374,19 @@ height: 200px;
 overflow: hidden;
 }
 #benefitsText_Your{
-	position: absolute;
-	left: 30px;
-	top:70px;
+position: absolute;
+left: 30px;
+top:30px;
 }
 #benefitsText_Benefits{
-	position: absolute;
-	top: 70px;
-	left: 100px;
+position: absolute;
+left: 90px;
+top: 30px;
+}
+#benefitsText_Explore{
+position: absolute;
+left: 90px;
+top: 117px;
 }
 .benefitsContainer{
 background-image: url(../images/benefits_trans_bg.png);

@@ -290,14 +290,18 @@
              var targetX = $(this).position().left;
              $(this).hover(function(){
              	var icon = $('#' + $(this).attr('id') + ' .benefit-graphic');
+             	var title = $('#' + $(this).attr('id') + ' h2');
              	var id = $(icon).attr('id').substr(-1, 1);
              	$(icon).removeClass('sprite-benefit' + id + '-off');
              	$(icon).addClass('sprite-benefit' + id);
+             	$(title).addClass('rollover');
              }, function(){
              	var icon = $('#' + $(this).attr('id') + ' .benefit-graphic');
              	var id = $(icon).attr('id').substr(-1, 1);
+             	var title = $('#' + $(this).attr('id') + ' h2');
              	$(icon).removeClass('sprite-benefit' + id);
          		$(icon).addClass('sprite-benefit' + id + '-off');
+         		$(title).removeClass('rollover');
              });
              $(this).css({
                  opacity: 0
