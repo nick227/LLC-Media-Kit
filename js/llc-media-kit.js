@@ -8,6 +8,7 @@
  var pageNames_ar = new Array('audience', 'benefits', 'inventory', 'pricing', 'contact');
  var stageHeight = $(document).height() - 80;
  var transitionCheck = 0;
+ var audienceStep = 0;
  var linkOrder = {
      "audience": 1,
      "benefits": 2,
@@ -197,7 +198,7 @@
          	//console.log(newPage);
              var newtop = stageHeight - 80;
              var newContainer = '<div id="temp-new-container" style="width:100%; position:absolute; top:0; left:' + currentStageWidth + 'px">' + newPage + '</div>';
-             $('#stage-anchor').prepend('<div id="temp-big-container" style="height:100%; top:0; left:0; position:relative; z-index:1"></div>');
+             $('#stage-anchor').prepend('<div id="temp-big-container" style="height:10000px; top:0; left:0; position:relative; z-index:1"></div>');
              $('#'+curStageID).prependTo('#temp-big-container');
              $('div#temp-big-container').append(newContainer).animate({
                  left: '-' + currentStageWidth
@@ -213,7 +214,7 @@
          if (dir == 'right') {
             var newtop = stageHeight - 80;
             var newContainer = '<div id="temp-new-container" style="width:100%; position:absolute; top:0; right:' + currentStageWidth + 'px">' + newPage + '</div>';
-            $('#stage-anchor').prepend('<div id="temp-big-container" style="height:100%; top:0; right:0; position:relative; z-index:1"></div>');
+            $('#stage-anchor').prepend('<div id="temp-big-container" style="height:10000px; top:0; right:0; position:relative; z-index:1"></div>');
             $('#'+curStageID).prependTo('#temp-big-container');
             $('div#temp-big-container').append(newContainer).animate({
             	right: '-' + currentStageWidth
@@ -347,17 +348,6 @@
     	});
      },
      setupInventoryPage: function () {
-         /*
-				$('body, section, div').bind('mousedown.welcome', function() {
-				$('#inventory-stage .welcome-message').animate({
-    			opacity: 0.25,
-    			height: '0'
-				}, {queue:false, duration:600, easing: 'easeInExpo'}, function() {
-				$('body, section, div').unbind('mousedown.welcome');
-				$('#inventory-stage .welcome-message').remove();
-				});  
-				});
-				*/
 				mediaKit.setupArrowSubNav();
 				mediaKit.setupVirtualIpad();
 		
@@ -374,61 +364,45 @@
 		$('#homeScreen').animate({left:(target-510)}, 300, function(){});
 	},
 	initPresentationArrows: function(e){
-//		var prevArrowX = $('#ipad').offset().left - $('#presentationPrev').width() - 80;
-//		var nextArrowX = $('#ipad').offset().left + $('#ipad').width() + $('#presentationPrev').width() + 80;
 		var leftArrow = $('#presentationPrev');
 		var rightArrow = $('#presentationNext');
-//		leftArrow.css({'left': prevArrowX});
-//		rightArrow.css({'left': nextArrowX});
-//		if(e=='firstInit'){
-//			leftArrow.css({'opacity': 0});
-//			rightArrow.css({'opacity': 0});
-//			setTimeout(function(){		
-//			leftArrow.animate({'opacity': 0.7}, 1000, function(){});
-//			rightArrow.animate({'opacity': 0.7}, 1000, function(){});
-//			}, 2000);
-			
-			leftArrow.click(function(){
-//				var prevSubSelection = $('ul li.selected').prev();
-//				if(prevSubSelection != undefined){
-//					prevSubSelection.trigger('click');
-//				} else {
+		leftArrow.click(function(){
+			if($('body').data('activeNav') == 1 || $('body').data('activeNav') == 0){//still on page one
+				if(audienceStep==1){//bottom of page one
+				$("html, body").animate({ scrollTop: 0}, 900, 'swing' );
+				audienceStep=0;
+				}
+			}else{
+				previousMainSlide();
+			}
+		});
+		rightArrow.click(function(){
+			if($('body').data('activeNav') == 1 || $('body').data('activeNav') == 0){//still on page one
+				if(audienceStep==0){//top of page one
+				var destination = $('.cash_section').offset().top;
+				$("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination-40}, 1500, function(){
+				$("html, body").delay(1150).animate({ scrollTop: $(document).height()-$(window).height()-100}, 1800, 'swing' );
+				audienceStep=1;
+				});
+				}else{//bottom of page one
+				advanceMainSlide();
+				audienceStep=0;
+				}
+			}else{
+			advanceMainSlide();
+			}
+		});
+			function previousMainSlide(){
 					var activeNav = $('body').data('activeNav') == 0 ? 1 : $('body').data('activeNav');
 						activeNav = activeNav > 1 ? activeNav - 2: activeNav - 1;
 					$('#inventory-nav-main .slideChange').eq(activeNav).trigger('click');
-//				}
-if($('body').data('activeNav') == 1 || $('body').data('activeNav') == 0){
-
-}
-			});
-			rightArrow.click(function(){
-			//	console.log('next clicked');
-//				var nextSubSelection = $('ul li.selected').next();
-//				if(nextSubSelection != undefined){
-//					nextSubSelection.trigger('click');
-//				} else {
-if($('body').data('activeNav') == 1 || $('body').data('activeNav') == 0){
-}
+			}
+			function advanceMainSlide(){
 					var activeNav = $('body').data('activeNav') == 0 ? 1 : $('body').data('activeNav');
 					$('#inventory-nav-main .slideChange').eq(activeNav).trigger('click');
-
-
-//				}
-			});
-//		}		
+			}
 	},
 	setupVirtualIpad: function(){ //sets up interactive ipad on inventory screen
-		// fade screen images
-		//$("#ipadScreen .screen").fadeTo(0,0.5);
-		/*
-		window.zoomAni = setInterval(function() {
-			$("#ipadScreen a .zoom, span.glowingIcon").each(function(i){
-				$(this).delay(i*200).fadeTo(300, 0.5, function(){
-					$(this).delay(100).fadeTo(300, 1);
-				});
-			});
-		}, 3000);
-		*/
 		// set bg, fade ads, ad events
 		$("#ipadScreen a .img").each(function() {
 			
@@ -525,28 +499,12 @@ if($('body').data('activeNav') == 1 || $('body').data('activeNav') == 0){
 				// y2 = screen position
 				$("#ipadScreen .draggable").animate({top:y2}, 300);
 				
-				// hide ads
-//				$('#ipadScreen a').each(function(){
-//					$(this).removeClass('active').find('.img').fadeTo(0, 0)
-//				});
-				
 				// show triggered ad
 				ad.addClass('active').find('.img').fadeTo(0,1);
-				
-//				 Remove active class
-//				$(this)
-//				.parent()
-//				.siblings()
-//				.add(this.parentNode)
-//				.find('a').removeClass('active');
-//				
-//				 Add active class to selected
-//				$(this).addClass('active');
 				
 			});
 			
 		})
-		//.eq(0).trigger('click'); // first link make active on load
 		
 	},
 	setupArrowSubNav: function(){
