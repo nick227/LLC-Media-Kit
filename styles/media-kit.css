@@ -774,15 +774,16 @@ height: 162px;
 .contact-orange-triangle{
 position: absolute;
 top: 162px;
-left: 200px;
+left: 250px;
 }
 #contactInfo{
-background: #4698b8;
+background: url(../images/contactInfoBg.png);
 padding: 30px;
 position: absolute;
 top: 330px;
-width: 852px;
-height: 170px;
+left: 500px;
+width: 500px;
+height: 130px;
 }
 #contactInfoLeft{
 position: absolute;
@@ -799,6 +800,11 @@ width: 391px;
 .contact-info, contact-p{
 margin: 0px;
 padding: 0px;
+}
+#contactInfo p a{
+color: #ff5e355;
+font-family: "proxima-nova";
+font-weight: 300;
 }
 .contact-sub-text-left{
 float: left;
