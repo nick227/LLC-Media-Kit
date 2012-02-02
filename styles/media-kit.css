@@ -653,7 +653,7 @@ font-weight:900;
 color:#ffffff;
 height: auto !important;
 padding-bottom: 20px;
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32f0a6', endColorstr='#00bc85',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32f0a6', endColorstr='#00bc85',GradientType=1 );  IE6-9 fallback on horizontal gradient */
 }
 #pricing-wrap { margin: 0 auto; width: 919px; }
 #pricing-wrap h1 { margin: 0; padding: 60px 0 0 0; }
