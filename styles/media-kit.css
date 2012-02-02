@@ -374,14 +374,19 @@ height: 200px;
 overflow: hidden;
 }
 #benefitsText_Your{
-	position: absolute;
-	left: 30px;
-	top:70px;
+position: absolute;
+left: 30px;
+top:30px;
 }
 #benefitsText_Benefits{
-	position: absolute;
-	top: 70px;
-	left: 100px;
+position: absolute;
+left: 90px;
+top: 30px;
+}
+#benefitsText_Explore{
+position: absolute;
+left: 90px;
+top: 117px;
 }
 .benefitsContainer{
 background-image: url(../images/benefits_trans_bg.png);
@@ -433,6 +438,14 @@ width: 122px;
 height:117px;
 overflow: hidden;
 }
+#benefitContent1 h2.rollover{color:#e59c4c}
+#benefitContent2 h2.rollover{color:#746ea9}
+#benefitContent3 h2.rollover{color:#6bbc72}
+#benefitContent4 h2.rollover{color:#9a4647}
+#benefitContent6 h2.rollover{color:#8fbedb}
+#benefitContent7 h2.rollover{color:#8da7d8}
+#benefitContent8 h2.rollover{color:#a89dd8}
+#benefitContent9 h2.rollover{color:#ebbf4f}
 .sprite-benefit1{ background-position: 0 0; width: 122px; height: 117px; } 
 .sprite-benefit1-off{ background-position: 0 -167px; width: 122px; height: 117px; } 
 .sprite-benefit2{ background-position: 0 -334px; width: 122px; height: 117px; } 
@@ -485,7 +498,7 @@ font-size: 11pt;
 .benefit-box{
 cursor: pointer;
 border: 1px solid #555555;
-background-color: #dedede;
+background-image: url(../images/benefits/benefit-bg.png);
 display: block;
 position: absolute;
 width: 286px;
