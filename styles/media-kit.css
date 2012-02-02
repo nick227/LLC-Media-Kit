@@ -791,12 +791,6 @@ left: 30px;
 top: 30px;
 width: 391px;
 }
-#contactInfoRight{
-position: absolute;
-right: 30px;
-top: 30px;
-width: 391px;
-}
 .contact-info, contact-p{
 margin: 0px;
 padding: 0px;
@@ -808,9 +802,6 @@ font-weight: 300;
 }
 .contact-sub-text-left{
 float: left;
-clear: both;
-}
-.contact-sub-text-right{
 clear: both;
 }
 #contactInfo h2, #contactInfo p{
