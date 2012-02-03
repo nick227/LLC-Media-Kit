@@ -402,9 +402,7 @@ top: 117px;
 .benefitsContainer{
 background-image: url(../images/benefits_trans_bg.png);
 position: relative;
-display: block;
 margin: auto;
-margin-top: 60px;
 width: 878px;
 height: 620px;
 }
