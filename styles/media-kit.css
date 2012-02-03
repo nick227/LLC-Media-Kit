@@ -236,14 +236,13 @@ position: fixed;
 z-index: -1;
 top: 0px; 
 left: 0px; 
-background: url(../images/bg_gradient.png) center no-repeat; 
+background: url(../images/bg_gradient.png) center no-repeat;
 background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
 background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.6)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
 background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.6) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
 background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.6) 0%,rgba(255,255,255,0) 100%); /* Opera 12+ */
 background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.6) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
 background: radial-gradient(center, ellipse cover,  rgba(255,255,255,0.6) 0%,rgba(255,255,255,0) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
 }
 #temp-big-container{
 padding:0;margin:0;position:absolute;
@@ -762,6 +761,7 @@ color:#ffffff;
 position: absolute;
 height: 197px;
 top: 100px;
+left: 70px;
 }
 #contactHeaderOrange{
 position: absolute;
@@ -781,7 +781,7 @@ background: url(../images/contactInfoBg.png);
 padding: 30px;
 position: absolute;
 top: 330px;
-left: 500px;
+left: 230px;
 width: 500px;
 height: 130px;
 }
@@ -817,7 +817,7 @@ color:#f5e355;
 }
 .contact-header{font-family:KnockoutHTF26JuniorFlyweighRg; font-size:10em; PADDING:none; margin: 0px; position:absolute; display: inline; left:30px; font-weight:500;}
 .contact-header-sub{font-family:KnockoutHTF26JuniorFlyweighRg;color: #898989; font-size:4.7em; PADDING:none; margin: 0px; position:absolute; display: inline;left:270px; top:32px;line-height:.75em; font-weight:500;}
-#contact-wrap { margin: 0 auto; width: 919px; height: 800px;}
+#contact-wrap { position: relative; margin:auto; width: 919px; height: 800px;}
 #contact-wrap h1 { margin: 0; padding: 0 0 0 0; text-align: center; }
 #contact-left p, #contact-right p { font-family: "proxima-nova"; font-size: 22px; color: #f5e355; }
 #contact-left h2, #contact-right h2 { margin: 0 0 10px 0; font-size: 30px; color: #fff; }

@@ -200,4 +200,8 @@
 		]]>
 	</adLowLeaderboardLightbox>
 </inventoryPage>
+<getStartedPage>
+	<salesEmailLink><![CDATA[mailto:sales@multiview.com]]></salesEmailLink>
+	<multiviewLink><![CDATA[http://www.multiview.com]]></multiviewLink>
+</getStartedPage>
 </site>
