@@ -722,15 +722,17 @@ padding-bottom: 20px;
 #pricing-table .option { position: relative; padding: 10px 0 0 0; }
 #pricing-table .option .info { overflow: hidden; background: #fff; color: #555; padding-right: 3px; position: relative; z-index: 2; }
 #pricing-table .option .title { line-height: 40px; background-color: #f0a726; font-size: 24px; text-indent: 20px; text-transform: uppercase; color: #fff; }
+
 #pricing-table .option .title .price { display: block; background-color: #ececec; width: 160px; position: relative; margin-right: -3px; float: right; text-align: right; padding-right: 10px; color: #6b6b6b; }
+
 #pricing-table .option .bg { display: none; }
 #pricing-table .option .desc { width: 75%; padding: 20px; float: left; }
 #pricing-table .option .buy { width: 15%; float: right; text-align: center; padding: 30px 20px; }
 #pricing-table .option .specs { background: #ececec; padding: 10px 20px; float: left; clear: both; }
 
 #pricing-table #opt-one.option { padding: 0;}
-/*
-#pricing-table #opt-one.option .info { width: 870px; }
+
+/*#pricing-table #opt-one.option .info { width: 870px; }
 #pricing-table #opt-one.option .bg { width: 50px; }
 
 #pricing-table #opt-two.option .info { width: 876px; }
@@ -746,9 +748,9 @@ padding-bottom: 20px;
 #pricing-table #opt-five.option .bg { width: 26px; }
 
 #pricing-table #opt-six.option .info { width: 900px; }
+
 #pricing-table #opt-six.option .bg { width: 20px; }
 */
-
 
 /**** CONTACT PAGE */ /*Radial gradient : inner = #e0a739, outer = #b2790b */
 #contact-stage{
