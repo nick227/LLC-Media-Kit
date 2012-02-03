@@ -494,7 +494,7 @@ var ie = false;
 		  // SlideContainer rebound
 		  if ($(this).is('#ipadWrap') && height > top - parHeight + 50) {
 		  	
-		  	$(this).animate({top:height+parHeight-50}, 300, 'swing');
+		  	$(this).animate({top:0}, 300, 'swing');
 		  
 		  } 
 		  // iPadScreen rebound
