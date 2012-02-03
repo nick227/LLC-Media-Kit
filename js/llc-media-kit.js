@@ -208,7 +208,9 @@ var ie = false;
              }, pageTransitionSpeed, 'swing', function () {
                  $("#temp-new-container .stage").prependTo('#stage-anchor');
                  $("#temp-big-container").remove();
-                 mediaKit.fadeUpBgGradient();
+                 if($('body').data('activeNav')!='2'){
+                	 mediaKit.fadeUpBgGradient();
+                }
 				 transitionCheck = 0;
              });
 
@@ -224,13 +226,15 @@ var ie = false;
             }, pageTransitionSpeed, 'swing', function () {
                 $("#temp-new-container .stage").prependTo('#stage-anchor');
                 $("#temp-big-container").remove();
-            	mediaKit.fadeUpBgGradient();
-				 transitionCheck = 0;
+                if($('body').data('activeNav')!='2'){
+	            	mediaKit.fadeUpBgGradient();
+	            	
+				}
+				transitionCheck = 0;
             });
          
          
          }
-
      },
      adjustBgGradientPos: function () {
          var stageHeight = $('#stage-anchor').height();
@@ -333,48 +337,47 @@ var ie = false;
              	}
              });
          });
-         mediaKit.introBenefitsPage1();
-     },
-     introBenefitsPage1: function(){
-     	$('.benefit-box').each(function () {
-     		$(this).css({opacity: 0});
-     	});
-     	var a = $('#benefitsText_Your');
-     	var b = $('#benefitsText_Benefits');
-     	$('#benefitsText_Explore').css('opacity', '0');
-     	var yourTop = $(a).position().top;
-     	var benefitsLeft = $(b).position().left;
-     	$(a).css('top', yourTop + 250 + 'px');
-     	$(a).css('opacity', 0);
-     	$(b).css('opacity', 0);
-     	$(b).css('left', benefitsLeft + 250 + 'px');
-     	
-     	$(a).delay(1000).animate({top: yourTop, opacity: 1}, 400, 'swing', function(){
-     		$(b).delay(100).animate({left: benefitsLeft, opacity: 1}, 400, 'swing', function(){mediaKit.introBenefitsPage2();});
-     	});
-     },
-     introBenefitsPage2: function(){
-     	var delayInc = 100;
-		$('.benefit-box').each(function () {
-			var targetX = $(this).position().left;
-    	 	$(this).css({left: targetX + 400});
-    		$(this).delay(delayInc).animate({opacity: 1,
-    												left: targetX}, 
-    												{duration: 300,
-    	             								specialEasing: {opacity: 'linear',
-    	                 											left: 'swing'}});
-    	    delayInc += 100;
-    	});
-    	setTimeout(function(){mediaKit.introBenefitsPage3();}, 1000);
-     },
-     introBenefitsPage3: function(){
-		var c = $('#benefitsText_Explore');
-		$(c).delay(200).animate({opacity: 1}, 500);
+		introBenefitsPage1();
+		function introBenefitsPage1(){
+     		$('.benefit-box').each(function () {
+     			$(this).css({opacity: 0});
+     		});
+     		var a = $('#benefitsText_Your');
+     		var b = $('#benefitsText_Benefits');
+     		$('#benefitsText_Explore').css('opacity', '0');
+    	 	var yourTop = $(a).position().top;
+    	 	var benefitsLeft = $(b).position().left;
+    	 	$(a).css('top', yourTop + 250 + 'px');
+     		$(a).css('opacity', 0);
+     		$(b).css('opacity', 0);
+     		$(b).css('left', benefitsLeft + 250 + 'px');
+     		$(a).delay(1000).animate({top: yourTop, opacity: 1}, 400, 'swing', function(){
+     			$(b).delay(100).animate({left: benefitsLeft, opacity: 1}, 400, 'swing', function(){introBenefitsPage2();});
+     		});
+    	 }
+		function introBenefitsPage2(){
+     		var delayInc = 100;
+			$('.benefit-box').each(function () {
+				var targetX = $(this).position().left;
+    	 		$(this).css({left: targetX + 400});
+    			$(this).delay(delayInc).animate({opacity: 1,
+    											left: targetX}, 
+    											{duration: 300,
+    	             							specialEasing: 
+    	             							{opacity: 'linear',
+    	                 						left: 'swing'}});
+    	    	delayInc += 100;
+    		});
+    		setTimeout(function(){introBenefitsPage3();}, 1000);
+    	 }
+		function introBenefitsPage3(){
+			var c = $('#benefitsText_Explore');
+			$(c).delay(200).animate({opacity: 1}, 500);
+     	}
      },
      setupInventoryPage: function () {
 				mediaKit.setupArrowSubNav();
 				mediaKit.setupVirtualIpad();
-		
 	},
 	shiftIpadScreen: function(whereTo){
 		var target = 0;
