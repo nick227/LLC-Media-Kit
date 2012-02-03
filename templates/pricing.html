@@ -2,7 +2,7 @@
   <div id="pricing-wrap">
     <h1><img src="images/plans_pricing_title.png" alt="Plans and Pricing" /></h1>
     <div id="pricing-table">
-      <div id="opt-one" class="option">
+      <div id="opt-one" class="option" style="display:none;">
         <div class="info">
           <div class="title">
             <strong>Full Campaign</strong>
@@ -10,12 +10,12 @@
           </div>
           <div class="desc">This provides you with a prominent listing that features your ads in multiple places. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio
           </div>
-          <div class="buy"><a href="#"><img src="images/btn_reserve.png" alt="Reserve Now" /></a></div>
+          <div class="buy"><a href="<%=pricingPage.reserveButtonLink%>"><img src="images/btn_reserve.png" alt="Reserve Now" /></a></div>
           <div class="specs">DIMENSIONS: <strong>728 x 90, 120 x 600, 120 x 90</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FORMAT: <strong>JPG, GIF, SWF</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SIZE: <strong>40KB (3)</strong></div>
         </div>
         <div class="bg"></div>
       </div>
-      <div id="opt-two" class="option">
+      <div id="opt-two" class="option" style="display:none;">
         <div class="info">
           <div class="title">
             <strong>Top LEADERBOARD</strong>
@@ -23,7 +23,7 @@
           </div>
           <div class="desc">This premier position provides your company with top exposure and quality traffic – ensure that your company is the first thing LLC users see!
           </div>
-          <div class="buy"><a href="#"><img src="images/btn_reserve.png" alt="Reserve Now" /></a></div>
+          <div class="buy"><a href="<%=pricingPage.reserveButtonLink%>"><img src="images/btn_reserve.png" alt="Reserve Now" /></a></div>
           <div class="specs">DIMENSIONS: <strong>728 x 90</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FORMAT: <strong>JPG, GIF, SWF</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SIZE: <strong>40KB</strong></div>
         </div>
         <div class="bg"></div>
@@ -31,12 +31,12 @@
       <div id="opt-three" class="option">
         <div class="info">
           <div class="title">
-            <strong>Skyscraper</strong>
-            <span class="price">$2,500</span>
+            <strong><%=pricingPage.skyScraperName%></strong>
+            <span class="price"><%=pricingPage.skyScraperPrice%></span>
           </div>
-          <div class="desc">A Skyscraper is a large format graphic ad that delivers prime real estate to sell your company’s products or services to decision makers.
+          <div class="desc"><%=pricingPage.skyScraperBlurb%>
           </div>
-          <div class="buy"><a href="#"><img src="images/btn_reserve.png" alt="Reserve Now" /></a></div>
+          <div class="buy"><a href="<%=pricingPage.reserveButtonLink%>"><img src="images/btn_reserve.png" alt="Reserve Now" /></a></div>
           <div class="specs">DIMENSIONS: <strong>728 x 90</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FORMAT: <strong>JPG, GIF, SWF</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SIZE: <strong>40KB</strong></div>
         </div>
         <div class="bg"></div>
@@ -44,12 +44,12 @@
       <div id="opt-four" class="option">
         <div class="info">
           <div class="title">
-            <strong>Sponsored media</strong>
-            <span class="price">$1,250</span>
+            <strong><%=pricingPage.sponsorMediaName%></strong>
+            <span class="price"><%=pricingPage.sponsorMediaPrice%></span>
           </div>
-          <div class="desc">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio
+          <div class="desc"><%=pricingPage.sponsorMediaBlurb%>
           </div>
-          <div class="buy"><a href="#"><img src="images/btn_reserve.png" alt="Reserve Now" /></a></div>
+          <div class="buy"><a href="<%=pricingPage.reserveButtonLink%>"><img src="images/btn_reserve.png" alt="Reserve Now" /></a></div>
           <div class="specs">DIMENSIONS: <strong>728 x 90</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FORMAT: <strong>JPG, GIF, SWF</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SIZE: <strong>40KB</strong></div>
         </div>
         <div class="bg"></div>
@@ -57,12 +57,12 @@
       <div id="opt-five" class="option">
         <div class="info">
           <div class="title">
-            <strong>Industry Partner</strong>
-            <span class="price">$1,250</span>
+            <strong><%=pricingPage.spotlightName%></strong>
+            <span class="price"><%=pricingPage.spotlightPrice%></span>
           </div>
-          <div class="desc">Cement your company’s presence in front of the industry by displaying your logo across all areas of the LLC.
+          <div class="desc"><%=pricingPage.spotlightBlurb%>
           </div>
-          <div class="buy"><a href="#"><img src="images/btn_reserve.png" alt="Reserve Now" /></a></div>
+          <div class="buy"><a href="<%=pricingPage.reserveButtonLink%>"><img src="images/btn_reserve.png" alt="Reserve Now" /></a></div>
           <div class="specs">DIMENSIONS: <strong>728 x 90</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FORMAT: <strong>JPG, GIF, SWF</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SIZE: <strong>40KB</strong></div>
         </div>
         <div class="bg"></div>
@@ -70,12 +70,12 @@
       <div id="opt-six" class="option">
         <div class="info">
           <div class="title">
-            <strong>Bottom LEADERBOARD</strong>
-            <span class="price">$2,500</span>
+            <strong><%=pricingPage.lowerLeaderName%></strong>
+            <span class="price"><%=pricingPage.lowerLeaderPrice%></span>
           </div>
-          <div class="desc">Lower Leaderboard allows your company to combine text, colors and graphics into a unique sales message for qualified buyers.
+          <div class="desc"><%=pricingPage.lowerLeaderBlurb%>
           </div>
-          <div class="buy"><a href="#"><img src="images/btn_reserve.png" alt="Reserve Now" /></a></div>
+          <div class="buy"><a href="<%=pricingPage.reserveButtonLink%>"><img src="images/btn_reserve.png" alt="Reserve Now" /></a></div>
           <div class="specs">DIMENSIONS: <strong>728 x 90</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FORMAT: <strong>JPG, GIF, SWF</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SIZE: <strong>40KB</strong></div>
         </div>
         <div class="bg"></div>

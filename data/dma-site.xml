@@ -34,4 +34,31 @@
 <benefitCopyCreative>
 	<![CDATA[Our agency-quality creative team offers full design services at no additional cost. We will work with you to ensure that your campaign is engaging and drives the traffic you need.]]>
 </benefitCopyCreative>
+
+<audiencePage>
+<industrySize><![CDATA[12,000]]></industrySize>
+<industryType><![CDATA[DIRECT MARKETING]]></industryType>
+<industrySpend><![CDATA[$155 BILLION DOLLARS]]></industrySpend>
+<industryMembers><![CDATA[<li>Marketers</li><li>Consultants</li><li>Non-Profits</li><li>Intl Organizations</li>]]></industryMembers>
+</audiencePage>
+
+<pricingPage>
+<reserveButtonLink><![CDATA[mailto:sales@multiview.com]]></reserveButtonLink>
+<skyScraperName><![CDATA[Skyscraper]]></skyScraperName>
+<skyScraperBlurb><![CDATA[A Skyscraper is a large format graphic ad that delivers prime real estate to sell your company’s products or services to decision makers.]]></skyScraperBlurb>
+<skyScraperPrice><![CDATA[$2,500]]></skyScraperPrice>
+
+<sponsorMediaName><![CDATA[SPONSORED MEDIA]]></sponsorMediaName>
+<sponsorMediaBlurb><![CDATA[Further target your message by sponsoring individual sessions – prominently showcase your logo throughout an entire presentation.]]></sponsorMediaBlurb>
+<sponsorMediaPrice><![CDATA[$1,500]]></sponsorMediaPrice>
+
+<spotlightName><![CDATA[BUSINESS SPOTLIGHT]]></spotlightName>
+<spotlightBlurb><![CDATA[Cement your company’s presence in front of the industry by displaying your logo across all areas of the LLC. Industry Partner logos are highlighted throughout the site.]]></spotlightBlurb>
+<spotlightPrice><![CDATA[$1,250]]></spotlightPrice>
+
+<lowerLeaderName><![CDATA[BOTTOM LEADERBOARD]]></lowerLeaderName>
+<lowerLeaderBlurb><![CDATA[Lower Leaderboard allows your company to combine text, colors and graphics into a unique sales message for qualified buyers.]]></lowerLeaderBlurb>
+<lowerLeaderPrice><![CDATA[$2,500]]></lowerLeaderPrice>
+
+</pricingPage>
 </site>
