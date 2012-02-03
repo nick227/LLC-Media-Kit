@@ -3,7 +3,8 @@
   * 01/19/2012 Multiview Inc,
   * 
   */ /**** SETUP VARS HERE! ***/
- var feedName = 'data/dma-site.xml';
+ var subdomain = urlCheck();
+ var feedName = 'data/'+subdomain+'-site.xml';
  var startPage = 'audience';
  var pageNames_ar = new Array('audience', 'benefits', 'inventory', 'pricing', 'contact');
  var stageHeight = $(document).height() - 80;

@@ -97,3 +97,16 @@ document.write("<li>["+p+"] => "+theObj[p]+"</li>");
     document.write("</ul>")
   }
 }
+
+ /******************* PARSE URL ***********/
+
+function urlCheck() {
+  var loc = window.location.toString();
+  loc = loc.replace('www.', '');
+  var subd = loc.substring(loc.indexOf('//')+2, loc.indexOf('.'));
+	if(subd.indexOf('.com') > 0 || subd.indexOf('/') > 0){
+	return 'dma';
+	}else{
+	return subd;
+	}
+}
