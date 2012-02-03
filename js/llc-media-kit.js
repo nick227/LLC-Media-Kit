@@ -208,7 +208,7 @@ var ie = false;
              }, pageTransitionSpeed, 'swing', function () {
                  $("#temp-new-container .stage").prependTo('#stage-anchor');
                  $("#temp-big-container").remove();
-                 if($('body').data('activeNav')!='2'){
+                 if($('body').data('activeNav')!='2'){ //Benefits setup function will handle this with different timing
                 	 mediaKit.fadeUpBgGradient();
                 }
 				 transitionCheck = 0;
@@ -373,6 +373,7 @@ var ie = false;
 		function introBenefitsPage3(){
 			var c = $('#benefitsText_Explore');
 			$(c).delay(200).animate({opacity: 1}, 500);
+			mediaKit.fadeUpBgGradient();
      	}
      },
      setupInventoryPage: function () {
