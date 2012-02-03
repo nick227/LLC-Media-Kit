@@ -121,6 +121,7 @@ var ie = false;
                          }, 400, function () {
                              mediaKit.pageTransition(direction, newPage);
                              mediaKit.setupBenefitsPage();
+							$("html, body").animate({ scrollTop: 0}, 900, 'swing' );
                          });
                      }
                      //INVENTORY PAGE
@@ -131,6 +132,7 @@ var ie = false;
                          }, 400, function () {
                              mediaKit.pageTransition(direction, newPage);
                              mediaKit.setupInventoryPage();
+							$("html, body").animate({ scrollTop: 0}, 900, 'swing' );
                          });
                      }
                      //PRICING PAGE
@@ -139,6 +141,7 @@ var ie = false;
                              opacity: 0
                          }, 400, function () {
                              mediaKit.pageTransition(direction, newPage);
+							 $("html, body").animate({ scrollTop: 0}, 900, 'swing' );
                          });
                      }
                      //CONTACT PAGE
@@ -147,6 +150,7 @@ var ie = false;
                              opacity: 0
                          }, 400, function () {
                              mediaKit.pageTransition(direction, newPage);
+							 $("html, body").animate({ scrollTop: 0}, 900, 'swing' );
                          });
                      }
 
