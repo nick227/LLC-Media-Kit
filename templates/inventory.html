@@ -8,12 +8,12 @@
 </table>
 <div class="spacer-25px"></div>
 		<div class="nav-sub">
-			<!--<div id="subnav_campaign" class="nav-btn">FULL CAMPAIGN</div>-->
-			<!--<div id="subnav_top_leaderboard" class="nav-btn">TOP LEADERBOARD</div>-->
-			<div id="subnav_skyscraper" class="nav-btn">SKYSCRAPER</div>
-			<div id="subnav_low_leaderboard" class="nav-btn">LOWER LEADERBOARD</div>
-			<div id="subnav_industry_partner" class="nav-btn">BUSINESS SPOTLIGHT</div>
-			<div id="subnav_sponsored_media" class="nav-btn">SPONSORED MEDIA</div>
+			<div id="subnav_full_campaign" class="nav-btn" style="display: <%=inventoryPage.adFullCampaign.display%>;">FULL CAMPAIGN</div>
+			<div id="subnav_top_leaderboard" class="nav-btn" style="display: <%=inventoryPage.adTopLeaderboard.display%>;">TOP LEADERBOARD</div>
+			<div id="subnav_skyscraper" class="nav-btn" style="display: <%=inventoryPage.adSkyscraperL.display%>;">SKYSCRAPER</div>
+			<div id="subnav_low_leaderboard" class="nav-btn" style="display: <%=inventoryPage.adLowLeaderboard.display%>;">LOWER LEADERBOARD</div>
+			<div id="subnav_industry_partner" class="nav-btn" style="display: <%=inventoryPage.adIndustryPartner.display%>;">INDUSTRY PARTNERS</div>
+			<div id="subnav_sponsored_media" class="nav-btn" style="display: <%=inventoryPage.adSponsoredMedia.display%>;">SPONSORED MEDIA</div>
 		</div>
 </div>
 	<div id="ipadWrap" class="draggable">
@@ -21,42 +21,37 @@
 	    <div id="ipadScreen">
 	      <div id="homeScreen" class="draggable">
 	        <%=inventoryPage.homeScreen%>
-	        <!--<a class="fancybox ad_top_leaderboard" href="#ad_top_leaderboard" style="width: 360px; height: 45px; left: 75px; top: 12px;">
-	         <div class="glowingIcon"></div><span class="zoom"></span>
-	        </a>-->
-	        <a class="fancybox ad_sponsored_media" href="#ad_sponsored_media" style="width: <%=inventoryPage.adSponsoredMedia.width%>px; height: <%=inventoryPage.adSponsoredMedia.height%>px; left: <%=inventoryPage.adSponsoredMedia.left%>px; top: <%=inventoryPage.adSponsoredMedia.top%>px;">
+	        <a class="fancybox ad_full_campaign" href="#ad_full_campaign" style="width: 0; height: 0; overflow: hidden;">
 	         <div class="glowingIcon"></div><span class="zoom"></span>
 	        </a>
-	        <a class="fancybox ad_skyscraper" href="#ad_skyscraper_L" style="width: <%=inventoryPage.adSkyscraperL.width%>px; height: <%=inventoryPage.adSkyscraperL.height%>px; left: <%=inventoryPage.adSkyscraperL.left%>px; top: <%=inventoryPage.adSkyscraperL.top%>px;">
+	        <a class="fancybox ad_top_leaderboard" href="#ad_top_leaderboard" style="display: <%=inventoryPage.adTopLeaderboard.display%>; width: <%=inventoryPage.adTopLeaderboard.width%>px; height: <%=inventoryPage.adTopLeaderboard.height%>px; left: <%=inventoryPage.adTopLeaderboard.left%>px; top: <%=inventoryPage.adTopLeaderboard.top%>px;">
+	         <div class="glowingIcon"></div><span class="zoom"></span>
+	        </a>
+	        <a class="fancybox ad_sponsored_media" href="#ad_sponsored_media" style="display: <%=inventoryPage.adSponsoredMedia.display%>; width: <%=inventoryPage.adSponsoredMedia.width%>px; height: <%=inventoryPage.adSponsoredMedia.height%>px; left: <%=inventoryPage.adSponsoredMedia.left%>px; top: <%=inventoryPage.adSponsoredMedia.top%>px;">
+	         <div class="glowingIcon"></div><span class="zoom"></span>
+	        </a>
+	        <a class="fancybox ad_skyscraper" href="#ad_skyscraper_L" style="display: <%=inventoryPage.adSkyscraperL.display%>; width: <%=inventoryPage.adSkyscraperL.width%>px; height: <%=inventoryPage.adSkyscraperL.height%>px; left: <%=inventoryPage.adSkyscraperL.left%>px; top: <%=inventoryPage.adSkyscraperL.top%>px;">
 	          <div class="glowingIcon"></div><span class="zoom"></span>
 	        </a>
-	        <a class="fancybox ad_skyscraper" href="#ad_skyscraper_R" style="width: <%=inventoryPage.adSkyscraperR.width%>px; height: <%=inventoryPage.adSkyscraperR.height%>px; left: <%=inventoryPage.adSkyscraperR.left%>px; top: <%=inventoryPage.adSkyscraperR.top%>px;">
+	        <a class="fancybox ad_skyscraper" href="#ad_skyscraper_R" style="display: <%=inventoryPage.adSkyscraperR.display%>; width: <%=inventoryPage.adSkyscraperR.width%>px; height: <%=inventoryPage.adSkyscraperR.height%>px; left: <%=inventoryPage.adSkyscraperR.left%>px; top: <%=inventoryPage.adSkyscraperR.top%>px;">
 	          <div class="glowingIcon"></div><span class="zoom"></span>
 	        </a>
-	        <a class="fancybox ad_industry_partner" href="#ad_industry_partner" style="width: <%=inventoryPage.adBusinessSpotlight.width%>px; height: <%=inventoryPage.adBusinessSpotlight.height%>px; left: <%=inventoryPage.adBusinessSpotlight.left%>px; top: <%=inventoryPage.adBusinessSpotlight.top%>px;">
+	        <a class="fancybox ad_industry_partner" href="#ad_industry_partner" style="display: <%=inventoryPage.adIndustryPartner.display%>; width: <%=inventoryPage.adIndustryPartner.width%>px; height: <%=inventoryPage.adIndustryPartner.height%>px; left: <%=inventoryPage.adIndustryPartner.left%>px; top: <%=inventoryPage.adIndustryPartner.top%>px;">
 	          <div class="glowingIcon"></div><span class="zoom"></span>
 	        </a>
-	        <a class="fancybox ad_low_leaderboard" href="#ad_low_leaderboard" style="width: <%=inventoryPage.adLowLeaderboard.width%>px; height: <%=inventoryPage.adLowLeaderboard.height%>px; left: <%=inventoryPage.adLowLeaderboard.left%>px; top: <%=inventoryPage.adLowLeaderboard.top%>px;">
+	        <a class="fancybox ad_low_leaderboard" href="#ad_low_leaderboard" style="display: <%=inventoryPage.adLowLeaderboard.display%>; width: <%=inventoryPage.adLowLeaderboard.width%>px; height: <%=inventoryPage.adLowLeaderboard.height%>px; left: <%=inventoryPage.adLowLeaderboard.left%>px; top: <%=inventoryPage.adLowLeaderboard.top%>px;">
 	          <div class="glowingIcon"></div><span class="zoom"></span>
 	        </a>
 	        <!-- Lightbox content -->
 	        <div style="display:none">
 	        	
-	        	<!--<div id="ad_top_leaderboard" class="inline-content">
-	        	  <img src="images/ad_top_leaderboard.jpg" />
-	        	  <div style="margin: 0 auto; width: 700px; overflow: hidden;">
-		        	<table class="title" style="float: left;" width="300">
-		        	  <tr><th colspan="2">Top Leaderboard</th></tr>
-		        	  <tr><td></td><td align="right">$3,500</td></tr>
-		        	</table>
-		        	<table class="specs" style="float: right;" width="300">
-		        	  <tr><th colspan="2">specifications:</th></tr>
-		        	  <tr><td>Dimensions</td><td><em>728 x 90</em></td></tr>
-		        	  <tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
-		        	  <tr><td>size</td><td><em>40Kb</em></td></tr>
-	        	  	</table>
-	        	  </div>
-	        	</div>-->
+	        	<div id="ad_full_campaign" class="inline-content">
+	        	  <%=inventoryPage.adFullCampaignLightbox%>
+	        	</div>
+	        	
+	        	<div id="ad_top_leaderboard" class="inline-content">
+	        	  <%=inventoryPage.adTopLeaderboardLightbox%>
+	        	</div>
 
 	        	<div id="ad_sponsored_media" class="inline-content">
 	        	  <%=inventoryPage.adSponsoredMediaLightbox%>
