@@ -63,7 +63,7 @@
 
 <inventoryPage>
 	<homeScreen><![CDATA[<img class="screen" src="images/homeScreen.jpg" width="510" height="994" alt="" />]]></homeScreen>
-	<adFullCampaign display="none" />
+	<adFullCampaign display="none"></adFullCampaign>
 	<adFullCampaignLightbox>
 		<![CDATA[  
 		full campaign html here 
@@ -160,8 +160,8 @@
 		<height><![CDATA[30]]></height>
 		<left><![CDATA[431]]></left>
 		<top><![CDATA[610]]></top>
-	</adBusinessSpotlight>
-	<adBusinessSpotlightLightbox>
+	</adIndustryPartner>
+	<adIndustryPartnerLightbox>
 		<![CDATA[
 		<img src="images/ad_business_spotlight.jpg" />
 		<table class="title" align="center" width="300">
