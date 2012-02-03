@@ -160,8 +160,8 @@
 		<height><![CDATA[30]]></height>
 		<left><![CDATA[431]]></left>
 		<top><![CDATA[610]]></top>
-	</adIndustryPartner>
-	<adIndustryPartnerLightbox>
+	</adBusinessSpotlight>
+	<adBusinessSpotlightLightbox>
 		<![CDATA[
 		<img src="images/ad_business_spotlight.jpg" />
 		<table class="title" align="center" width="300">
