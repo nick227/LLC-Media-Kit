@@ -155,7 +155,7 @@
 		</table>
 		]]>
 	</adSkyscraperRLightbox>
-	<adIndustryPartner display="block">
+	<adBusinessSpotlight display="block">
 		<width><![CDATA[60]]></width>
 		<height><![CDATA[30]]></height>
 		<left><![CDATA[431]]></left>
@@ -175,7 +175,7 @@
 			<tr><td>size</td><td><em>40Kb</em></td></tr>
 		</table>
 		]]>
-	</adIndustryPartnerLightbox>
+	</adBusinessSpotlightLightbox>
 	<adLowLeaderboard display="block">
 		<width><![CDATA[360]]></width>
 		<height><![CDATA[45]]></height>
