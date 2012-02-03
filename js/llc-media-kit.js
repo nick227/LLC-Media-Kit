@@ -209,7 +209,7 @@ var ie = false;
              $('#'+curStageID).prependTo('#temp-big-container');
              $('div#temp-big-container').append(newContainer).animate({
                  left: '-' + currentStageWidth
-             }, pageTransitionSpeed, 'swing', function () {
+             }, pageTransitionSpeed, 'easeInOutExpo', function () {
                  $("#temp-new-container .stage").prependTo('#stage-anchor');
                  $("#temp-big-container").remove();
                  if($('body').data('activeNav')!='2'){ //Benefits setup function will handle this with different timing
@@ -227,7 +227,7 @@ var ie = false;
             $('#'+curStageID).prependTo('#temp-big-container');
             $('div#temp-big-container').append(newContainer).animate({
             	right: '-' + currentStageWidth
-            }, pageTransitionSpeed, 'swing', function () {
+            }, pageTransitionSpeed, 'easeInOutExpo', function () {
                 $("#temp-new-container .stage").prependTo('#stage-anchor');
                 $("#temp-big-container").remove();
                 if($('body').data('activeNav')!='2'){
