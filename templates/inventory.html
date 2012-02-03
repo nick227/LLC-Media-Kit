@@ -20,23 +20,23 @@
 	  <div id="ipad" style="">
 	    <div id="ipadScreen">
 	      <div id="homeScreen" class="draggable">
-	        <img class="screen" src="images/homeScreen.jpg" width="510" height="994" alt="" />
+	        <%=inventoryPage.homeScreen%>
 	        <!--<a class="fancybox ad_top_leaderboard" href="#ad_top_leaderboard" style="width: 360px; height: 45px; left: 75px; top: 12px;">
 	         <div class="glowingIcon"></div><span class="zoom"></span>
 	        </a>-->
-	        <a class="fancybox ad_sponsored_media" href="#ad_sponsored_media" style="width: 60px; height: 30px; left: 427px; top: 227px;">
+	        <a class="fancybox ad_sponsored_media" href="#ad_sponsored_media" style="width: <%=inventoryPage.adSponsoredMedia.width%>px; height: <%=inventoryPage.adSponsoredMedia.height%>px; left: <%=inventoryPage.adSponsoredMedia.left%>px; top: <%=inventoryPage.adSponsoredMedia.top%>px;">
 	         <div class="glowingIcon"></div><span class="zoom"></span>
 	        </a>
-	        <a class="fancybox ad_skyscraper" href="#ad_skyscraper_L" style="width: 81px; height: 298px; left: 8px; top: 285px;">
+	        <a class="fancybox ad_skyscraper" href="#ad_skyscraper_L" style="width: <%=inventoryPage.adSkyscraperL.width%>px; height: <%=inventoryPage.adSkyscraperL.height%>px; left: <%=inventoryPage.adSkyscraperL.left%>px; top: <%=inventoryPage.adSkyscraperL.top%>px;">
 	          <div class="glowingIcon"></div><span class="zoom"></span>
 	        </a>
-	        <a class="fancybox ad_skyscraper" href="#ad_skyscraper_R" style="width: 81px; height: 298px; left: 421px; top: 285px;">
+	        <a class="fancybox ad_skyscraper" href="#ad_skyscraper_R" style="width: <%=inventoryPage.adSkyscraperR.width%>px; height: <%=inventoryPage.adSkyscraperR.height%>px; left: <%=inventoryPage.adSkyscraperR.left%>px; top: <%=inventoryPage.adSkyscraperR.top%>px;">
 	          <div class="glowingIcon"></div><span class="zoom"></span>
 	        </a>
-	        <a class="fancybox ad_industry_partner" href="#ad_industry_partner" style="width: 60px; height: 30px; left: 431px; top: 610px;">
+	        <a class="fancybox ad_industry_partner" href="#ad_industry_partner" style="width: <%=inventoryPage.adIndustryPartner.width%>px; height: <%=inventoryPage.adIndustryPartner.height%>px; left: <%=inventoryPage.adIndustryPartner.left%>px; top: <%=inventoryPage.adIndustryPartner.top%>px;">
 	          <div class="glowingIcon"></div><span class="zoom"></span>
 	        </a>
-	        <a class="fancybox ad_low_leaderboard" href="#ad_low_leaderboard" style="width: 360px; height: 45px; left: 75px; top: 928px;">
+	        <a class="fancybox ad_low_leaderboard" href="#ad_low_leaderboard" style="width: <%=inventoryPage.adLowLeaderboard.width%>px; height: <%=inventoryPage.adLowLeaderboard.height%>px; left: <%=inventoryPage.adLowLeaderboard.left%>px; top: <%=inventoryPage.adLowLeaderboard.top%>px;">
 	          <div class="glowingIcon"></div><span class="zoom"></span>
 	        </a>
 	        <!-- Lightbox content -->
@@ -63,61 +63,19 @@
 	        	</div>
 	        	
 	        	<div id="ad_skyscraper_L" style="width: 500px;" class="inline-content">
-	        	  <img src="images/ad_skyscraper_L.jpg" style="float: left; margin-right: 20px;" />
-	        	  <table class="title" style="margin-top: 0;" align="center" width="300">
-	        	  	<tr><th colspan="2">Skyscraper</th></tr>
-	        	  	<tr><td></td><td align="right">$3,500</td></tr>
-	        	  </table>
-	        	  <table class="specs" align="center" width="300">
-	        	  	<tr><th colspan="2">specifications:</th></tr>
-	        	  	<tr><td>Dimensions</td><td><em>728 x 90</em></td></tr>
-	        	  	<tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
-	        	  	<tr><td>size</td><td><em>40Kb</em></td></tr>
-	        	  </table>
+	        	  <%=inventoryPage.adSkyscraperLLightbox%>
 	        	</div>
 	        	
 	        	<div id="ad_skyscraper_R" style="width: 500px;" class="inline-content">
-	        	  <img src="images/ad_skyscraper_R.jpg" style="float: left; margin-right: 20px;" />
-	        	  <table class="title" style="margin-top: 0;" align="center" width="300">
-	        	  	<tr><th colspan="2">Skyscraper</th></tr>
-	        	  	<tr><td></td><td align="right">$3,500</td></tr>
-	        	  </table>
-	        	  <table class="specs" align="center" width="300">
-	        	  	<tr><th colspan="2">specifications:</th></tr>
-	        	  	<tr><td>Dimensions</td><td><em>728 x 90</em></td></tr>
-	        	  	<tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
-	        	  	<tr><td>size</td><td><em>40Kb</em></td></tr>
-	        	  </table>
+	        	  <%=inventoryPage.adSkyscraperRLightbox%>
 	        	</div>
 	        	
 	        	<div id="ad_industry_partner" class="inline-content">
-	        	  <img src="images/ad_industry_partner.jpg" />
-	        	  <table class="title" align="center" width="300">
-	        	  	<tr><th colspan="2">Industry Partner</th></tr>
-	        	  	<tr><td></td><td align="right">$3,500</td></tr>
-	        	  </table>
-	        	  <table class="specs" align="center" width="300">
-	        	  	<tr><th colspan="2">specifications:</th></tr>
-	        	  	<tr><td>Dimensions</td><td><em>728 x 90</em></td></tr>
-	        	  	<tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
-	        	  	<tr><td>size</td><td><em>40Kb</em></td></tr>
-	        	  </table>
+	        	  <%=inventoryPage.adIndustryPartnerLightbox%>
 	        	</div>
 	        	
 	        	<div id="ad_low_leaderboard" class="inline-content">
-	        	  <img src="images/ad_low_leaderboard.jpg" />
-	        	  <div style="margin: 0 auto; width: 700px; overflow: hidden;">
-	        	  	<table class="title" style="float: left;" width="300">
-	        	  	  <tr><th colspan="2">Lower Leaderboard</th></tr>
-	        	  	  <tr><td></td><td align="right">$3,500</td></tr>
-	        	  	</table>
-	        	  	<table class="specs" style="float: right;" width="300">
-	        	  	  <tr><th colspan="2">specifications:</th></tr>
-	        	  	  <tr><td>Dimensions</td><td><em>728 x 90</em></td></tr>
-	        	  	  <tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
-	        	  	  <tr><td>size</td><td><em>40Kb</em></td></tr>
-	        	  	</table>
-	        	  </div>
+	        	  <%=inventoryPage.adLowLeaderboardLightbox%>
 	        	</div>
 	        	
 	        </div>
