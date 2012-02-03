@@ -85,7 +85,6 @@ var ie = false;
                      });
                      
                      globalNavPointer = $('.header-edge-pointer');
-//                     console.log(globalNavPointer);
                      mediaKit.setPointerTargetX('#' + startPage + '_mainNav');
                      $(window).resize(function () {
                          mediaKit.setPointerX();
@@ -200,7 +199,6 @@ var ie = false;
 
          }
          if (dir == 'left') {
-         	//console.log(newPage);
              var newtop = stageHeight - 80;
              var newContainer = '<div id="temp-new-container" style="width:100%; position:absolute; top:0; left:' + currentStageWidth + 'px">' + newPage + '</div>';
              $('#stage-anchor').prepend('<div id="temp-big-container" style="height:10000px; top:0; left:0; position:relative; z-index:1"></div>');
@@ -236,7 +234,6 @@ var ie = false;
      },
      adjustBgGradientPos: function () {
          var stageHeight = $('#stage-anchor').height();
-         //console.log(stageHeight);
          var i = $('.stage-bg-gradient');
          var s = $('#stage-anchor');
          $(i).offset({
@@ -286,7 +283,6 @@ var ie = false;
          }
      },
      setPointerX: function () {
-//         console.log('resize');
          if (!pointerInMotion && currentSelection != null) {
              pointerTargetX = $(currentSelection).offset().left + (($(currentSelection).width() - $(globalNavPointer).width()) / 2);
              globalNavPointer[0].style.left = pointerTargetX + 'px';
@@ -317,7 +313,6 @@ var ie = false;
                     	 top: 0
                  		}, 200, function () {});
                  		currentBenefit = null;
-                 		console.log(currentBenefit);
              		}else{
              			$(currentBenefit).stop();
              			$(currentBenefit).animate({
@@ -374,7 +369,6 @@ var ie = false;
      },
      introBenefitsPage3: function(){
 		var c = $('#benefitsText_Explore');
-		console.log(c);
 		$(c).delay(200).animate({opacity: 1}, 500);
      },
      setupInventoryPage: function () {
