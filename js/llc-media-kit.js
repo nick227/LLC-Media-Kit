@@ -121,6 +121,7 @@ var ie = false;
                          }, 400, function () {
                              mediaKit.pageTransition(direction, newPage);
                              mediaKit.setupBenefitsPage();
+							$("html, body").animate({ scrollTop: 0}, 900, 'swing' );
                          });
                      }
                      //INVENTORY PAGE
