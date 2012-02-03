@@ -52,7 +52,7 @@
 <sponsorMediaPrice><![CDATA[$1,500]]></sponsorMediaPrice>
 
 <spotlightName><![CDATA[BUSINESS SPOTLIGHT]]></spotlightName>
-<spotlightBlurb><![CDATA[Cement your company’s presence in front of the industry by displaying your logo across all areas of the LLC. Industry Partner logos are highlighted throughout the site.]]></spotlightBlurb>
+<spotlightBlurb><![CDATA[Cement your company’s presence in front of the industry by displaying your logo across all areas of the LLC. Business Spotlight logos are highlighted throughout the site.]]></spotlightBlurb>
 <spotlightPrice><![CDATA[$1,250]]></spotlightPrice>
 
 <lowerLeaderName><![CDATA[BOTTOM LEADERBOARD]]></lowerLeaderName>
@@ -163,7 +163,7 @@
 	</adBusinessSpotlight>
 	<adBusinessSpotlightLightbox>
 		<![CDATA[
-		<img src="images/ad_industry_partner.jpg" />
+		<img src="images/ad_business_spotlight.jpg" />
 		<table class="title" align="center" width="300">
 			<tr><th colspan="2">Business Spotlight</th></tr>
 			<tr><td></td><td align="right">$1,250</td></tr>
