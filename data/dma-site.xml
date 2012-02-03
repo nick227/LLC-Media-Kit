@@ -7,6 +7,7 @@
 <logo><![CDATA[http://www.the-dma.org/graphics/DMA_logo.jpg]]></logo>
 <accentColor><![CDATA[#74A5CD]]></accentColor>
 <llcURL><![CDATA[http://dma.sclibraries.com]]></llcURL>
+<benefitsPage>
 <benefitCopyDuration>
 	<![CDATA[In 2011, users of the DMA LLC spent over 1,200 hours interacting with valuable educational content. That&#145;s 1,200 hours they could have spent looking at YOUR campaign.]]>
 </benefitCopyDuration>
@@ -31,7 +32,7 @@
 <benefitCopyCreative>
 	<![CDATA[Our agency-quality creative team offers full design services at no additional cost. We will work with you to ensure that your campaign is engaging and drives the traffic you need.]]>
 </benefitCopyCreative>
-
+</benefitsPage>
 <audiencePage>
 <industrySize><![CDATA[12,000]]></industrySize>
 <industryType><![CDATA[DIRECT MARKETING]]></industryType>
