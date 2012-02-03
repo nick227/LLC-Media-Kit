@@ -9,7 +9,7 @@
 <div class="spacer-25px"></div>
 		<div class="nav-sub">
 			<div id="subnav_campaign" class="nav-btn">FULL CAMPAIGN</div>
-			<div id="subnav_top_leaderboard" class="nav-btn">TOP LEADERBOARD</div>
+			<!--<div id="subnav_top_leaderboard" class="nav-btn">TOP LEADERBOARD</div>-->
 			<div id="subnav_skyscraper" class="nav-btn">SKYSCRAPER</div>
 			<div id="subnav_low_leaderboard" class="nav-btn">LOWER LEADERBOARD</div>
 			<div id="subnav_industry_partner" class="nav-btn">INDUSTRY PARTNERS</div>
@@ -20,29 +20,29 @@
 	  <div id="ipad" style="">
 	    <div id="ipadScreen">
 	      <div id="homeScreen" class="draggable">
-	        <img class="screen" src="images/homeScreen.jpg" width="510" height="1046" alt="" />
-	        <a class="fancybox ad_top_leaderboard" href="#ad_top_leaderboard" style="width: 360px; height: 45px; left: 75px; top: 12px;">
+	        <img class="screen" src="images/homeScreen.jpg" width="510" height="994" alt="" />
+	        <!--<a class="fancybox ad_top_leaderboard" href="#ad_top_leaderboard" style="width: 360px; height: 45px; left: 75px; top: 12px;">
+	         <div class="glowingIcon"></div><span class="zoom"></span>
+	        </a>-->
+	        <a class="fancybox ad_sponsored_media" href="#ad_sponsored_media" style="width: 60px; height: 30px; left: 427px; top: 227px;">
 	         <div class="glowingIcon"></div><span class="zoom"></span>
 	        </a>
-	        <a class="fancybox ad_sponsored_media" href="#ad_sponsored_media" style="width: 60px; height: 30px; left: 427px; top: 294px;">
-	         <div class="glowingIcon"></div><span class="zoom"></span>
-	        </a>
-	        <a class="fancybox ad_skyscraper" href="#ad_skyscraper_L" style="width: 81px; height: 298px; left: 8px; top: 337px;">
+	        <a class="fancybox ad_skyscraper" href="#ad_skyscraper_L" style="width: 81px; height: 298px; left: 8px; top: 285px;">
 	          <div class="glowingIcon"></div><span class="zoom"></span>
 	        </a>
-	        <a class="fancybox ad_skyscraper" href="#ad_skyscraper_R" style="width: 81px; height: 298px; left: 421px; top: 337px;">
+	        <a class="fancybox ad_skyscraper" href="#ad_skyscraper_R" style="width: 81px; height: 298px; left: 421px; top: 285px;">
 	          <div class="glowingIcon"></div><span class="zoom"></span>
 	        </a>
-	        <a class="fancybox ad_industry_partner" href="#ad_industry_partner" style="width: 60px; height: 30px; left: 431px; top: 662px;">
+	        <a class="fancybox ad_industry_partner" href="#ad_industry_partner" style="width: 60px; height: 30px; left: 431px; top: 610px;">
 	          <div class="glowingIcon"></div><span class="zoom"></span>
 	        </a>
-	        <a class="fancybox ad_low_leaderboard" href="#ad_low_leaderboard" style="width: 360px; height: 45px; left: 75px; top: 966px;">
+	        <a class="fancybox ad_low_leaderboard" href="#ad_low_leaderboard" style="width: 360px; height: 45px; left: 75px; top: 928px;">
 	          <div class="glowingIcon"></div><span class="zoom"></span>
 	        </a>
 	        <!-- Lightbox content -->
 	        <div style="display:none">
 	        	
-	        	<div id="ad_top_leaderboard" class="inline-content">
+	        	<!--<div id="ad_top_leaderboard" class="inline-content">
 	        	  <img src="images/ad_top_leaderboard.jpg" />
 	        	  <div style="margin: 0 auto; width: 700px; overflow: hidden;">
 		        	<table class="title" style="float: left;" width="300">
@@ -56,20 +56,10 @@
 		        	  <tr><td>size</td><td><em>40Kb</em></td></tr>
 	        	  	</table>
 	        	  </div>
-	        	</div>
+	        	</div>-->
 
 	        	<div id="ad_sponsored_media" class="inline-content">
-	        	  <img src="images/ad_sponsored_media.jpg" />
-	        	  <table class="title" align="center" width="300">
-	        	  	<tr><th colspan="2">Sponsored Media</th></tr>
-	        	  	<tr><td></td><td align="right">$3,500</td></tr>
-	        	  </table>
-	        	  <table class="specs" align="center" width="300">
-	        	  	<tr><th colspan="2">specifications:</th></tr>
-	        	  	<tr><td>Dimensions</td><td><em>728 x 90</em></td></tr>
-	        	  	<tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
-	        	  	<tr><td>size</td><td><em>40Kb</em></td></tr>
-	        	  </table>
+	        	  <%=inventoryPage.adSponsoredMediaLightbox%>
 	        	</div>
 	        	
 	        	<div id="ad_skyscraper_L" style="width: 500px;" class="inline-content">
