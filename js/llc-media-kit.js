@@ -505,7 +505,7 @@ var ie = false;
 		  
 		  }
 		  
-		  // Keep child drag from triggering parrent
+		  // Keep child drag from triggering parent
 		  //event.stopPropagation();
 		  		  
 		}); 

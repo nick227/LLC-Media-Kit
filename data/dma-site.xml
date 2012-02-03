@@ -36,4 +36,27 @@
 		<![CDATA[Our agency-quality creative team offers full design services at no additional cost. We will work with you to ensure that your campaign is engaging and drives the traffic you need.]]>
 	</benefitCopyCreative>
 </benefitsPage>
+<inventoryPage>
+	<adSponsoredMedia>
+		<width><![CDATA[60]]></width>
+		<height><![CDATA[30]]></height>
+		<left><![CDATA[427]]></left>
+		<top><![CDATA[227]]></top>
+	</adSponsoredMedia>
+	<adSponsoredMediaLightbox>
+		<![CDATA[
+		<img src="images/ad_sponsored_media.jpg" />
+		<table class="title" align="center" width="300">
+			<tr><th colspan="2">Sponsored Media</th></tr>
+			<tr><td></td><td align="right">$3,500</td></tr>
+		</table>
+		<table class="specs" align="center" width="300">
+			<tr><th colspan="2">specifications:</th></tr>
+			<tr><td>Dimensions</td><td><em>728 x 90</em></td></tr>
+			<tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
+			<tr><td>size</td><td><em>40Kb</em></td></tr>
+		</table>
+		]]>
+	</adSponsoredMediaLightbox>
+</inventoryPage>
 </site>
