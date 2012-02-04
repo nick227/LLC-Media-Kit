@@ -113,7 +113,7 @@ Our agency-quality creative team offers full design services at no additional co
 		<![CDATA[
 		<img src="images/ad_skyscraper_L.jpg" style="float: left; margin-right: 20px;" />
 		<table class="title" style="margin-top: 0;text-align:left;" align="left" width="300">
-			<tr><th>Skyscraper</th></tr>
+			<tr><th>Skyscraper Left</th></tr>
 			<tr><td align="left">$2,500</td></tr>
 		</table><br />
 		<table class="specs" align="left" width="300">
@@ -140,7 +140,7 @@ Our agency-quality creative team offers full design services at no additional co
 		<![CDATA[
 		<img src="images/ad_skyscraper_R.jpg" style="float: left; margin-right: 20px;" />
 		<table class="title" style="margin-top: 0;text-align:left;" align="left" width="300">
-			<tr><th>Skyscraper</th></tr>
+			<tr><th>Skyscraper Right</th></tr>
 			<tr><td align="left">$2,500</td></tr>
 		</table><br />
 		<table class="specs" align="left" width="300">
