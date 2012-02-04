@@ -7,60 +7,58 @@
 <logo><![CDATA[http://www.the-dma.org/graphics/DMA_logo.jpg]]></logo>
 <accentColor><![CDATA[#74A5CD]]></accentColor>
 <llcURL><![CDATA[http://dma.sclibraries.com]]></llcURL>
-<benefitsPage>
-<benefitCopyDuration>
-	<![CDATA[In 2011, users of the DMA LLC spent over 1,200 hours interacting with valuable educational content. That&#145;s 1,200 hours they could have spent looking at YOUR campaign.]]>
-</benefitCopyDuration>
-<benefitCopyTablet>
-	<![CDATA[The DMA LLC is also optimized for use with tablet devices&#8212; your message will stay in front of buyers everywhere they go!]]>
-</benefitCopyTablet>
-<benefitCopyAffordable>
-	<![CDATA[Interact with 12,000 qualified buyers for hours at time. The DMA LLC gives you unprecedented access at an unbeatable price &#8212; now you can communicate directly with these valuable customers.]]>
-</benefitCopyAffordable>
-<benefitCopyMetrics>
-	<![CDATA[The DMA LLC incorporates an extensive reporting system that is available anytime &#8212; this gives you the ability to quantify and track your ROI instantly!]]>
-</benefitCopyMetrics>
-<benefitCopyLibrary>
-	<![CDATA[Comprised of over 125 hours of professionally recorded sessions from DMA&#8217;s annual conferences, the DMA LLC is a complete educational content resource for all direct marketers.]]>
-</benefitCopyLibrary>
-<benefitCopyAccess>
-	<![CDATA[DMA promotes the LLC through both print and digital campaigns. Your message will be showcased in front of dedicated professionals involved in direct marketing &#8212; enabling your organization to reach qualified buyers.]]>
-</benefitCopyAccess>
-<benefitCopyCredibility>
-	<![CDATA[Since 1917, the Direct Marketing Association has been the definitive resource for relevant information and educational opportunities in the industry. By advertising in the DMA LLC, your campaign will appear within the trusted network of DMA.]]>
-</benefitCopyCredibility>
-<benefitCopyCreative>
-	<![CDATA[Our agency-quality creative team offers full design services at no additional cost. We will work with you to ensure that your campaign is engaging and drives the traffic you need.]]>
-</benefitCopyCreative>
-</benefitsPage>
-
+<llcName><![CDATA[Knowledge Center]]></llcName>
+<!-- AUDIENCE PAGE -->
 <audiencePage>
 <industrySize><![CDATA[12,000]]></industrySize>
 <industryType><![CDATA[DIRECT MARKETING]]></industryType>
 <industrySpend><![CDATA[$155 BILLION DOLLARS]]></industrySpend>
 <industryMembers><![CDATA[<li>Marketers</li><li>Consultants</li><li>Non-Profits</li><li>Intl Organizations</li>]]></industryMembers>
 </audiencePage>
-
-<pricingPage>
-<reserveButtonLink><![CDATA[mailto:sales@multiview.com]]></reserveButtonLink>
-<skyScraperName><![CDATA[Skyscraper]]></skyScraperName>
-<skyScraperBlurb><![CDATA[A Skyscraper is a large format graphic ad that delivers prime real estate to sell your company’s products or services to decision makers.]]></skyScraperBlurb>
-<skyScraperPrice><![CDATA[$2,500]]></skyScraperPrice>
-
-<sponsorMediaName><![CDATA[SPONSORED MEDIA]]></sponsorMediaName>
-<sponsorMediaBlurb><![CDATA[Further target your message by sponsoring individual sessions – prominently showcase your logo throughout an entire presentation.]]></sponsorMediaBlurb>
-<sponsorMediaPrice><![CDATA[$1,500]]></sponsorMediaPrice>
-
-<spotlightName><![CDATA[BUSINESS SPOTLIGHT]]></spotlightName>
-<spotlightBlurb><![CDATA[Cement your company’s presence in front of the industry by displaying your logo across all areas of the LLC. Business Spotlight logos are highlighted throughout the site.]]></spotlightBlurb>
-<spotlightPrice><![CDATA[$1,250]]></spotlightPrice>
-
-<lowerLeaderName><![CDATA[BOTTOM LEADERBOARD]]></lowerLeaderName>
-<lowerLeaderBlurb><![CDATA[Lower Leaderboard allows your company to combine text, colors and graphics into a unique sales message for qualified buyers.]]></lowerLeaderBlurb>
-<lowerLeaderPrice><![CDATA[$2,500]]></lowerLeaderPrice>
-
-</pricingPage>
-
+<!-- BENEFITS PAGE -->
+<benefitsPage>
+<benefitCopyDuration>
+	<![CDATA[
+	In 2011, users of the DMA LLC spent over 1,200 hours interacting with valuable educational content. That&#145;s 1,200 hours they could have spent looking at YOUR campaign.
+	]]>
+</benefitCopyDuration>
+<benefitCopyTablet>
+	<![CDATA[
+	The DMA LLC is also optimized for use with tablet devices&#8212; your message will stay in front of buyers everywhere they go!
+	]]>
+</benefitCopyTablet>
+<benefitCopyAffordable>
+	<![CDATA[
+	Interact with 12,000 qualified buyers for hours at time. The DMA LLC gives you unprecedented access at an unbeatable price &#8212; now you can communicate directly with these valuable customers.
+	]]>
+</benefitCopyAffordable>
+<benefitCopyMetrics>
+	<![CDATA[
+	The DMA LLC incorporates extensive reporting– this gives you the ability to easily quantify and track your ROI!
+	]]>
+</benefitCopyMetrics>
+<benefitCopyLibrary>
+	<![CDATA[
+	Comprised of over 125 hours of professionally recorded sessions from DMA&#8217;s annual conferences, the DMA LLC is a complete educational content resource for all direct marketers.
+	]]>
+</benefitCopyLibrary>
+<benefitCopyAccess>
+	<![CDATA[
+DMA promotes the LLC through both print and digital campaigns. Your message will be showcased in front of dedicated professionals involved in direct marketing &#8212; enabling your organization to reach qualified buyers.
+]]>
+</benefitCopyAccess>
+<benefitCopyCredibility>
+	<![CDATA[
+Since 1917, the Direct Marketing Association has been the definitive resource for relevant information and educational opportunities in the industry. By advertising in the DMA LLC, your campaign will appear within the trusted network of DMA.
+]]>
+</benefitCopyCredibility>
+<benefitCopyCreative>
+	<![CDATA[
+Our agency-quality creative team offers full design services at no additional cost. We will work with you to ensure that your campaign is engaging and drives the traffic you need.
+]]>
+</benefitCopyCreative>
+</benefitsPage>
+<!-- INVENTORY PAGE -->
 <inventoryPage>
 	<homeScreen><![CDATA[<img class="screen" src="images/homeScreen.jpg" width="510" height="994" alt="" />]]></homeScreen>
 	<adFullCampaign display="none"></adFullCampaign>
@@ -88,6 +86,7 @@
 			  <tr><td>Dimensions</td><td><em>728 x 90</em></td></tr>
 			  <tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
 			  <tr><td>size</td><td><em>40Kb</em></td></tr>
+			  <tr><td>runtime</td><td><em>1 YEAR</em></td></tr>
 			</table>
 		</div>
 		]]>
@@ -110,7 +109,11 @@
 			<tr><td>Dimensions</td><td><em>728 x 90</em></td></tr>
 			<tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
 			<tr><td>size</td><td><em>40Kb</em></td></tr>
+			  <tr><td>runtime</td><td><em>1 YEAR</em></td></tr>
 		</table>
+			<div class="lightboxInfo">Further target your message by sponsoring individual sessions – prominently showcase your logo throughout an entire presentation. </div>
+          <div class="spacer-10px"></div>
+          <div style="float:right;" class="buy"><a href="mailto:sales@multiview.com"><img style="width:90%;" src="images/btn_reserve.png" alt="Reserve Now" /></a></div>
 		]]>
 	</adSponsoredMediaLightbox>
 	<adSkyscraperL display="block">
@@ -131,7 +134,13 @@
 			<tr><td>Dimensions</td><td><em>728 x 90</em></td></tr>
 			<tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
 			<tr><td>size</td><td><em>40Kb</em></td></tr>
+			  <tr><td>runtime</td><td><em>1 YEAR</em></td></tr>
 		</table>
+			<div class="lightboxInfo">
+			A Skyscraper is a large format graphic ad that delivers prime real estate to sell your company’s products or services to decision makers. Skyscrapers are displayed throughout the LLC in a limited-inventory rotation.
+			</div>
+          <div class="spacer-10px"></div>
+          <div style="float:right;" class="buy"><a href="mailto:sales@multiview.com"><img style="width:90%;" src="images/btn_reserve.png" alt="Reserve Now" /></a></div>
 		]]>
 	</adSkyscraperLLightbox>
 	<adSkyscraperR display="block">
@@ -152,7 +161,13 @@
 			<tr><td>Dimensions</td><td><em>728 x 90</em></td></tr>
 			<tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
 			<tr><td>size</td><td><em>40Kb</em></td></tr>
+			  <tr><td>runtime</td><td><em>1 YEAR</em></td></tr>
 		</table>
+			<div class="lightboxInfo">
+			A Skyscraper is a large format graphic ad that delivers prime real estate to sell your company’s products or services to decision makers. Skyscrapers are displayed throughout the LLC in a limited-inventory rotation.
+			</div>
+       <div class="spacer-10px"></div>
+          <div style="float:right;" class="buy"><a href="mailto:sales@multiview.com"><img style="width:90%;" src="images/btn_reserve.png" alt="Reserve Now" /></a></div>
 		]]>
 	</adSkyscraperRLightbox>
 	<adBusinessSpotlight display="block">
@@ -173,7 +188,13 @@
 			<tr><td>Dimensions</td><td><em>728 x 90</em></td></tr>
 			<tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
 			<tr><td>size</td><td><em>40Kb</em></td></tr>
+			  <tr><td>runtime</td><td><em>1 YEAR</em></td></tr>
 		</table>
+			<div class="lightboxInfo">
+			Cement your company’s presence in front of the industry by displaying your logo across all areas of the LLC. Industry Partner logos are highlighted throughout the site.
+			</div>
+        <div class="spacer-10px"></div>
+          <div style="float:right;" class="buy"><a href="mailto:sales@multiview.com"><img style="width:90%;" src="images/btn_reserve.png" alt="Reserve Now" /></a></div>
 		]]>
 	</adBusinessSpotlightLightbox>
 	<adLowLeaderboard display="block">
@@ -187,19 +208,56 @@
 		<img src="images/ad_low_leaderboard.jpg" />
 		<div style="margin: 0 auto; width: 700px; overflow: hidden;">
 			<table class="title" style="float: left;" width="300">
-			  <tr><th colspan="2">Lower Leaderboard</th></tr>
-			  <tr><td></td><td align="right">$2,500</td></tr>
+			  <tr><th align="left">Lower Leaderboard</th></tr>
+			  <tr><td align="left">$2,500</td></tr>
+			  <tr><td align="left" style="font-size:13px;">
+			<div class="lightboxInfo" style="float:left;">
+			The Lower Leaderboard allows your company to combine text, colors and graphics into a unique sales message for qualified buyers. Lower Leaderboards are displayed throughout the LLC in a limited-inventory rotation.
+			</div>
+			</td></tr>
 			</table>
 			<table class="specs" style="float: right;" width="300">
 			  <tr><th colspan="2">specifications:</th></tr>
 			  <tr><td>Dimensions</td><td><em>728 x 90</em></td></tr>
 			  <tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
 			  <tr><td>size</td><td><em>40Kb</em></td></tr>
+			  <tr><td>runtime</td><td><em>1 YEAR</em></td></tr>
 			</table>
 		</div>
+        <div class="spacer-10px"></div>
+          <div style="float:right;" class="buy"><a href="mailto:sales@multiview.com"><img style="width:90%;" src="images/btn_reserve.png" alt="Reserve Now" /></a></div>
 		]]>
 	</adLowLeaderboardLightbox>
 </inventoryPage>
+<!-- PRICING PAGE -->
+<pricingPage>
+<reserveButtonLink><![CDATA[mailto:sales@multiview.com]]></reserveButtonLink>
+<skyScraperName><![CDATA[Skyscraper]]></skyScraperName>
+<skyScraperBlurb><![CDATA[
+A Skyscraper is a large format graphic ad that delivers prime real estate to sell your company’s products or services to decision makers. Skyscrapers are displayed throughout the LLC in a limited-inventory rotation.
+]]></skyScraperBlurb>
+<skyScraperPrice><![CDATA[$2,500]]></skyScraperPrice>
+
+<sponsorMediaName><![CDATA[SPONSORED MEDIA]]></sponsorMediaName>
+<sponsorMediaBlurb><![CDATA[
+Further target your message by sponsoring individual sessions – prominently showcase your logo throughout an entire presentation.
+]]></sponsorMediaBlurb>
+<sponsorMediaPrice><![CDATA[$1,500]]></sponsorMediaPrice>
+
+<spotlightName><![CDATA[BUSINESS SPOTLIGHT]]></spotlightName>
+<spotlightBlurb><![CDATA[
+Cement your company’s presence in front of the industry by displaying your logo across all areas of the LLC. Industry Partner logos are highlighted throughout the site.
+]]></spotlightBlurb>
+<spotlightPrice><![CDATA[$1,250]]></spotlightPrice>
+
+<lowerLeaderName><![CDATA[BOTTOM LEADERBOARD]]></lowerLeaderName>
+<lowerLeaderBlurb><![CDATA[
+The Lower Leaderboard allows your company to combine text, colors and graphics into a unique sales message for qualified buyers. Lower Leaderboards are displayed throughout the LLC in a limited-inventory rotation.
+]]></lowerLeaderBlurb>
+<lowerLeaderPrice><![CDATA[$2,500]]></lowerLeaderPrice>
+
+</pricingPage>
+<!-- CONTACT PAGE -->
 <getStartedPage>
 	<salesEmailLink><![CDATA[mailto:sales@multiview.com]]></salesEmailLink>
 	<multiviewLink><![CDATA[http://www.multiview.com]]></multiviewLink>

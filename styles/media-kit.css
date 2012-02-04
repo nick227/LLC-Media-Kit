@@ -700,7 +700,15 @@ table.specs th { font-size: 14px; color: #fff; background: #656d79; text-transfo
 table.specs td { font-size: 14px; color: #656d79; text-transform: uppercase; }
 table.specs td em { color: #6986a1; }
 
-
+.lightboxInfo{
+font-family:'proxima-nova';
+font-weight:300;
+color:#17181c;
+font-size:1.123em;
+width:300px;
+padding:10px 15px 5px 0;
+float:right;
+}
 
 /**** PRICING PAGE */
 #pricing-stage{
@@ -724,10 +732,22 @@ padding-bottom: 20px;
 
 #pricing-table .option .bg { display: none; }
 #pricing-table .option .desc { width: 75%; padding: 20px; float: left; }
-#pricing-table .option .buy { width: 15%; float: right; text-align: center; padding: 30px 20px; }
+#pricing-table .option .buy { width: 115px; text-align: center; padding:0px; position:absolute; right:11px; bottom:15px; }
 #pricing-table .option .specs { background: #ececec; padding: 10px 20px; float: left; clear: both; }
 
 #pricing-table #opt-one.option { padding: 0;}
+
+#pricing-stage .foot-note {
+    color: #FFFFFF;
+    font-family: "proxima-nova",Gadget;
+    font-size: 1.11em;
+    line-height: 1.6em;
+    margin: 0;
+    padding: 2px;
+    margin: 0 auto; width: 920px;
+	padding:10px 0 30px 0;
+	text-align:right;
+}
 
 /*#pricing-table #opt-one.option .info { width: 870px; }
 #pricing-table #opt-one.option .bg { width: 50px; }
@@ -788,7 +808,7 @@ height: 130px;
 #contactInfoLeft{
 position: absolute;
 left: 30px;
-top: 30px;
+top: 16px;
 width: 391px;
 }
 .contact-info, contact-p{
@@ -815,14 +835,18 @@ font-weight: bold;
 font-size: 18pt;
 color:#f5e355;
 }
-.contact-header{font-family:KnockoutHTF26JuniorFlyweighRg; font-size:10em; PADDING:none; margin: 0px; position:absolute; display: inline; left:30px; font-weight:500;}
-.contact-header-sub{font-family:KnockoutHTF26JuniorFlyweighRg;color: #898989; font-size:4.7em; PADDING:none; margin: 0px; position:absolute; display: inline;left:270px; top:32px;line-height:.75em; font-weight:500;}
+.contact-header{font-family:tandelle; font-size:9.1em; PADDING:none; margin: 0px; position:absolute; display: inline; left:30px; font-weight:500;}
+.contact-header-sub{font-family:tandelle;color: #898989; font-size:4.01em; PADDING:none; margin: 0px; position:absolute; display: inline;left:270px; top:32px;line-height:.75em; font-weight:500;}
 #contact-wrap { position: relative; margin:auto; width: 919px; height: 800px;}
 #contact-wrap h1 { margin: 0; padding: 0 0 0 0; text-align: center; }
 #contact-left p, #contact-right p { font-family: "proxima-nova"; font-size: 22px; color: #f5e355; }
 #contact-left h2, #contact-right h2 { margin: 0 0 10px 0; font-size: 30px; color: #fff; }
 #contact-wrap a, html #contact-wrap .gc-cs-link { color: #ffef8e !important; text-decoration: underline; font-weight: bold; }
-
+.contact-p-sub{
+color:#ffffff;
+font-size:11px;
+white-space:nowrap;
+}
 /* ==|== non-semantic helper classes ========================================
 Please define your styles before this section.
 ========================================================================== */
