@@ -574,7 +574,7 @@ height:100%;
 #inventory-stage .nav-sub{
 display:none;
 left:0em;
-top:155px;
+top:170px;
 width:240px;
 height:260px;
 -moz-border-radius-topleft:2px;
@@ -602,7 +602,7 @@ font-weight:800;
 vertical-align:middle;
 text-align:center;
 padding:5px 6px 0 6px;
-margin-bottom:8px;
+margin-bottom:12px;
 line-height:2em;
 background-image:url(../images/transgray3.png);
 cursor:pointer;
@@ -700,7 +700,7 @@ table.specs th { font-size: 14px; color: #fff; background: #656d79; text-transfo
 table.specs td { font-size: 14px; color: #656d79; text-transform: uppercase; }
 table.specs td em { color: #6986a1; }
 
-.lightboxInfo{
+.lBoxInfo{
 font-family:'proxima-nova';
 font-weight:300;
 color:#17181c;
@@ -709,7 +709,14 @@ width:300px;
 padding:10px 15px 5px 0;
 float:right;
 }
-
+.advanceLboxLink{
+    font-family: "proxima-nova";
+    font-weight: 300;
+    color: #045b6d !important;
+    font-weight: bold;
+}
+#fancybox-right{display:none !important;}
+#fancybox-left{display:none !important;}
 /**** PRICING PAGE */
 #pricing-stage{
 /*background-color:green;*/

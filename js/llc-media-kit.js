@@ -446,21 +446,15 @@ var ie = false;
 			
 			// set bg image				
 			$(this).css('background-image','url('+src+')');
-			
+			/*
 			// Click ad event
 			$(this).add(this.nextSibling).click(function(event){
 				if (!par.is('.active')) {
 					var c = par.attr('class').replace('ad_','').replace('zoom ','');
 					$('#'+c).trigger('click');
-					
-					var arrow = $('nav.nav-sub').find('img.pointerArrowSml');
-					var p = $('nav.nav-sub ul li').find('li.selected').position();
-					$(arrow).stop(true, true).animate({top:p.top}, 200, function(){});
-					//return false;
-
 				}				
 			});
-			
+			*/
 			// parent rollover effect
 			$(this).parent().hover(function(){
 				// hover in
@@ -481,9 +475,15 @@ var ie = false;
 			'opacity'		: true,
 			'overlayShow'	: true,
 			'transitionIn'	: 'elastic',
-			'transitionOut'	: 'elastic'
+			'transitionOut'	: 'elastic',
+			'cyclic'        : 'false',
+			'showNavArrows' : 'false'
 		});
 		
+			$('a.advanceLboxLink').live('click', function(){
+			$.fancybox.next();
+			
+			});
 		
 		// setup draggables 	
 		$('.draggable').draggable({ axis: 'y', snapMode: 'both' }).bind( "dragstop", function(event, ui) {

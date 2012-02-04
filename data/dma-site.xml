@@ -74,22 +74,8 @@ Our agency-quality creative team offers full design services at no additional co
 		<top><![CDATA[12]]></top>
 	</adTopLeaderboard>
 	<adTopLeaderboardLightbox>
-		<![CDATA[
-		<img src="images/ad_top_leaderboard.jpg" />
-		<div style="margin: 0 auto; width: 700px; overflow: hidden;">
-			<table class="title" style="float: left;" width="300">
-			  <tr><th colspan="2">Top Leaderboard</th></tr>
-			  <tr><td></td><td align="right">$3,500</td></tr>
-			</table>
-			<table class="specs" style="float: right;" width="300">
-			  <tr><th colspan="2">specifications:</th></tr>
-			  <tr><td>Dimensions</td><td><em>728 x 90</em></td></tr>
-			  <tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
-			  <tr><td>size</td><td><em>40Kb</em></td></tr>
-			  <tr><td>runtime</td><td><em>1 YEAR</em></td></tr>
-			</table>
-		</div>
-		]]>
+		<![CDATA[<img src="images/ad_top_leaderboard.jpg" />]]>
+		<![CDATA[<img src="images/ad_top_leaderboard.jpg" />]]>
 	</adTopLeaderboardLightbox>
 	<adSponsoredMedia display="block">
 		<width><![CDATA[60]]></width>
@@ -99,10 +85,9 @@ Our agency-quality creative team offers full design services at no additional co
 	</adSponsoredMedia>
 	<adSponsoredMediaLightbox>
 		<![CDATA[
-		<img src="images/ad_sponsored_media.jpg" />
 		<table class="title" align="center" width="300">
 			<tr><th colspan="2">Sponsored Media</th></tr>
-			<tr><td></td><td align="right">$1,500</td></tr>
+			<tr><td><img src="images/ad_sponsored_media.jpg" /></td><td align="right">$1,500</td></tr>
 		</table>
 		<table class="specs" align="center" width="300">
 			<tr><th colspan="2">specifications:</th></tr>
@@ -111,9 +96,11 @@ Our agency-quality creative team offers full design services at no additional co
 			<tr><td>size</td><td><em>40Kb</em></td></tr>
 			  <tr><td>runtime</td><td><em>1 YEAR</em></td></tr>
 		</table>
-			<div class="lightboxInfo">Further target your message by sponsoring individual sessions – prominently showcase your logo throughout an entire presentation. </div>
+			<div class="lBoxInfo">Further target your message by sponsoring individual sessions – prominently showcase your logo throughout an entire presentation.
+			<br><div style="width:300px; text-align:left;  margin:5px 13px 0 0"><a href="#" class="advanceLboxLink">show another</a></div>
+			</div>
           <div class="spacer-10px"></div>
-          <div style="float:right;" class="buy"><a href="mailto:sales@multiview.com"><img style="width:90%;" src="images/btn_reserve.png" alt="Reserve Now" /></a></div>
+          <div style="float:right;" class="buy"><a href="mailto:sales@multiview.com"><img style="" src="images/btn_reserve.png" alt="Reserve Now" /></a></div>
 		]]>
 	</adSponsoredMediaLightbox>
 	<adSkyscraperL display="block">
@@ -125,22 +112,22 @@ Our agency-quality creative team offers full design services at no additional co
 	<adSkyscraperLLightbox>
 		<![CDATA[
 		<img src="images/ad_skyscraper_L.jpg" style="float: left; margin-right: 20px;" />
-		<table class="title" style="margin-top: 0;" align="center" width="300">
-			<tr><th colspan="2">Skyscraper</th></tr>
-			<tr><td></td><td align="right">$2,500</td></tr>
-		</table>
-		<table class="specs" align="center" width="300">
+		<table class="title" style="margin-top: 0;text-align:left;" align="left" width="300">
+			<tr><th>Skyscraper</th></tr>
+			<tr><td align="left">$2,500</td></tr>
+		</table><br />
+		<table class="specs" align="left" width="300">
 			<tr><th colspan="2">specifications:</th></tr>
 			<tr><td>Dimensions</td><td><em>728 x 90</em></td></tr>
 			<tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
 			<tr><td>size</td><td><em>40Kb</em></td></tr>
 			  <tr><td>runtime</td><td><em>1 YEAR</em></td></tr>
 		</table>
-			<div class="lightboxInfo">
+			<div class="lBoxInfo">
 			A Skyscraper is a large format graphic ad that delivers prime real estate to sell your company’s products or services to decision makers. Skyscrapers are displayed throughout the LLC in a limited-inventory rotation.
+			<br><div style="width:300px; text-align:left;  margin:20px 3px 0 0"><a href="#" class="advanceLboxLink">show another</a></div>
 			</div>
-          <div class="spacer-10px"></div>
-          <div style="float:right;" class="buy"><a href="mailto:sales@multiview.com"><img style="width:90%;" src="images/btn_reserve.png" alt="Reserve Now" /></a></div>
+          <div style="position:absolute; bottom:15px; right:10px;" class="buy"><a href="mailto:sales@multiview.com"><img style="" src="images/btn_reserve.png" alt="Reserve Now" /></a></div>
 		]]>
 	</adSkyscraperLLightbox>
 	<adSkyscraperR display="block">
@@ -152,22 +139,23 @@ Our agency-quality creative team offers full design services at no additional co
 	<adSkyscraperRLightbox>
 		<![CDATA[
 		<img src="images/ad_skyscraper_R.jpg" style="float: left; margin-right: 20px;" />
-		<table class="title" style="margin-top: 0;" align="center" width="300">
-			<tr><th colspan="2">Skyscraper</th></tr>
-			<tr><td></td><td align="right">$2,500</td></tr>
-		</table>
-		<table class="specs" align="center" width="300">
+		<table class="title" style="margin-top: 0;text-align:left;" align="left" width="300">
+			<tr><th>Skyscraper</th></tr>
+			<tr><td align="left">$2,500</td></tr>
+		</table><br />
+		<table class="specs" align="left" width="300">
 			<tr><th colspan="2">specifications:</th></tr>
 			<tr><td>Dimensions</td><td><em>728 x 90</em></td></tr>
 			<tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
 			<tr><td>size</td><td><em>40Kb</em></td></tr>
 			  <tr><td>runtime</td><td><em>1 YEAR</em></td></tr>
 		</table>
-			<div class="lightboxInfo">
+			<div class="lBoxInfo">
 			A Skyscraper is a large format graphic ad that delivers prime real estate to sell your company’s products or services to decision makers. Skyscrapers are displayed throughout the LLC in a limited-inventory rotation.
+			<br><div style="width:300px; text-align:left;  margin:20px 3px 0 0"><a href="#" class="advanceLboxLink">show another</a></div>
 			</div>
        <div class="spacer-10px"></div>
-          <div style="float:right;" class="buy"><a href="mailto:sales@multiview.com"><img style="width:90%;" src="images/btn_reserve.png" alt="Reserve Now" /></a></div>
+          <div style="position:absolute; bottom:15px; right:10px;" class="buy"><a href="mailto:sales@multiview.com"><img style="" src="images/btn_reserve.png" alt="Reserve Now" /></a></div>
 		]]>
 	</adSkyscraperRLightbox>
 	<adBusinessSpotlight display="block">
@@ -178,10 +166,10 @@ Our agency-quality creative team offers full design services at no additional co
 	</adBusinessSpotlight>
 	<adBusinessSpotlightLightbox>
 		<![CDATA[
-		<img src="images/ad_business_spotlight.jpg" />
+		
 		<table class="title" align="center" width="300">
 			<tr><th colspan="2">Business Spotlight</th></tr>
-			<tr><td></td><td align="right">$1,250</td></tr>
+			<tr><td><img src="images/ad_business_spotlight.jpg" /></td><td align="right">$1,250</td></tr>
 		</table>
 		<table class="specs" align="center" width="300">
 			<tr><th colspan="2">specifications:</th></tr>
@@ -190,11 +178,12 @@ Our agency-quality creative team offers full design services at no additional co
 			<tr><td>size</td><td><em>40Kb</em></td></tr>
 			  <tr><td>runtime</td><td><em>1 YEAR</em></td></tr>
 		</table>
-			<div class="lightboxInfo">
+			<div class="lBoxInfo">
 			Cement your company’s presence in front of the industry by displaying your logo across all areas of the LLC. Industry Partner logos are highlighted throughout the site.
+			<br><div style="width:300px; text-align:left;  margin:6px 3px 0 0"><a href="#" class="advanceLboxLink">show another</a></div>
 			</div>
         <div class="spacer-10px"></div>
-          <div style="float:right;" class="buy"><a href="mailto:sales@multiview.com"><img style="width:90%;" src="images/btn_reserve.png" alt="Reserve Now" /></a></div>
+          <div style="float:right;" class="buy"><a href="mailto:sales@multiview.com"><img style="" src="images/btn_reserve.png" alt="Reserve Now" /></a></div>
 		]]>
 	</adBusinessSpotlightLightbox>
 	<adLowLeaderboard display="block">
@@ -211,8 +200,9 @@ Our agency-quality creative team offers full design services at no additional co
 			  <tr><th align="left">Lower Leaderboard</th></tr>
 			  <tr><td align="left">$2,500</td></tr>
 			  <tr><td align="left" style="font-size:13px;">
-			<div class="lightboxInfo" style="float:left;">
+			<div class="lBoxInfo" style="float:left;">
 			The Lower Leaderboard allows your company to combine text, colors and graphics into a unique sales message for qualified buyers. Lower Leaderboards are displayed throughout the LLC in a limited-inventory rotation.
+			<br><div style="width:300px; text-align:left;  margin:10px 3px 0 0"><a href="#" class="advanceLboxLink">show another</a></div>
 			</div>
 			</td></tr>
 			</table>
@@ -225,7 +215,7 @@ Our agency-quality creative team offers full design services at no additional co
 			</table>
 		</div>
         <div class="spacer-10px"></div>
-          <div style="float:right;" class="buy"><a href="mailto:sales@multiview.com"><img style="width:90%;" src="images/btn_reserve.png" alt="Reserve Now" /></a></div>
+          <div style="float:right;" class="buy"><a href="mailto:sales@multiview.com"><img style="" src="images/btn_reserve.png" alt="Reserve Now" /></a></div>
 		]]>
 	</adLowLeaderboardLightbox>
 </inventoryPage>
