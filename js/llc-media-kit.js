@@ -99,6 +99,8 @@ var ie = false;
                      $('section#stage-anchor').html(newPage);
 					 $('div.cash_section').css('top', viewPort_height);
                      $('body').data('activeNav', '0');
+					 $("html, body").animate({ scrollTop: 0}, 0 );
+					 
                  } else { //a nav click
                      var activeNav = $('body').data('activeNav');
                      var direction = (activeNav < order) ? 'left' : 'right';
@@ -382,8 +384,8 @@ var ie = false;
      	}
      },
      setupInventoryPage: function () {
-				mediaKit.setupArrowSubNav();
 				mediaKit.setupVirtualIpad();
+				mediaKit.setupArrowSubNav();
 	},
 	shiftIpadScreen: function(whereTo){
 		var target = 0;
@@ -413,10 +415,13 @@ var ie = false;
 			if($('body').data('activeNav') == 1 || $('body').data('activeNav') == 0){//still on page one
 				if(audienceStep==0){//top of page one
 				var destination = $('.cash_section').offset().top;
-				$("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination-140}, 1500, function(){
-				var dist = $('.cash_section').height()+140;
-				$("html, body").delay(1150).animate({ scrollTop: dist}, 1800, 'swing' );
-				audienceStep=1;
+				$("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination-140}, 2000, 'swing', function(){
+					$("div.industrySpend").animate({ color: '#ffffff' }, 1200, function(){
+					
+						var dist = $('.cash_section').height()+140;
+						$("html, body").delay(1150).animate({ scrollTop: dist}, 1600, 'easeInOutExpo' );
+						audienceStep=1;
+					});
 				});
 				}else{//bottom of page one
 				advanceMainSlide();

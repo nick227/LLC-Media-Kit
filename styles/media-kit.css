@@ -210,7 +210,7 @@ td { vertical-align: top; }
 /* ==|== primary styles =====================================================
 Author(s): NJ/BV/MM ~MultiView 2012
 ========================================================================== */
-body{margin:0;padding:0;background-color: #008dbc;}
+body{margin:0;padding:0;background-color: #008dbc;/*background-color: #eeeeee;*/}
 .hidden{display:none;}
 .slideChange{cursor:pointer}
 .spacer-10px{clear:both;height:10px;}
@@ -372,6 +372,47 @@ height:2995px;
 /*background-color:black;*/
 color:#ffffff;
 }
+.engage_anchor{
+top:125px; left:50%; margin-left:-380px; width:835px; height:504px; position:absolute;
+}
+.engage_section{
+width:835px; height:504px; position:relative;
+}
+.engage_banner_pointer{
+background-image:url(../images/engageTopTriangle.png); width:52px; height:31px; position:absolute; top:326px; left:195px;
+}
+.engage_banner{
+width:610px; height:150px; background-color:#1e5676; position:absolute; bottom:0
+}
+.engage_size{
+position:absolute; bottom:-13px; left:95px; vertical-align:top;font-family:tandelle; font-size:11em; PADDING:0;margin:0;
+/*position:absolute; bottom:-43px; left:102px; vertical-align:top;font-family:KnockoutHTF26JuniorFlyweighRg; font-size:13.7em; PADDING:0;margin:0;letter-spacing:2px;*/
+}
+.engage_type{
+font-family:tandelle; font-size:4.2em; PADDING:0;position:absolute; bottom:27px; left:336px; line-height:.99em; letter-spacing:1px;
+/*font-family:KnockoutHTF26JuniorFlyweighRg; font-size:4.2em; PADDING:0;position:absolute; bottom:30px; left:328px; line-height:.99em;*/
+}
+.cash_section{
+position:absolute; top:800px; width:100%; text-align:center;z-index:0;
+}
+.cash_welcome{
+width:527px; height:33px; background-image:url(../images/inanindustrythatspendsover.png); background-repeat:no-repeat;margin:auto auto;
+}
+.cash_stack{
+width:880px; height:1772px; background-image:url(../images/bigCashStack.png); background-repeat:no-repeat;margin:auto auto; position:relative;
+}
+.industrySpend{
+color:#dfdfdf;font-family:tandelle; font-size:7.400em;margin-left:auto;margin-right:auto; padding-right:10px; border:1px solid transparent;
+/*color:#ffffff;font-family:KnockoutHTF26JuniorFlyweighRg; font-size:9em;margin-left:auto;margin-right:auto;*/
+}
+.cash_summary{
+position:absolute; bottom:0; width:740px; height:190px; margin-left:auto;margin-right:auto
+}
+.cash_summary_title{
+color:#ffffff;font-family:tandelle; font-size:7.15em;text-align:left; line-height:.8999em; width:423px;  
+/*color:#ffffff;font-family:KnockoutHTF26JuniorFlyweighRg; font-size:9em;text-align:left; line-height:.8999em; width:423px;*/
+}
+
 /**** BENEFITS PAGE */
 #benefits-stage{
 color:#ffffff;
@@ -715,6 +756,10 @@ float:right;
     font-weight: 300;
     color: #045b6d !important;
     font-weight: bold;
+	text-decoration:none;
+}
+.advanceLboxLink:hover{
+	text-decoration:underline;
 }
 #fancybox-right{display:none !important;}
 #fancybox-left{display:none !important;}
