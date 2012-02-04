@@ -104,7 +104,7 @@ function urlCheck() {
   var loc = window.location.toString();
   loc = loc.replace('www.', '');
   var subd = loc.substring(loc.indexOf('//')+2, loc.indexOf('.'));
-	if(subd.indexOf('.com') > 0 || subd.indexOf('/') > 0){
+	if(subd.indexOf('.com') > 0 || subd.indexOf('/') > 0 || loc.indexOf('dropbox.com') != -1){
 	return 'dma';
 	}else{
 	return subd;

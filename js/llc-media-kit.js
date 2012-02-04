@@ -294,10 +294,8 @@ var ie = false;
          }
      },
      setPointerX: function () {
-         if (!pointerInMotion && currentSelection != null) {
              pointerTargetX = $(currentSelection).offset().left + (($(currentSelection).width() - $(globalNavPointer).width()) / 2);
              globalNavPointer[0].style.left = pointerTargetX + 'px';
-         }
      },
      setupBenefitsPage: function () {
          $('.benefit-box').each(function () {
