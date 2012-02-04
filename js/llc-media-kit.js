@@ -26,7 +26,7 @@ var w=window,d=document,e=d.documentElement,g=d.getElementsByTagName('body')[0],
  var pointerAnimationHandler;
  var currentBenefit;
 
-//if IE...
+//if IE.
 var ie = false;
 
  // set ajax caching
@@ -112,7 +112,10 @@ var ie = false;
                              opacity: 0
                          }, 400, function () {
                              mediaKit.pageTransition(direction, newPage);
+							$('div.cash_section').css('top', viewPort_height); 	
+							$(window).resize(function () {
 							$('div.cash_section').css('top', viewPort_height); 
+							});
                          });
                      }
                      //BENEFITS PAGE
@@ -122,7 +125,6 @@ var ie = false;
                          }, 400, function () {
                              mediaKit.pageTransition(direction, newPage);
                              mediaKit.setupBenefitsPage();
-							$("html, body").animate({ scrollTop: 0}, 900, 'swing' );
                          });
                      }
                      //INVENTORY PAGE
@@ -413,8 +415,9 @@ var ie = false;
 			if($('body').data('activeNav') == 1 || $('body').data('activeNav') == 0){//still on page one
 				if(audienceStep==0){//top of page one
 				var destination = $('.cash_section').offset().top;
-				$("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination-140}, 1500, function(){
-				$("html, body").delay(1150).animate({ scrollTop: $(document).height()-$(window).height()}, 1800, 'swing' );
+				$("html:not(:animated),body:not(:animated)").stop().animate({ scrollTop: destination-140}, 1500, function(){
+				var dist = $('.cash_section').height()+140;
+				$("html, body").delay(1150).stop().animate({ scrollTop: dist}, 1800, 'swing' );
 				audienceStep=1;
 				});
 				}else{//bottom of page one
