@@ -476,14 +476,10 @@ var ie = false;
 			'overlayShow'	: true,
 			'transitionIn'	: 'elastic',
 			'transitionOut'	: 'elastic',
-			'cyclic'        : 'false',
+			'cyclic'        : 'true',
 			'showNavArrows' : 'false'
 		});
-		
-			$('a.advanceLboxLink').live('click', function(){
-			$.fancybox.next();
-			
-			});
+		$('a.advanceLboxLink').live('click', function(){$.fancybox.next();});
 		
 		// setup draggables 	
 		$('.draggable').draggable({ axis: 'y', snapMode: 'both' }).bind( "dragstop", function(event, ui) {
