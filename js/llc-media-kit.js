@@ -413,9 +413,9 @@ var ie = false;
 			if($('body').data('activeNav') == 1 || $('body').data('activeNav') == 0){//still on page one
 				if(audienceStep==0){//top of page one
 				var destination = $('.cash_section').offset().top;
-				$("html:not(:animated),body:not(:animated)").stop().animate({ scrollTop: destination-140}, 1500, function(){
+				$("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination-140}, 1500, function(){
 				var dist = $('.cash_section').height()+140;
-				$("html, body").delay(1150).stop().animate({ scrollTop: dist}, 1800, 'swing' );
+				$("html, body").delay(1150).animate({ scrollTop: dist}, 1800, 'swing' );
 				audienceStep=1;
 				});
 				}else{//bottom of page one
