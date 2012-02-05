@@ -554,15 +554,27 @@ left: -10px;
 width: 286px;
 height: 200px;
 border: 0px;
+
+background: rgb(252,255,244); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(252,255,244,1) 0%, rgba(255,255,255,255) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,255,244,1)), color-stop(100%,rgba(255,255,255,255))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(252,255,244,1) 0%,rgba(255,255,255,255) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(252,255,244,1) 0%,rgba(255,255,255,255) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(252,255,244,1) 0%,rgba(255,255,255,255) 100%); /* IE10+ */
+background: linear-gradient(top,  rgba(252,255,244,1) 0%,rgba(255,255,255,255) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e9e9ce',GradientType=0 ); /* IE6-9 */
+
 }
 .benefit-content-blurb p{
 position: absolute;
-left: 10px;
-top: 50px;
+left: 16px;
+top: 46px;
 margin: 0px;
-color: #555555;
+color: #52575d;
 font-size: 10pt;
-padding-right: 10px;
+line-height:18px;
+padding-right: 16px;
+font-family:'Myriad Pro', 'Proxima Nova', 
 }
 .benefit-graphic{
 background-image: url(../images/benefits/csg-4f2a92e5839df.png);

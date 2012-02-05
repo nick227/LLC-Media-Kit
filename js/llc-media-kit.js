@@ -451,7 +451,7 @@ var ie = false;
 			
 			// set bg image				
 			$(this).css('background-image','url('+src+')');
-			/*
+			
 			// Click ad event
 			$(this).add(this.nextSibling).click(function(event){
 				if (!par.is('.active')) {
@@ -459,7 +459,7 @@ var ie = false;
 					$('#'+c).trigger('click');
 				}				
 			});
-			*/
+			
 			// parent rollover effect
 			$(this).parent().hover(function(){
 				// hover in
@@ -482,7 +482,23 @@ var ie = false;
 			'transitionIn'	: 'elastic',
 			'transitionOut'	: 'elastic',
 			'cyclic'        : 'true',
-			'showNavArrows' : 'false'
+			'showNavArrows' : 'false',
+			'onStart': function(links, index){  
+			var self = links[index];
+			var href = self.getAttribute("href");
+			$('.nav-btn').each(function(){
+				$(this).removeClass('nav-active');
+				});
+			var subNavID = href.replace('#ad_', '');
+			subNavID = (subNavID.indexOf('skyscraper') > -1) ? 'skyscraper' : subNavID;
+			subNavID = '#subnav_'+subNavID;
+			$(subNavID).addClass('nav-active');
+			},
+			'onClosed' : function(){
+			$('.nav-btn').each(function(){
+				$(this).removeClass('nav-active');
+				});
+			}
 		});
 		$('a.advanceLboxLink').live('click', function(){$.fancybox.next();});
 		
