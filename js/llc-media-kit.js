@@ -97,9 +97,9 @@ var ie = false;
 
                  if (animationMethod == 'none') { //initial load
                      $('section#stage-anchor').html(newPage);
-					 $('div.cash_section').css('top', viewPort_height);
                      $('body').data('activeNav', '0');
 					 $("html, body").animate({ scrollTop: 0}, 0 );
+                      mediaKit.setupAudiencePage();
 					 
                  } else { //a nav click
                      var activeNav = $('body').data('activeNav');
@@ -114,10 +114,7 @@ var ie = false;
                              opacity: 0
                          }, 400, function () {
                              mediaKit.pageTransition(direction, newPage);
-							$('div.cash_section').css('top', viewPort_height); 	
-							$(window).resize(function () {
-							$('div.cash_section').css('top', viewPort_height); 
-							});
+                             mediaKit.setupAudiencePage();
                          });
                      }
                      //BENEFITS PAGE
@@ -299,6 +296,18 @@ var ie = false;
              pointerTargetX = $(currentSelection).offset().left + (($(currentSelection).width() - $(globalNavPointer).width()) / 2);
              globalNavPointer[0].style.left = pointerTargetX + 'px';
      },
+     setupAudiencePage: function () {
+		setInterval(function () {
+        $('#gear1img').animate({rotate: '+=10deg'}, 0);
+        $('#gear3img,#gear2img').animate({rotate: '-=10deg'}, 0);
+		},200);
+
+		$('div.cash_section').css('top', viewPort_height); 	
+		$(window).resize(function () {
+		$('div.cash_section').css('top', viewPort_height); 
+		});	
+							
+	 },
      setupBenefitsPage: function () {
          $('.benefit-box').each(function () {
              $(this).hover(function(){
