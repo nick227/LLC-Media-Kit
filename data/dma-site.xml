@@ -197,11 +197,11 @@ Our agency-quality creative team offers full design services at no additional co
 		<img src="images/ad_low_leaderboard.jpg" />
 		<div style="margin: 0 auto; width: 700px; overflow: hidden;">
 			<table class="title" style="float: left;" width="300">
-			  <tr><th align="left">Lower Leaderboard</th></tr>
+			  <tr><th align="left">Bottom Leaderboard</th></tr>
 			  <tr><td align="left">$2,500</td></tr>
 			  <tr><td align="left" style="font-size:13px;">
 			<div class="lBoxInfo" style="float:left;">
-			The Lower Leaderboard allows your company to combine text, colors and graphics into a unique sales message for qualified buyers. Lower Leaderboards are displayed throughout the LLC in a limited-inventory rotation.
+			The Bottom Leaderboard allows your company to combine text, colors and graphics into a unique sales message for qualified buyers. Bottom Leaderboards are displayed throughout the LLC in a limited-inventory rotation.
 			<br><div style="width:300px; text-align:left;  margin:10px 3px 0 0"><a href="#" onclick="return false" class="advanceLboxLink">show another</a></div>
 			</div>
 			</td></tr>
@@ -246,7 +246,7 @@ Cement your company’s presence in front of the industry by displaying your log
 
 <lowerLeaderName><![CDATA[BOTTOM LEADERBOARD]]></lowerLeaderName>
 <lowerLeaderBlurb><![CDATA[
-The Lower Leaderboard allows your company to combine text, colors and graphics into a unique sales message for qualified buyers. Lower Leaderboards are displayed throughout the LLC in a limited-inventory rotation.
+The Bottom Leaderboard allows your company to combine text, colors and graphics into a unique sales message for qualified buyers. Bottom Leaderboards are displayed throughout the LLC in a limited-inventory rotation.
 ]]></lowerLeaderBlurb>
 <lowerLeaderPrice><![CDATA[$2,500]]></lowerLeaderPrice>
 
