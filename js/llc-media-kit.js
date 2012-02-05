@@ -306,7 +306,15 @@ var ie = false;
 		$(window).resize(function () {
 		$('div.cash_section').css('top', viewPort_height); 
 		});	
-							
+		
+		$(window).scroll(function(){
+			if ($(window).scrollTop() > '1600'){
+			audienceStep=1;
+			}
+			if ($(window).scrollTop() < '1000'){
+			audienceStep=0;
+			}
+		});					
 	 },
      setupBenefitsPage: function () {
          $('.benefit-box').each(function () {
@@ -426,9 +434,8 @@ var ie = false;
 				var destination = $('.cash_section').offset().top;
 				$("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination-140}, 2000, 'swing', function(){
 					$("div.industrySpend").animate({ color: '#ffffff' }, 1200, function(){
-					
 						var dist = $('.cash_section').height()+140;
-						$("html, body").delay(1150).animate({ scrollTop: dist}, 1600, 'easeInOutExpo' );
+						$("html, body").delay(950).animate({ scrollTop: dist}, 1600, 'easeInOutExpo' );
 						audienceStep=1;
 					});
 				});
