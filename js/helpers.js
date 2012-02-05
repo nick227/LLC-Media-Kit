@@ -101,25 +101,30 @@ document.write("<li>["+p+"] => "+theObj[p]+"</li>");
  /******************* PARSE URL ***********/
 
 function urlCheck() {
-  var url = window.location.toString();
+var url = window.location.toString();
  if(url.indexOf('dropbox') != -1){
  return 'dma';
  }
 // IF THERE, REMOVES 'http://', 'https://' or 'ftp://' FROM THE START
 url = url.replace(new RegExp(/^http\:\/\/|^https\:\/\/|^ftp\:\/\//i),"");
 // IF THERE, REMOVES 'www.' FROM THE START OF THE STRING
+
 url = url.replace(new RegExp(/^www\./i),"");
 // REMOVE COMPLETE STRING FROM FIRST FORWARD SLASH ON
 url = url.replace(new RegExp(/\/(.*)/),"");
+
 // REMOVES '.??.??' OR '.???.??' FROM END - e.g. '.CO.UK', '.COM.AU'
 	if (url.match(new RegExp(/\.[a-z]{2,3}\.[a-z]{2}$/i))) {
 		url = url.replace(new RegExp(/\.[a-z]{2,3}\.[a-z]{2}$/i),"");
+
 // REMOVES '.??' or '.???' or '.????' FROM END - e.g. '.US', '.COM', '.INFO'
 	}else if (url.match(new RegExp(/\.[a-z]{2,4}$/i))) {
 		url = url.replace(new RegExp(/\.[a-z]{2,4}$/i),"");
+
 	}
-		
+
 var subDomain = (url.match(new RegExp(/\./g))) ? url : 'dma';
+var res = subDomain.split('.');
 
 return(subDomain);
 }
