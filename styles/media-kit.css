@@ -373,7 +373,7 @@ height:2995px;
 color:#ffffff;
 }
 .engage_anchor{
-top:125px; left:50%; margin-left:-380px; width:835px; height:504px; position:absolute;
+top:125px; left:50%; margin-left:-400px; width:835px; height:504px; position:absolute;
 }
 .engage_section{
 width:835px; height:504px; position:relative;
@@ -393,7 +393,7 @@ font-family:tandelle; font-size:4.2em; PADDING:0;position:absolute; bottom:27px;
 /*font-family:KnockoutHTF26JuniorFlyweighRg; font-size:4.2em; PADDING:0;position:absolute; bottom:30px; left:328px; line-height:.99em;*/
 }
 .cash_section{
-position:absolute; top:800px; width:100%; text-align:center;z-index:0;
+position:absolute; top:800px; width:100%; text-align:center;z-index:10;
 }
 .cash_welcome{
 width:527px; height:33px; background-image:url(../images/inanindustrythatspendsover.png); background-repeat:no-repeat;margin:auto auto;
@@ -413,6 +413,92 @@ color:#ffffff;font-family:tandelle; font-size:7.15em;text-align:left; line-heigh
 /*color:#ffffff;font-family:KnockoutHTF26JuniorFlyweighRg; font-size:9em;text-align:left; line-height:.8999em; width:423px;*/
 }
 
+#lineSection1{
+position:absolute;
+top:550px;
+left:50%;
+margin-left:226px;
+width:77px;
+height:1000px;
+z-index:1;
+}
+#lineSection2{
+position:absolute;
+top:114px;
+left:0;
+margin-left:-66px;
+width:202px;
+height:1560px;
+z-index:1;
+}
+.barHorizSmall{
+background-image:url(../images/gray-horiz-bar.png);
+background-repeat:repeat-x;
+height:4px;
+position:absolute;
+z-index:0;
+}
+.barVertSmall{
+background-image:url(../images/gray-vert-bar.png);
+background-repeat:repeat-y;
+width:4px;
+position:absolute;
+z-index:0;
+}
+.barHorizLong{
+background-image:url(../images/gray-horiz-long-bar.png);
+background-repeat:repeat-x;
+height:125px;
+height:4px;
+position:absolute;
+z-index:0;
+}
+.barVertLong{
+background-image:url(../images/gray-vert-long-bar.png);
+background-repeat:repeat-y;
+width:4px;
+position:absolute;
+z-index:0;
+}
+.barCurveRD{
+background-image:url(../images/gray-curve-rd-bar.png);
+background-repeat:repeat-y;
+height:17px;
+width:15px;
+position:absolute;
+z-index:0;
+}
+.barCurveLD{
+background-image:url(../images/gray-curve-ld-bar.png);
+background-repeat:repeat-y;
+height:17px;
+width:15px;
+position:absolute;
+z-index:0;
+}
+.barCurveDR{
+background-image:url(../images/gray-curve-dr-bar.png);
+background-repeat:repeat-y;
+height:17px;
+width:15px;
+position:absolute;
+z-index:0;
+}
+.barCurveDL{
+background-image:url(../images/gray-curve-dl-bar.png);
+background-repeat:repeat-y;
+height:17px;
+width:15px;
+position:absolute;
+z-index:0;
+}
+.lineSectionInnerWrap{
+position:relative;
+top:0;
+left:0;
+height:100%;
+width:100%;
+}
 /**** BENEFITS PAGE */
 #benefits-stage{
 color:#ffffff;
