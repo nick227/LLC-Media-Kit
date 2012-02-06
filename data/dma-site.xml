@@ -183,7 +183,7 @@ Our agency-quality creative team offers full design services at no additional co
 			<br><div style="width:300px; text-align:left;  margin:6px 3px 0 0"><a href="#" onclick="return false" class="advanceLboxLink">show another</a></div>
 			</div>
         <div class="spacer-10px"></div>
-          <div style="float:right;" class="buy"><a href="mailto:sales@multiview.com?subject=Reserve%Business%20Spotlight-DMA"><img style="" src="images/btn_reserve.png" alt="Reserve Now" /></a></div>
+          <div style="float:right;" class="buy"><a href="mailto:sales@multiview.com?subject=Reserve%20Business%20Spotlight-DMA"><img style="" src="images/btn_reserve.png" alt="Reserve Now" /></a></div>
 		]]>
 	</adBusinessSpotlightLightbox>
 	<adLowLeaderboard display="block">
