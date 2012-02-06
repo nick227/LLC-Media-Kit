@@ -275,27 +275,37 @@ width: 1000px;
 height: 80px;
 background-color: #ffffff;
 overflow: hidden;
+vertical-align:bottom;
 }
+.header-contents table{
+height:80px;
+width:100%;
+bottom:0;
+}
+.header-contents table td{position:relative;}
 .header .logo-main{
-top:10px;
 left:10px;
-height:63px;
-width:140px;
+height:80px;
 margin:left:20px;
 margin-top:2px;
+position:relative;
+bottom:0;
 }
-.header .logo-main img{
+.logo-main-img{
 padding-right:10px;
+display:inline;
+vertical-align:bottom;
 }
 .header .title-main{
 vertical-align:bottom;
-padding:22px 0 0 10px;
+padding:36px 0 0 10px;
 color:#4d4d4d;
 font-size:2.0289em;
 font-family:'Century Gothic';
+bottom:0;
 }
 .header .nav-main{
-padding-top:34px;
+padding-top:48px;
 padding-left:15px;
 }
 .header .nav-main ul li{

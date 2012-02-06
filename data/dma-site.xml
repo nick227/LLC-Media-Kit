@@ -4,14 +4,18 @@
 <siteTitle><![CDATA[DMA Media Kit]]></siteTitle>
 <partnerAcronym><![CDATA[DMA]]></partnerAcronym>
 <partnerFullName><![CDATA[Direct Marketing Association]]></partnerFullName>
+<headerWidth><![CDATA[width:1000px;]]></headerWidth>
 <logo><![CDATA[http://www.the-dma.org/graphics/DMA_logo.jpg]]></logo>
+<logoPaddingTop><![CDATA[padding-top:10px]]></logoPaddingTop>
+<logoPaddingLeft><![CDATA[padding-left:0px]]></logoPaddingLeft>
 <accentColor><![CDATA[#74A5CD]]></accentColor>
 <llcURL><![CDATA[http://dma.sclibraries.com]]></llcURL>
-<llcName><![CDATA[Knowledge Center]]></llcName>
+<llcName><![CDATA[Learning Center]]></llcName>
 <!-- AUDIENCE PAGE -->
 <audiencePage>
 <industrySize><![CDATA[12,000]]></industrySize>
-<industryType><![CDATA[DIRECT MARKETING]]></industryType>
+<industryType><![CDATA[DIRECT MARKETING<BR />PROFESSIONALS]]></industryType>
+<industryTypeFontSize><![CDATA[font-size:4.3em]]></industryTypeFontSize>
 <industrySpend><![CDATA[$155 BILLION DOLLARS]]></industrySpend>
 <industryMembers><![CDATA[<li>Marketers</li><li>Consultants</li><li>Non-Profits</li><li>Intl Organizations</li>]]></industryMembers>
 </audiencePage>

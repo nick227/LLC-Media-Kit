@@ -301,7 +301,7 @@ var ie = false;
         $('#gear1img').animate({rotate: '+=10deg'}, 0);
         $('#gear3img,#gear2img').animate({rotate: '-=10deg'}, 0);
 		},200);
-
+		viewPort_height = (viewPort_height < 800) ? 800 : viewPort_height;
 		$('div.cash_section').css('top', viewPort_height); 	
 		$(window).resize(function () {
 		$('div.cash_section').css('top', viewPort_height); 
@@ -435,7 +435,7 @@ var ie = false;
 				$("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination-140}, 2000, 'swing', function(){
 					$("div.industrySpend").animate({ color: '#ffffff' }, 1200, function(){
 						var dist = $('.cash_section').height()+140;
-						$("html, body").delay(950).animate({ scrollTop: dist}, 1600, 'easeInOutExpo' );
+						$("html, body").animate({ scrollTop: dist}, 1500, 'easeInOutExpo' );
 						audienceStep=1;
 					});
 				});
