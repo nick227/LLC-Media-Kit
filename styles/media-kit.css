@@ -282,7 +282,7 @@ height:80px;
 width:100%;
 bottom:0;
 }
-.header-contents table td{position:relative;}
+.header-contents table td{position:relative; text-align:left;}
 .header .logo-main{
 left:10px;
 height:80px;
@@ -298,7 +298,7 @@ vertical-align:bottom;
 }
 .header .title-main{
 vertical-align:bottom;
-padding:36px 0 0 10px;
+padding:36px 0 0 0px;
 color:#4d4d4d;
 font-size:2.0289em;
 font-family:'Century Gothic';
