@@ -126,7 +126,7 @@ url = url.replace(new RegExp(/\/(.*)/),"");
 var subDomain = (url.match(new RegExp(/\./g))) ? url : 'dma';
 var res = subDomain.split('.');
 
-return(subDomain);
+return(res[0]);
 }
 
 
