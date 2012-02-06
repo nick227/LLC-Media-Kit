@@ -277,7 +277,6 @@ background-color: #ffffff;
 overflow: hidden;
 }
 .header .logo-main{
-position:absolute;
 top:10px;
 left:10px;
 height:63px;
@@ -289,17 +288,15 @@ margin-top:2px;
 padding-right:10px;
 }
 .header .title-main{
-position:absolute;
-top:33px;
-left:170px;
+vertical-align:bottom;
+padding:22px 0 0 10px;
 color:#4d4d4d;
 font-size:2.0289em;
 font-family:'Century Gothic';
 }
 .header .nav-main{
-position:absolute;
-left:460px;
-top:44px;
+padding-top:34px;
+padding-left:15px;
 }
 .header .nav-main ul li{
 display: inline;
