@@ -308,8 +308,9 @@ var ie = false;
 		});	
 		
 		$(window).scroll(function(){
-			if ($(window).scrollTop() > '1600'){
+			if ($(window).scrollTop() > '1100'){
 			audienceStep=1;
+			$("div.industrySpend").animate({ color: '#ffffff' }, 200);
 			}
 			if ($(window).scrollTop() < '1000'){
 			audienceStep=0;

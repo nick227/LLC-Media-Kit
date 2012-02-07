@@ -402,14 +402,17 @@ font-family:tandelle; font-size:4.2em; PADDING:0;position:absolute; bottom:27px;
 .cash_section{
 position:absolute; top:800px; width:100%; text-align:center;z-index:10;
 }
-.cash_welcome{
+.cash_welcome_img{
 width:527px; height:33px; background-image:url(../images/inanindustrythatspendsover.png); background-repeat:no-repeat;margin:auto auto;
+}
+.cash_welcome_msg{
+width:527px; height:33px; text-align:center; background-repeat:no-repeat;margin:auto auto; color:#ffffff; font-family:"proxima-nova"; font-weight:400; font-size:3.032em; 
 }
 .cash_stack{
 width:880px; height:1772px; background-image:url(../images/bigCashStack.png); background-repeat:no-repeat;margin:auto auto; position:relative;
 }
 .industrySpend{
-color:#dfdfdf;font-family:tandelle; font-size:7.400em;margin-left:auto;margin-right:auto; padding-right:10px; border:1px solid transparent;
+color:#ffffff;font-family:league-gothic; font-size:6.100em;margin-left:auto;margin-right:auto; padding-right:10px; border:1px solid transparent;
 /*color:#ffffff;font-family:KnockoutHTF26JuniorFlyweighRg; font-size:9em;margin-left:auto;margin-right:auto;*/
 }
 .cash_summary{
