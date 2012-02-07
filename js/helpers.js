@@ -105,6 +105,10 @@ var url = window.location.toString();
  if(url.indexOf('dropbox') != -1){
  return 'dma';
  }
+ var f = checkParams('feed');
+ if(f.length > 1){
+ return f;
+ }
 // IF THERE, REMOVES 'http://', 'https://' or 'ftp://' FROM THE START
 url = url.replace(new RegExp(/^http\:\/\/|^https\:\/\/|^ftp\:\/\//i),"");
 // IF THERE, REMOVES 'www.' FROM THE START OF THE STRING
