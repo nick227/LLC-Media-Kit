@@ -102,7 +102,7 @@ document.write("<li>["+p+"] => "+theObj[p]+"</li>");
 
 function urlCheck() {
 var url = window.location.toString();
- if(url.indexOf('dropbox') != -1){
+ if(url.indexOf('dropbox') != -1 || url.indexOf('10.8') != -1){
  return 'dma';
  }
  var f = checkParams('feed');

@@ -210,7 +210,7 @@ td { vertical-align: top; }
 /* ==|== primary styles =====================================================
 Author(s): NJ/BV/MM ~MultiView 2012
 ========================================================================== */
-body{margin:0;padding:0;background-color: #008dbc;/*background-color: #eeeeee;*/}
+body{margin:0;padding:0;background-color: #008dbc;}
 .hidden{display:none;}
 .slideChange{cursor:pointer}
 .spacer-10px{clear:both;height:10px;}
@@ -314,7 +314,7 @@ list-style-type: none;
 padding-right: 20px;
 }
 .header .nav-main ul li a{
-font-family:'Myriad Pro';
+font-family:'Myriad Pro', 'sans-serif';
 color:#232323;
 font-size:1.2576545em;
 cursor:pointer;
@@ -906,8 +906,29 @@ padding-bottom: 20px;
     margin: 0;
     padding: 2px;
     margin: 0 auto; width: 920px;
-	padding:10px 0 30px 0;
+	padding:7px 0 30px 0;
 	text-align:right;
+}
+#pricing-stage .foot-note .printMsg{
+    margin: 0;
+    padding: 2px;
+    width: 140px;
+	padding:0px 0 0px 0;
+	text-align:left;
+	float:left;
+	vertical-align:top;
+}
+#pricing-stage .foot-note .printMsg a{
+    color: #FFFFFF;
+    font-family: "Myriad Pro", "proxima-nova",Gadget;
+    font-size: .998em;
+    line-height: 1.6em;
+	cursor:pointer;
+	font-weight:300;
+	vertical-align:top;
+}
+#pricing-stage .foot-note .printMsg a:hover{
+text-decoration:underline;
 }
 
 /*#pricing-table #opt-one.option .info { width: 870px; }
@@ -1005,8 +1026,10 @@ color:#f5e355;
 #contact-wrap a, html #contact-wrap .gc-cs-link { color: #ffef8e !important; text-decoration: underline; font-weight: bold; }
 .contact-p-sub{
 color:#ffffff;
-font-size:11px;
+font-size:18px;
 white-space:nowrap;
+font-family:proxima-nova;
+font-family:Arial;
 }
 /* ==|== non-semantic helper classes ========================================
 Please define your styles before this section.
