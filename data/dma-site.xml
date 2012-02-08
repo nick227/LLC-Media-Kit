@@ -13,12 +13,21 @@
 <llcName><![CDATA[Learning Center]]></llcName>
 <!-- AUDIENCE PAGE -->
 <audiencePage>
+<industrySizeFontSize><![CDATA[font-size:11em]]></industrySizeFontSize>
 <industrySize><![CDATA[12,000]]></industrySize>
-<industryType><![CDATA[DIRECT MARKETING<BR />PROFESSIONALS]]></industryType>
+
 <industryTypeFontSize><![CDATA[font-size:4.3em]]></industryTypeFontSize>
-<industrySpend><![CDATA[$155 BILLION DOLLARS]]></industrySpend>
+<industryType><![CDATA[DIRECT MARKETING<BR />PROFESSIONALS]]></industryType>
+
+<industrySpendFontSize><![CDATA[font-size:6.1em]]></industrySpendFontSize>
+<industrySpend><![CDATA[$155 BILLION DOLLARS ANNUALLY]]></industrySpend>
+
+<industryMembersFontSize><![CDATA[font-size:2.2em]]></industryMembersFontSize>
 <industryMembers><![CDATA[<li>Marketers</li><li>Consultants</li><li>Non-Profits</li><li>Intl Organizations</li>]]></industryMembers>
+
+<introCopyFontSize><![CDATA[font-size:3.032em]]></introCopyFontSize>
 <introCopy><![CDATA[in an industry that spends over]]></introCopy>
+
 </audiencePage>
 <!-- BENEFITS PAGE -->
 <benefitsPage>
@@ -239,13 +248,13 @@ A Skyscraper is a large format graphic ad that delivers prime real estate to sel
 
 <sponsorMediaName><![CDATA[SPONSORED MEDIA]]></sponsorMediaName>
 <sponsorMediaBlurb><![CDATA[
-Further target your message by sponsoring individual sessions – prominently showcase your logo throughout an entire presentation.
+Further target your message by sponsoring individual sessions – prominently showcase your logo throughout an entire presentation. Availability based on limited-inventory rotation.
 ]]></sponsorMediaBlurb>
 <sponsorMediaPrice><![CDATA[$1,500]]></sponsorMediaPrice>
 
 <spotlightName><![CDATA[BUSINESS SPOTLIGHT]]></spotlightName>
 <spotlightBlurb><![CDATA[
-Cement your company’s presence in front of the industry by displaying your logo across all areas of the LLC. Industry Partner logos are highlighted throughout the site.
+Cement your company’s presence in front of the industry by displaying your logo across all areas of the LLC. Industry Partner logos are highlighted throughout the site on limited-inventory rotation.
 ]]></spotlightBlurb>
 <spotlightPrice><![CDATA[$1,250]]></spotlightPrice>
 
