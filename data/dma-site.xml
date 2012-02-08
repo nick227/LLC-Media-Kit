@@ -13,6 +13,9 @@
 <llcName><![CDATA[Learning Center]]></llcName>
 <!-- AUDIENCE PAGE -->
 <audiencePage>
+<industryMembersIntroFontSize><![CDATA[font-size:7.15em]]></industryMembersIntroFontSize>
+<industryMembersIntro><![CDATA[WHILE TARGETING<BR />YOUR MESSAGE TO:]]></industryMembersIntro>
+
 <industrySizeFontSize><![CDATA[font-size:11em]]></industrySizeFontSize>
 <industrySize><![CDATA[12,000]]></industrySize>
 
