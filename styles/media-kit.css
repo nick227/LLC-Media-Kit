@@ -416,10 +416,10 @@ color:#ffffff;font-family:league-gothic; font-size:6.100em;margin-left:auto;marg
 /*color:#ffffff;font-family:KnockoutHTF26JuniorFlyweighRg; font-size:9em;margin-left:auto;margin-right:auto;*/
 }
 .cash_summary{
-position:absolute; bottom:0; width:740px; height:190px; margin-left:auto;margin-right:auto
+position:absolute; bottom:0; width:800px; height:190px; margin-left:auto;margin-right:auto
 }
 .cash_summary_title{
-color:#ffffff;font-family:tandelle; font-size:7.15em;text-align:left; line-height:.8999em; width:603px;  text-align:center;
+color:#ffffff;font-family:tandelle; font-size:7.15em;text-align:left; line-height:.8999em; width:440px;  text-align:left;
 /*color:#ffffff;font-family:KnockoutHTF26JuniorFlyweighRg; font-size:9em;text-align:left; line-height:.8999em; width:423px;*/
 }
 
