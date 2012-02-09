@@ -882,9 +882,9 @@ height: auto !important;
 padding-bottom: 20px;
 /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32f0a6', endColorstr='#00bc85',GradientType=1 );  IE6-9 fallback on horizontal gradient */
 }
-#pricing-wrap { margin: 0 auto; width: 920px; }
+#pricing-wrap { margin: 0 auto; width: 920px; padding-right:100px; }
 #pricing-wrap h1 { margin: 0; padding: 60px 0 30px 0; }
-#pricing-table { padding: 10px; background: #3587a7; }
+#pricing-table { padding: 10px; background: #3587a7; background: #3587a7; position:relative; }
 #pricing-table .option { position: relative; padding: 10px 0 0 0; }
 #pricing-table .option .info { overflow: hidden; background: #fff; color: #555; padding-right: 3px; position: relative; z-index: 2; }
 #pricing-table .option .title { line-height: 40px; background-color: #f0a726; font-size: 24px; text-indent: 20px; text-transform: uppercase; color: #fff; }
@@ -906,7 +906,7 @@ padding-bottom: 20px;
     margin: 0;
     padding: 2px;
     margin: 0 auto; width: 920px;
-	padding:7px 0 30px 0;
+	padding:0px 100px 0px 0;
 	text-align:right;
 }
 #pricing-stage .foot-note .printMsg{
@@ -930,7 +930,20 @@ padding-bottom: 20px;
 #pricing-stage .foot-note .printMsg a:hover{
 text-decoration:underline;
 }
-
+.printTab{
+width:108px;
+height:204px;
+position:absolute;
+top:0;
+right:-108px;
+background-image:url(../images/finFlyoutPrint.png);
+background-repeat:no-repeat:
+background-position:0 0;
+cursor:pointer;
+}
+.printTab:hover{
+background-position:0 -204px;
+}
 /*#pricing-table #opt-one.option .info { width: 870px; }
 #pricing-table #opt-one.option .bg { width: 50px; }
 
