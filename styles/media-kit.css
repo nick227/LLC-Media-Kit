@@ -543,7 +543,6 @@ width: 878px;
 height: 620px;
 }
 .benefit-content{
-background-image: url(../images/benefits/box-bg-gradient.png);
 position: absolute;
 left: 10px;
 width: 266px;
@@ -589,7 +588,7 @@ padding-right: 16px;
 font-family:'Myriad Pro', 'myriad-pro', 'Proxima Nova', 
 }
 .benefit-graphic{
-background-image: url(../images/benefits/csg-4f2a92e5839df.png);
+background-image: url(../images/benefits/csg-4f35742e7c108.png);
 position: absolute;
 left: 72px;
 top: 17px;
@@ -613,15 +612,15 @@ overflow: hidden;
 .sprite-benefit3-off{ background-position: 0 -835px; width: 122px; height: 117px; } 
 .sprite-benefit4{ background-position: 0 -1002px; width: 122px; height: 117px; } 
 .sprite-benefit4-off{ background-position: 0 -1169px; width: 122px; height: 117px; } 
-.sprite-benefit5{ background-position: 0 -1336px; width: 266px; height: 140px; } 
-.sprite-benefit6{ background-position: 0 -1526px; width: 122px; height: 117px; } 
-.sprite-benefit6-off{ background-position: 0 -1693px; width: 122px; height: 117px; } 
-.sprite-benefit7{ background-position: 0 -1860px; width: 122px; height: 117px; } 
-.sprite-benefit7-off{ background-position: -316px 0; width: 122px; height: 117px; } 
-.sprite-benefit8{ background-position: -316px -167px; width: 122px; height: 117px; } 
-.sprite-benefit8-off{ background-position: -316px -334px; width: 122px; height: 117px; } 
-.sprite-benefit9{ background-position: -316px -501px; width: 122px; height: 117px; } 
-.sprite-benefit9-off{ background-position: -316px -668px; width: 122px; height: 117px; } 
+.sprite-benefit5{ background-position: 0 -1336px; width: 122px; height: 117px; } 
+.sprite-benefit5-off{ background-position: 0 -1503px; width: 122px; height: 117px; } 
+.sprite-benefit6{ background-position: 0 -1670px; width: 122px; height: 117px; } 
+.sprite-benefit6-off{ background-position: 0 -1837px; width: 122px; height: 117px; } 
+.sprite-benefit7{ background-position: -172px 0; width: 122px; height: 117px; } 
+.sprite-benefit7-off{ background-position: -172px -167px; width: 122px; height: 117px; } 
+.sprite-benefit8{ background-position: -172px -334px; width: 122px; height: 117px; } 
+.sprite-benefit8-off{ background-position: -172px -501px; width: 122px; height: 117px; } 
+
 
 /*.benefit-image-large{
 position: absolute;
@@ -635,7 +634,7 @@ top: 10px;
 }
 .benefit-copy h2{
 position: absolute;
-display: block;
+display: inline;
 width: 266px;
 top: 0px;
 text-align: center;
@@ -655,11 +654,11 @@ font-family: "proxima-nova";
 font-size: 11pt;
 }
 .benefit-box{
+display: inline-block;
+position: absolute;
 cursor: pointer;
 border: 1px solid #555555;
 background-image: url(../images/benefits/benefit-bg.png);
-display: block;
-position: absolute;
 width: 286px;
 height: 200px;
 overflow: hidden;
