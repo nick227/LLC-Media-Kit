@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+<siteName><![CDATA[DMA Media Kit]]></siteName>
+<siteTitle><![CDATA[DMA Media Kit]]></siteTitle>
+<partnerAcronym><![CDATA[DMA]]></partnerAcronym>
+<partnerFullName><![CDATA[Direct Marketing Association]]></partnerFullName>
+<headerWidth><![CDATA[width:1000px;]]></headerWidth>
+<logo><![CDATA[http://www.the-dma.org/graphics/DMA_logo.jpg]]></logo>
+<logoPaddingTop><![CDATA[padding-top:10px]]></logoPaddingTop>
+<logoPaddingLeft><![CDATA[padding-left:0px]]></logoPaddingLeft>
+<accentColor><![CDATA[#74A5CD]]></accentColor>
+<llcURL><![CDATA[http://dma.sclibraries.com]]></llcURL>
+<llcName><![CDATA[Learning Center]]></llcName>
+<!-- AUDIENCE PAGE -->
+<audiencePage>
+
+<industrySizeFontSize><![CDATA[font-size:8.5em]]></industrySizeFontSize>
+<industrySize><![CDATA[12,000]]></industrySize>
+
+<industryTypeFontSize><![CDATA[font-size:3.295em]]></industryTypeFontSize>
+<industryType><![CDATA[DIRECT MARKETING<BR />PROFESSIONALS]]></industryType>
+
+<industryMembersFontSize><![CDATA[font-size:1.517em]]></industryMembersFontSize>
+<industryMembers><![CDATA[<li>Marketers</li><li>Consultants</li><li>Non-Profits</li><li>Intl Organizations</li>]]></industryMembers>
+
+<introCopyFontSize><![CDATA[font-size:1.932em]]></introCopyFontSize>
+<introCopy><![CDATA[IN AN INDUSTRY THAT SPENDS OVER]]></introCopy>
+
+<industrySpendFontSize><![CDATA[font-size:7.710em]]></industrySpendFontSize>
+<industrySpend><![CDATA[$155 BILLION]]></industrySpend>
+
+<industrySpendDescFontSize><![CDATA[font-size:2.908em]]></industrySpendDescFontSize>
+<industrySpendDescLineHeight><![CDATA[line-height:0.966em;]]></industrySpendDescLineHeight>
+<industrySpendDesc><![CDATA[DOLLARS<br />ANNUALLY]]></industrySpendDesc>
+
+</audiencePage>
+<!-- BENEFITS PAGE -->
+<benefitsPage>
+<benefitCopyDuration>
+	<![CDATA[
+	In 2011, users of the DMA LLC spent over 1,200 hours interacting with valuable educational content. That&#145;s 1,200 hours they could have spent looking at YOUR campaign.
+	]]>
+</benefitCopyDuration>
+<benefitCopyTablet>
+	<![CDATA[
+	The DMA LLC is also optimized for use with tablet devices&#8212; your message will stay in front of buyers everywhere they go!
+	]]>
+</benefitCopyTablet>
+<benefitCopyAffordable>
+	<![CDATA[
+	Interact with 12,000 qualified buyers for hours at time. The DMA LLC gives you unprecedented access at an unbeatable price &#8212; now you can communicate directly with these valuable customers.
+	]]>
+</benefitCopyAffordable>
+<benefitCopyMetrics>
+	<![CDATA[
+	The DMA LLC incorporates extensive reporting– this gives you the ability to easily quantify and track your ROI!
+	]]>
+</benefitCopyMetrics>
+<benefitCopyLibrary>
+	<![CDATA[
+	Comprised of over 125 hours of professionally recorded sessions from DMA&#8217;s annual conferences, the DMA LLC is a complete educational content resource for all direct marketers.
+	]]>
+</benefitCopyLibrary>
+<benefitCopyAccess>
+	<![CDATA[
+DMA promotes the LLC through both print and digital campaigns. Your message will be showcased in front of dedicated professionals involved in direct marketing &#8212; enabling your organization to reach qualified buyers.
+]]>
+</benefitCopyAccess>
+<benefitCopyCredibility>
+	<![CDATA[
+Since 1917, the Direct Marketing Association has been the definitive resource for relevant information and educational opportunities in the industry. By advertising in the DMA LLC, your campaign will appear within the trusted network of DMA.
+]]>
+</benefitCopyCredibility>
+<benefitCopyCreative>
+	<![CDATA[
+Our agency-quality creative team offers full design services at no additional cost. We will work with you to ensure that your campaign is engaging and drives the traffic you need.
+]]>
+</benefitCopyCreative>
+</benefitsPage>
+<!-- INVENTORY PAGE -->
+<inventoryPage>
+	<homeScreen><![CDATA[<img class="screen" src="/images/sites/154/mediaKit/homeScreen.jpg" width="510" height="994" alt="" />]]></homeScreen>
+	<adFullCampaign display="none"></adFullCampaign>
+	<adFullCampaignLightbox>
+		<![CDATA[  
+		full campaign html here 
+		]]>
+	</adFullCampaignLightbox>
+	<adTopLeaderboard display="none">
+		<width><![CDATA[360]]></width>
+		<height><![CDATA[45]]></height>
+		<left><![CDATA[75]]></left>
+		<top><![CDATA[12]]></top>
+	</adTopLeaderboard>
+	<adTopLeaderboardLightbox>
+		<![CDATA[<img src="/images/sites/154/mediaKit/ad_top_leaderboard.jpg" />]]>
+		<![CDATA[<img src="/images/sites/154/mediaKit/ad_top_leaderboard.jpg" />]]>
+	</adTopLeaderboardLightbox>
+	<adSponsoredMedia display="block">
+		<width><![CDATA[60]]></width>
+		<height><![CDATA[30]]></height>
+		<left><![CDATA[427]]></left>
+		<top><![CDATA[227]]></top>
+	</adSponsoredMedia>
+	<adSponsoredMediaLightbox>
+		<![CDATA[
+		<table class="title" align="left" width="300">
+			<tr><th align="left" colspan="2">Sponsored Media</th></tr>
+			<tr><td align="left">$1,500</td><td align="right"><img style="margin-top:4px;" src="/images/sites/154/mediaKit/ad_sponsored_media.jpg" /></td></tr>
+		</table><div class="spacer-10px"></div>
+		<table class="specs" align="center" width="300">
+			<tr><th colspan="2">specifications:</th></tr>
+			<tr><td>Dimensions</td><td><em>120 x 60</em></td></tr>
+			<tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
+			<tr><td>size</td><td><em>40Kb</em></td></tr>
+			  <tr><td>CYCLE</td><td><em>1 YEAR</em></td></tr>
+		</table><br>
+			<div class="lBoxInfo">Further target your message by sponsoring individual sessions – prominently showcase your logo throughout an entire presentation.
+			<br><div style="width:300px; text-align:left;  margin:5px 13px 0 0"><a href="#" onclick="return false" class="advanceLboxLink">show another</a></div>
+			</div>
+          <div class="spacer-10px"></div>
+          <div style="float:right;" class="buy"><a href="mailto:sales@multiview.com?subject=Reserve%20Media%20Sponsorship-DMA"><img style="" src="/images/mediaKit/btn_reserve.png" alt="Reserve Now" /></a></div>
+		]]>
+	</adSponsoredMediaLightbox>
+	<adSkyscraperL display="block">
+		<width><![CDATA[81]]></width>
+		<height><![CDATA[298]]></height>
+		<left><![CDATA[8]]></left>
+		<top><![CDATA[285]]></top>
+	</adSkyscraperL>
+	<adSkyscraperLLightbox>
+		<![CDATA[
+		<img src="/images/sites/154/mediaKit/ad_skyscraper_L.jpg" style="float: left; margin-right: 20px;" />
+		<table class="title" style="margin-top: 0;text-align:left;" align="left" width="300">
+			<tr><th>Skyscraper Left</th></tr>
+			<tr><td align="left">$2,500</td></tr>
+		</table><br />
+		<table class="specs" align="left" width="300">
+			<tr><th colspan="2">specifications:</th></tr>
+			<tr><td>Dimensions</td><td><em>160 x 600</em></td></tr>
+			<tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
+			<tr><td>size</td><td><em>40Kb</em></td></tr>
+			  <tr><td>CYCLE</td><td><em>1 YEAR</em></td></tr>
+		</table>
+			<div class="lBoxInfo">
+			A Skyscraper is a large format graphic ad that delivers prime real estate to sell your company’s products or services to decision makers. Skyscrapers are displayed throughout the LLC in a limited-inventory rotation.
+			<br><div style="width:300px; text-align:left;  margin:20px 3px 0 0"><a href="#" onclick="return false" class="advanceLboxLink">show another</a></div>
+			</div>
+          <div style="position:absolute; bottom:0px; right:10px;" class="buy"><a href="mailto:sales@multiview.com?subject=Reserve%20a%20Skyscraper-DMA"><img style="" src="/images/mediaKit/btn_reserve.png" alt="Reserve Now" /></a></div>
+		]]>
+	</adSkyscraperLLightbox>
+	<adSkyscraperR display="block">
+		<width><![CDATA[81]]></width>
+		<height><![CDATA[298]]></height>
+		<left><![CDATA[421]]></left>
+		<top><![CDATA[285]]></top>
+	</adSkyscraperR>
+	<adSkyscraperRLightbox>
+		<![CDATA[
+		<img src="/images/sites/154/mediaKit/ad_skyscraper_R.jpg" style="float: left; margin-right: 20px;" />
+		<table class="title" style="margin-top: 0;text-align:left;" align="left" width="300">
+			<tr><th>Skyscraper Right</th></tr>
+			<tr><td align="left">$2,500</td></tr>
+		</table><br />
+		<table class="specs" align="left" width="300">
+			<tr><th colspan="2">specifications:</th></tr>
+			<tr><td>Dimensions</td><td><em>160 x 600</em></td></tr>
+			<tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
+			<tr><td>size</td><td><em>40Kb</em></td></tr>
+			  <tr><td>CYCLE</td><td><em>1 YEAR</em></td></tr>
+		</table>
+			<div class="lBoxInfo">
+			A Skyscraper is a large format graphic ad that delivers prime real estate to sell your company’s products or services to decision makers. Skyscrapers are displayed throughout the LLC in a limited-inventory rotation.
+			<br><div style="width:300px; text-align:left;  margin:20px 3px 0 0"><a href="#" onclick="return false" class="advanceLboxLink">show another</a></div>
+			</div>
+       <div class="spacer-10px"></div>
+          <div style="position:absolute; bottom:0px; right:10px;" class="buy"><a href="mailto:sales@multiview.com?subject=Reserve%20Skyscraper-DMA"><img style="" src="/images/mediaKit/btn_reserve.png" alt="Reserve Now" /></a></div>
+		]]>
+	</adSkyscraperRLightbox>
+	<adBusinessSpotlight display="block">
+		<width><![CDATA[60]]></width>
+		<height><![CDATA[30]]></height>
+		<left><![CDATA[431]]></left>
+		<top><![CDATA[610]]></top>
+	</adBusinessSpotlight>
+	<adBusinessSpotlightLightbox>
+		<![CDATA[
+		
+		<table class="title" align="left" width="300">
+			<tr><th align="left" colspan="2">Business Spotlight</th></tr>
+			<tr><td align="left">$1,250</td><td align="right"><img style="margin-top:4px;" src="/images/sites/154/mediaKit/ad_business_spotlight.jpg" /></td></tr>
+		</table><div class="spacer-10px"></div>
+		<table class="specs" align="center" width="300">
+			<tr><th colspan="2">specifications:</th></tr>
+			<tr><td>Dimensions</td><td><em>120 x 60</em></td></tr>
+			<tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
+			<tr><td>size</td><td><em>40Kb</em></td></tr>
+			  <tr><td>CYCLE</td><td><em>1 YEAR</em></td></tr>
+		</table><br>
+			<div class="lBoxInfo">
+			Cement your company’s presence in front of the industry by displaying your logo across all areas of the LLC. Industry Partner logos are highlighted throughout the site.
+			<br><div style="width:300px; text-align:left;  margin:6px 3px 0 0"><a href="#" onclick="return false" class="advanceLboxLink">show another</a></div>
+			</div>
+        <div class="spacer-10px"></div>
+          <div style="float:right;" class="buy"><a href="mailto:sales@multiview.com?subject=Reserve%20Business%20Spotlight-DMA"><img style="" src="/images/mediaKit/btn_reserve.png" alt="Reserve Now" /></a></div>
+		]]>
+	</adBusinessSpotlightLightbox>
+	<adLowLeaderboard display="block">
+		<width><![CDATA[360]]></width>
+		<height><![CDATA[45]]></height>
+		<left><![CDATA[75]]></left>
+		<top><![CDATA[914]]></top>
+	</adLowLeaderboard>
+	<adLowLeaderboardLightbox>
+		<![CDATA[
+		<img src="/images/sites/154/mediaKit/ad_low_leaderboard.jpg" />
+		<div style="margin: 0 auto; width: 700px; overflow: hidden;">
+			<table class="title" style="float: left;" width="300">
+			  <tr><th align="left">Bottom Leaderboard</th></tr>
+			  <tr><td align="left">$2,500</td></tr>
+			  <tr><td align="left" style="font-size:13px;">
+			<div class="lBoxInfo" style="float:left;">
+			The Bottom Leaderboard allows your company to combine text, colors and graphics into a unique sales message for qualified buyers. Bottom Leaderboards are displayed throughout the LLC in a limited-inventory rotation.
+			<br><div style="width:300px; text-align:left;  margin:10px 3px 0 0"><a href="#" onclick="return false" class="advanceLboxLink">show another</a></div>
+			</div>
+			</td></tr>
+			</table>
+			<table class="specs" style="float: right;" width="300">
+			  <tr><th colspan="2">specifications:</th></tr>
+			  <tr><td>Dimensions</td><td><em>728 x 90</em></td></tr>
+			  <tr><td>format</td><td><em>JPG, GIF</em></td></tr>
+			  <tr><td>size</td><td><em>40Kb</em></td></tr>
+			  <tr><td>CYCLE</td><td><em>1 YEAR</em></td></tr>
+			</table>
+		</div>
+        <div class="spacer-10px"></div>
+          <div style="float:right;" class="buy"><a href="mailto:sales@multiview.com?subject=Reserve%20Bottom%20Leaderboard-DMA"><img style="" src="/images/mediaKit/btn_reserve.png" alt="Reserve Now" /></a></div>
+		]]>
+	</adLowLeaderboardLightbox>
+</inventoryPage>
+<!-- PRICING PAGE -->
+<pricingPage>
+<reserveButtonLinkSkyscraper><![CDATA[mailto:sales@multiview.com?subject=Reserve%20Skyscraper-DMA]]></reserveButtonLinkSkyscraper>
+<reserveButtonLinkSpotlight><![CDATA[mailto:sales@multiview.com?subject=Reserve%20Business%20Spotlight-DMA]]></reserveButtonLinkSpotlight>
+<reserveButtonLinkBLeaderboard><![CDATA[mailto:sales@multiview.com?subject=Reserve%20Bottom%20Leaderboard-DMA]]></reserveButtonLinkBLeaderboard>
+<reserveButtonLinkSponsor><![CDATA[mailto:sales@multiview.com?subject=Reserve%20Sponsored%20Media-DMA]]></reserveButtonLinkSponsor>
+
+<skyScraperName><![CDATA[Skyscraper]]></skyScraperName>
+<skyScraperBlurb><![CDATA[
+A Skyscraper is a large format graphic ad that delivers prime real estate to sell your company’s products or services to decision makers. Skyscrapers are displayed throughout the LLC in a limited-inventory rotation.
+]]></skyScraperBlurb>
+<skyScraperPrice><![CDATA[$2,500]]></skyScraperPrice>
+
+<sponsorMediaName><![CDATA[SPONSORED MEDIA]]></sponsorMediaName>
+<sponsorMediaBlurb><![CDATA[
+Further target your message by sponsoring individual sessions – prominently showcase your logo throughout an entire presentation. Availability based on limited-inventory rotation.
+]]></sponsorMediaBlurb>
+<sponsorMediaPrice><![CDATA[$1,500]]></sponsorMediaPrice>
+
+<spotlightName><![CDATA[BUSINESS SPOTLIGHT]]></spotlightName>
+<spotlightBlurb><![CDATA[
+Cement your company’s presence in front of the industry by displaying your logo across all areas of the LLC. Industry Partner logos are highlighted throughout the site on limited-inventory rotation.
+]]></spotlightBlurb>
+<spotlightPrice><![CDATA[$1,250]]></spotlightPrice>
+
+<lowerLeaderName><![CDATA[BOTTOM LEADERBOARD]]></lowerLeaderName>
+<lowerLeaderBlurb><![CDATA[
+The Bottom Leaderboard allows your company to combine text, colors and graphics into a unique sales message for qualified buyers. Bottom Leaderboards are displayed throughout the LLC in a limited-inventory rotation.
+]]></lowerLeaderBlurb>
+<lowerLeaderPrice><![CDATA[$2,500]]></lowerLeaderPrice>
+
+</pricingPage>
+<!-- CONTACT PAGE -->
+<getStartedPage>
+	<salesEmailLink><![CDATA[mailto:sales@multiview.com?subject=Advertising%20Opportunities]]></salesEmailLink>
+	<multiviewLink><![CDATA[http://www.multiview.com]]></multiviewLink>
+</getStartedPage>
+</site>

@@ -1,0 +1,165 @@
+<div id="audience-stage" style="overflow:hidden;" class="stage">
+<style>
+.inner{position:relative;}
+.blueRibbon{}
+#audience-ribbon{
+width:100%;
+height:252px;
+position:absolute;
+left:80px;
+top:470px;
+}
+#audience-ribbon .inner{
+width:100%;
+height:100%;
+position:relative;
+}
+#audience-ribbon .inner .ribbon_left{
+width:553px;
+height:169px;
+background-color:#4180af;
+position:absolute;
+left:0;
+bottom:0;
+background-image:url(/images/mediaKit/engageVertText2.png);
+background-repeat:no-repeat;
+background-position:15px 35px;
+}
+#audience-ribbon .inner .ribbon_center{
+width:121px;
+height:252px;
+background-image:url(/images/mediaKit/blueRibbonConnector.png);
+background-repeat:no-repeat;
+position:absolute;
+bottom:0;
+left:553px;
+}
+#audience-ribbon .inner .ribbon_right{
+/*width:100%;*/
+height:169px;
+background-color:#4180af;
+position:absolute;
+left:674px;
+top:0;
+}
+#audience-ribbon .inner .engage_table{
+position:absolute; top:15px; left:56px;
+}
+#audience-ribbon .inner .engage_size{
+vertical-align:top;font-family:league-gothic; font-size:11em; PADDING:0;margin:0;
+}
+#audience-ribbon .inner .engage_type{
+font-family:league-gothic; font-size:4.2em; padding-left:10px; line-height:.99em; color:#4180af;
+width:100%;
+text-align:left;
+}
+#audience-ribbon .inner .engage_members_window{
+width:252px;
+height:120px;
+overflow:hidden;
+margin-top:10px;
+}
+.engage_table td .engage_members_window .inner{
+position:absolute;
+width:250px;
+height:300px;
+}
+.engage_table td .engage_members_list{
+list-style-type:disc; 
+}
+.engage_members_list li{
+color:#ffffff; font-family:proxima-nova;
+}
+.ribbon_right .industry_spend_msg{
+font-family:proxima-nova; color:#ffffff; 
+margin-top:20px;margin-left:25px;
+display:none;
+}
+.ribbon_right .spend_table{
+vertical-align:top;
+margin-left:20px;
+overflow:hidden;
+}
+.ribbon_right .spend_table td{vertical-align:top; height:100px}
+.ribbon_right .industry_spend{vertical-align:top;
+color:#92da77; font-family:league-gothic;line-height:100px;
+height:90px;
+overflow:hidden;
+position:relative;
+}
+.industry_spend_mask{
+position:absolute;
+height:100%;
+width:100%;
+background-color:#4180af;
+top:0;
+left:0;
+}
+.ribbon_right .industrySpendDesc{
+color:#ffffff; font-family:league-gothic;line-height:0.966em; margin-top:12px; padding-left:10px;display:none;
+}
+.headSection{
+background-image:url(/images/mediakit/bground-heads.png);
+background-repeat:no-repeat;
+background-position:0 171px;
+position:absolute;
+top:170px;
+left:140px;
+width:816px;
+height:435px;
+}
+.screenImages{position:absolute;top:21px; left:739px;}
+img#headimg{}
+</style>
+
+<div class="headSection">
+<div class="inner">
+<img id="headimg" src="/images/mediakit/engageHead2.png" style="top:0; left:107px; position:absolute;" />
+<img id="gear1img" src="/images/mediakit/gear1.png" style="top:125px; left:211px; position:absolute;" />
+<img id="gear2img" src="/images/mediakit/gear2.png" style="top:73px; left:250px; position:absolute;" />
+<img id="gear3img" src="/images/mediakit/gear3.png" style="top:99px; left:167px; position:absolute;" />
+<img id="rayimg" src="/images/mediakit/engageRay2.png" style="z-index:5;top:22px; left:385px; position:absolute;display:none;" />
+<div class="screenImages">
+	<div class="inner">
+	<img class="screenimg active" src="/images/mediakit/engageScreen2.png" style="z-index:4; position:absolute;display:none;" />
+	<img class="screenimg" src="/images/mediakit/engageScreen2b.png" style="z-index:3; position:absolute;display:none;" />
+	<img class="screenimg" src="/images/mediakit/engageScreen2c.png" style="z-index:2; position:absolute;display:none;" />
+	<img class="screenimg" src="/images/mediakit/engageScreen2d.png" style="z-index:1; position:absolute;display:none;" />
+	</div>
+</div>
+</div>
+</div>
+
+<div class="blueRibbon" id="audience-ribbon">
+	<div class="inner">
+		<div class="ribbon_left">
+			<table class="engage_table" CELLPADDING=0 CELLSPACING=0><tr>
+			<td><div class="engage_size" style="<%=audiencePage.industrySizeFontSize%>"><%=audiencePage.industrySize%></div></td>
+			<td><div class="engage_members_window">
+					<div class="inner">
+						<div class="spacer-10px"></div>
+						<div class="engage_type" style="<%=audiencePage.industryTypeFontSize%>"><%=audiencePage.industryType%></div>
+						<div class="spacer-10px"></div>
+						<div class="spacer-10px"></div>
+						<ul class="engage_members_list" style="<%=audiencePage.industryMembersFontSize%>; vertical-align:top;">
+						<%=audiencePage.industryMembers%>
+						</ul>
+					</div>
+			</div></td>
+			</tr></table>
+		</div>
+		<div class="ribbon_center"></div>
+		<div class="ribbon_right">
+		<div class="industry_spend_msg" style="<%=audiencePage.introCopyFontSize%>"><%=audiencePage.introCopy%></div>
+		<table class="spend_table" cellpadding=0 cellspacing=0><tr><td>
+		<div class="industry_spend" style="<%=audiencePage.industrySpendFontSize%>"><%=audiencePage.industrySpend%><div class="industry_spend_mask"></div></div>
+		</td><td>
+		<div class="industrySpendDesc" style="<%=audiencePage.industrySpendDescFontSize%>"><%=audiencePage.industrySpendDesc%></div>
+		</td></tr></table>
+		</div>
+	</div>
+</div>
+
+
+
+</div>

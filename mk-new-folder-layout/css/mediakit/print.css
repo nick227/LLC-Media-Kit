@@ -1,0 +1,22 @@
+* { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; font-size:13px;margin:0} /* Black prints faster: h5bp.com/s */
+  a, a:visited { text-decoration: underline; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; } /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* h5bp.com/t */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.1cm; margin-left:0; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+  .print_content{display:block}
+  nav ul{display:none;}
+  #pricing-table{margin:0;}
+  #pricing-table .option {margin:0;padding:3px;}
+  #pricing-table .option .info{border:1px solid #999999;margin:0;width:99%;}
+  #pricing-table .option .buy{display:none;}
+  .printTab{display:none;}
+  #pricing-stage .foot-note{text-align:center;}
+  #pricing-table .option .title{font-size:14px; font-weight:bold;line-height:16px;text-indent:12px; padding-right:5px;}
+  #pricing-table .option .desc{font-size:13px; font-weight:normal;padding:5px;padding-left:12px;}
+  #pricing-table .option .specs{padding:5px 10px;}
+  #pricing-wrap { margin: 0; width: 850px; padding:3px;padding-left:12px; left:0; text-align:left;}
