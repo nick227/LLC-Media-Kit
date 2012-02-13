@@ -547,8 +547,6 @@ position: absolute;
 left: 10px;
 width: 266px;
 height: 400px;
-opacity:0;
-filter: alpha(opacity = 0);
 }
 .benefit-copy{
 position: absolute;
