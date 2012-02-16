@@ -579,6 +579,9 @@ $('#ipad-hand-indicator').fadeIn(2250);
 $('#ipadScreen').mousedown(function() {
 $('#ipad-hand-indicator').fadeOut(125);
 });
+$('#ipad-hand-indicator').hover(function() {
+$('#ipad-hand-indicator').fadeOut(125);
+});
 
 
         // set bg, fade ads, ad events
