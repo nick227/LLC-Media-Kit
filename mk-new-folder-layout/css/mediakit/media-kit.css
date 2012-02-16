@@ -796,13 +796,13 @@ margin-left:auto;margin-right:auto; padding-right:15px;
 /*background-image:url(/images/mediaKit/ad_inventory_bg.png);*/
 }
 #ipad-hand-indicator{
-width:125px;
-height:155px;
+width:93px;
+height:111px;
 position:absolute;
 margin-top:30%;
 left:50%;
-margin-left:-62px;
-background-image:url(/images/mediakit/ipad-scroll-hand6.png);
+margin-left:-46.5px;
+background-image:url(/images/mediakit/ipad-scroll-hand7.png);
 background-repeat:no-repeat;
 background-position:0 0;
 z-index:125;
