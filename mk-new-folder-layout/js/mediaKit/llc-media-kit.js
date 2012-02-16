@@ -573,6 +573,14 @@ var mediaKit = { /*** Retrieves xml feed, runs template manager, attach onclick 
         }
     },
     setupVirtualIpad: function () { //sets up interactive ipad on inventory screen
+	
+
+$('#ipad-hand-indicator').fadeIn(2250);	
+$('#ipadScreen').mousedown(function() {
+$('#ipad-hand-indicator').fadeOut(125);
+});
+
+
         // set bg, fade ads, ad events
         $("#ipadScreen a .img").each(function () {
 
@@ -634,7 +642,6 @@ var mediaKit = { /*** Retrieves xml feed, runs template manager, attach onclick 
         $('a.advanceLboxLink').live('click', function () {
             $.fancybox.next();
         });
-
         // setup draggables 	
         $('.draggable').draggable({
             axis: 'y',

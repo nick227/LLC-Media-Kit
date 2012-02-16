@@ -383,132 +383,116 @@ height:850px;
 color:#ffffff;
 overflow:hidden;
 }
-.engage_anchor{
-top:125px; left:50%; margin-left:-400px; width:835px; height:504px; position:absolute;
-}
-.engage_section{
-width:835px; height:504px; position:relative;
-}
-.engage_banner_pointer{
-background-image:url(/images/mediaKit/engageTopTriangle.png); width:52px; height:31px; position:absolute; top:326px; left:195px;
-}
-.engage_banner{
-width:610px; height:150px; background-color:#1e5676; position:absolute; bottom:0
-}
-.engage_size{
-}
-.engage_type{
-}
-.cash_section{
-position:absolute; top:800px; width:100%; text-align:center;z-index:10;
-}
-.cash_welcome_img{
-width:527px; height:33px; background-image:url(/images/mediaKit/inanindustrythatspendsover.png); background-repeat:no-repeat;margin:auto auto;
-}
-.cash_welcome_msg{
-width:527px; height:33px; text-align:center; background-repeat:no-repeat;margin:auto auto; color:#ffffff; font-family:"proxima-nova"; font-weight:400; font-size:3.032em; 
-}
-.cash_stack{
-width:880px; height:1772px; background-image:url(/images/mediaKit/bigCashStack.png); background-repeat:no-repeat;margin:auto auto; position:relative;
-}
-.industrySpend{
-color:#ffffff;font-family:league-gothic; font-size:6.100em;margin-left:auto;margin-right:auto; padding-right:10px; border:1px solid transparent;
-/*color:#ffffff;font-family:KnockoutHTF26JuniorFlyweighRg; font-size:9em;margin-left:auto;margin-right:auto;*/
-}
-.cash_summary{
-position:absolute; bottom:0; width:800px; height:190px; margin-left:auto;margin-right:auto
-}
-.cash_summary_title{
-color:#ffffff;font-family:tandelle; font-size:7.15em;text-align:left; line-height:.8999em; width:440px;  text-align:left;
-/*color:#ffffff;font-family:KnockoutHTF26JuniorFlyweighRg; font-size:9em;text-align:left; line-height:.8999em; width:423px;*/
-}
-
-#lineSection1{
+.inner{position:relative;}
+.blueRibbon{}
+#audience-ribbon{
+width:100%;
+height:252px;
 position:absolute;
-top:550px;
-left:50%;
-margin-left:226px;
-width:77px;
-height:880px;
-z-index:1;
+left:80px;
+top:470px;
 }
-#lineSection2{
-position:absolute;
-top:114px;
-left:0;
-margin-left:-66px;
-width:202px;
-height:1560px;
-z-index:1;
-}
-.barHorizSmall{
-background-image:url(/images/mediaKit/gray-horiz-bar.png);
-background-repeat:repeat-x;
-height:4px;
-position:absolute;
-z-index:0;
-}
-.barVertSmall{
-background-image:url(/images/mediaKit/gray-vert-bar.png);
-background-repeat:repeat-y;
-width:4px;
-position:absolute;
-z-index:0;
-}
-.barHorizLong{
-background-image:url(/images/mediaKit/gray-horiz-long-bar.png);
-background-repeat:repeat-x;
-height:125px;
-height:4px;
-position:absolute;
-z-index:0;
-}
-.barVertLong{
-background-image:url(/images/mediaKit/gray-vert-long-bar.png);
-background-repeat:repeat-y;
-width:4px;
-position:absolute;
-z-index:0;
-}
-.barCurveRD{
-background-image:url(/images/mediaKit/gray-curve-rd-bar.png);
-background-repeat:repeat-y;
-height:17px;
-width:15px;
-position:absolute;
-z-index:0;
-}
-.barCurveLD{
-background-image:url(/images/mediaKit/gray-curve-ld-bar.png);
-background-repeat:repeat-y;
-height:17px;
-width:15px;
-position:absolute;
-z-index:0;
-}
-.barCurveDR{
-background-image:url(/images/mediaKit/gray-curve-dr-bar.png);
-background-repeat:repeat-y;
-height:17px;
-width:15px;
-position:absolute;
-z-index:0;
-}
-.barCurveDL{
-background-image:url(/images/mediaKit/gray-curve-dl-bar.png);
-background-repeat:repeat-y;
-height:17px;
-width:15px;
-position:absolute;
-z-index:0;
-}
-.lineSectionInnerWrap{
+#audience-ribbon .inner{
+width:100%;
+height:100%;
 position:relative;
-top:0;
+}
+#audience-ribbon .inner .ribbon_left{
+width:553px;
+height:169px;
+background-color:#4180af;
+position:absolute;
 left:0;
+bottom:0;
+background-image:url(/images/mediaKit/engageVertText2.png);
+background-repeat:no-repeat;
+background-position:15px 35px;
+}
+#audience-ribbon .inner .ribbon_center{
+width:121px;
+height:252px;
+background-image:url(/images/mediaKit/blueRibbonConnector.png);
+background-repeat:no-repeat;
+position:absolute;
+bottom:0;
+left:553px;
+}
+#audience-ribbon .inner .ribbon_right{
+/*width:100%;*/
+height:169px;
+background-color:#4180af;
+position:absolute;
+left:674px;
+top:0;
+}
+#audience-ribbon .inner .engage_table{
+position:absolute; top:15px; left:56px;
+}
+#audience-ribbon .inner .engage_size{
+vertical-align:top;font-family:league-gothic; font-size:11em; PADDING:0;margin:0;
+}
+#audience-ribbon .inner .engage_type{
+font-family:league-gothic; font-size:4.2em; padding-left:10px; line-height:.99em; color:#4180af;
+width:100%;
+text-align:left;
+}
+#audience-ribbon .inner .engage_members_window{
+width:252px;
+height:120px;
+overflow:hidden;
+margin-top:10px;
+}
+.engage_table td .engage_members_window .inner{
+position:absolute;
+width:250px;
+height:300px;
+}
+.engage_table td .engage_members_list{
+list-style-type:disc; 
+}
+.engage_members_list li{
+color:#ffffff; font-family:proxima-nova;
+}
+.ribbon_right .industry_spend_msg{
+font-family:proxima-nova; color:#ffffff; 
+margin-top:20px;margin-left:25px;
+display:none;
+}
+.ribbon_right .spend_table{
+vertical-align:top;
+margin-left:20px;
+overflow:hidden;
+}
+.ribbon_right .spend_table td{vertical-align:top; height:100px}
+.ribbon_right .industry_spend{vertical-align:top;
+color:#92da77; font-family:league-gothic;line-height:100px;
+height:90px;
+overflow:hidden;
+position:relative;
+}
+.industry_spend_mask{
+position:absolute;
 height:100%;
 width:100%;
+background-color:#4180af;
+top:0;
+left:0;
 }
+.ribbon_right .industrySpendDesc{
+color:#ffffff; font-family:league-gothic;line-height:0.966em; margin-top:12px; padding-left:10px;display:none;
+}
+.headSection{
+background-image:url(/images/mediakit/bground-heads.png);
+background-repeat:no-repeat;
+background-position:0 171px;
+position:absolute;
+top:170px;
+left:140px;
+width:816px;
+height:435px;
+}
+.screenImages{position:absolute;top:21px; left:739px;}
+img#headimg{}
 /**** BENEFITS PAGE */
 #benefits-stage{
 color:#ffffff;
@@ -810,6 +794,19 @@ margin-right:auto;
 margin-left:auto;margin-right:auto; padding-right:15px;
 /*background: #ff3019; /* Old browsers */
 /*background-image:url(/images/mediaKit/ad_inventory_bg.png);*/
+}
+#ipad-hand-indicator{
+width:125px;
+height:155px;
+position:absolute;
+margin-top:30%;
+left:50%;
+margin-left:-62px;
+background-image:url(/images/mediakit/ipad-scroll-hand6.png);
+background-repeat:no-repeat;
+background-position:0 0;
+z-index:125;
+display:none;
 }
 #ipadWrap { padding: 50px 0 50px; }
 #ipad { left:335px; background: url(/images/mediaKit/ipad.png) no-repeat; background-position:top right; width: 650px; height: 828px; margin: 0; padding-top: 84px; position:relative;}
