@@ -575,7 +575,7 @@ var mediaKit = { /*** Retrieves xml feed, runs template manager, attach onclick 
     setupVirtualIpad: function () { //sets up interactive ipad on inventory screen
 	
 
-$('#ipad-hand-indicator').fadeIn(2250);	
+$('#ipad-hand-indicator').css('display', 'block');	
 $('#ipadScreen').mousedown(function() {
 $('#ipad-hand-indicator').fadeOut(125);
 });

@@ -790,7 +790,7 @@ margin-left:auto;
 margin-right:auto;
 }
   
-#slideContainer { width: 985px; position: relative; overflow: hidden; cursor: move;
+#slideContainer { width: 985px; position: relative; overflow: hidden; 
 margin-left:auto;margin-right:auto; padding-right:15px;
 /*background: #ff3019; /* Old browsers */
 /*background-image:url(/images/mediaKit/ad_inventory_bg.png);*/
@@ -808,8 +808,8 @@ background-position:0 0;
 z-index:125;
 display:none;
 }
-#ipadWrap { padding: 50px 0 50px; }
-#ipad { left:335px; background: url(/images/mediaKit/ipad.png) no-repeat; background-position:top right; width: 650px; height: 828px; margin: 0; padding-top: 84px; position:relative;}
+#ipadWrap { left:335px; padding: 50px 0 50px; width:620px; cursor: move;}
+#ipad { background: url(/images/mediaKit/ipad.png) no-repeat; background-position:top right; width: 650px; height: 828px; margin: 0; padding-top: 84px; position:relative;}
 #ipadScreen { width: 510px; height: 648px; margin: 0 auto; overflow: hidden; }
 #ipadScreen div { position: relative; }
 #ipadScreen a { position: absolute; }
