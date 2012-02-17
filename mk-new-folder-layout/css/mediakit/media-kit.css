@@ -901,7 +901,7 @@ padding-bottom: 20px;
 #pricing-table .option .bg { display: none; }
 #pricing-table .option .desc { width: 75%; padding: 20px; float: left; }
 #pricing-table .option .buy { width: 115px; text-align: center; padding:0px; position:absolute; right:11px; bottom:15px; }
-#pricing-table .option .specs { background: #ececec; padding: 10px 20px; float: left; clear: both; }
+#pricing-table .option .specs { background: #ececec; padding: 10px 20px; float: left; clear: both; display:inline; white-space:nowrap;}
 
 #pricing-table #opt-one.option { padding: 0;}
 
