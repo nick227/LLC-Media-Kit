@@ -441,6 +441,7 @@ width:252px;
 height:120px;
 overflow:hidden;
 margin-top:10px;
+position:relative;
 }
 .engage_table td .engage_members_window .inner{
 position:absolute;
@@ -466,7 +467,7 @@ overflow:hidden;
 .ribbon_right .spend_table td{vertical-align:top; height:100px}
 .ribbon_right .industry_spend{vertical-align:top;
 color:#92da77; font-family:league-gothic;line-height:100px;
-height:90px;
+height:100px;
 overflow:hidden;
 position:relative;
 }
@@ -578,6 +579,7 @@ top: 17px;
 width: 122px;
 height:117px;
 overflow: hidden;
+display:none;
 }
 #benefitContent1 h2.rollover{color:#e59c4c}
 #benefitContent2 h2.rollover{color:#746ea9}
@@ -614,6 +616,11 @@ top: 17px;
 position: absolute;
 left: 10px;
 top: 10px;
+display:none;
+height:25px;
+width:25px;
+background-repeat:no-repeat;
+background-position:center center;
 }
 .benefit-copy h2{
 position: absolute;

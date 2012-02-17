@@ -424,6 +424,8 @@ var mediaKit = { /*** Retrieves xml feed, runs template manager, attach onclick 
 
     },
     setupBenefitsPage: function () {
+	
+
         $('.benefit-box').each(function () {
             $(this).hover(function () {
                 var icon = $('#' + $(this).attr('id') + ' .benefit-graphic');
@@ -486,7 +488,7 @@ var mediaKit = { /*** Retrieves xml feed, runs template manager, attach onclick 
             $(a).css('opacity', 0);
             $(b).css('opacity', 0);
             $(b).css('left', benefitsLeft + 250 + 'px');
-            $(a).delay(1000).animate({
+            $(a).delay(0).animate({
                 top: yourTop,
                 opacity: 1
             }, 400, 'swing', function () {
@@ -521,6 +523,7 @@ var mediaKit = { /*** Retrieves xml feed, runs template manager, attach onclick 
             setTimeout(function () {
                 introBenefitsPage3();
             }, 1000);
+		$('.benefit-graphic').css('display','block');
         }
 
         function introBenefitsPage3() {
