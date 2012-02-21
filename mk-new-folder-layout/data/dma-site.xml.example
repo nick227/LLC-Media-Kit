@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+<siteName><![CDATA[PPPC Media Kit]]></siteName>
+<siteTitle><![CDATA[PPPC Media Kit]]></siteTitle>
+<partnerAcronym><![CDATA[PPPC]]></partnerAcronym>
+<partnerFullName><![CDATA[Direct Marketing Association]]></partnerFullName>
+<headerWidth><![CDATA[width:1000px;]]></headerWidth>
+<logo><![CDATA[/images/sites/389/mediaKit/pppc_logo.jpg]]></logo>
+<logoPaddingTop><![CDATA[padding-top:10px]]></logoPaddingTop>
+<logoPaddingLeft><![CDATA[padding-left:0px]]></logoPaddingLeft>
+<accentColor><![CDATA[#74A5CD]]></accentColor>
+<llcURL><![CDATA[http://pppc.sclivelearningcenter.com]]></llcURL>
+<llcName><![CDATA[Live Learning Centre]]></llcName>
+
+<siteCopy>
+<terms_url><![CDATA[http://www.dma.sclibrary.com/terms.aspx]]></terms_url>
+<termsStyle><![CDATA[]]></termsStyle>
+<terms_lang><![CDATA[Terms]]></terms_lang>
+<privacy_url><![CDATA[http://www.dma.sclibrary.com/privacy.aspx]]></privacy_url>
+<privacyStyle><![CDATA[]]></privacyStyle>
+<privacy_lang><![CDATA[Privacy]]></privacy_lang>
+</siteCopy>
+
+<!-- AUDIENCE PAGE -->
+<audiencePage>
+
+<industrySizeFontSize><![CDATA[font-size:8.5em]]></industrySizeFontSize>
+
+<industrySize><![CDATA[5,000]]></industrySize>
+
+<industryTypeFontSize><![CDATA[font-size:2.730em]]></industryTypeFontSize>
+<industryType><![CDATA[PROMOTIONAL PRODUCTS<BR />PROFESSIONALS<div style="clear:both;height:10px;"></div>]]></industryType>
+
+<industryMembersFontSize><![CDATA[font-size:1.517em]]></industryMembersFontSize>
+<industryMembers><![CDATA[<li>Marketers</li><li>Consultants</li><li>Non-Profits</li><li>International Organizations</li>]]></industryMembers>
+
+<introCopyFontSize><![CDATA[font-size:1.932em]]></introCopyFontSize>
+<introCopy><![CDATA[IN AN INDUSTRY WORTH]]></introCopy>
+
+<industrySpendFontSize><![CDATA[font-size:7.710em]]></industrySpendFontSize>
+<industrySpend><![CDATA[3.97 BILLION]]></industrySpend>
+
+<industrySpendDescFontSize><![CDATA[font-size:2.908em]]></industrySpendDescFontSize>
+<industrySpendDescLineHeight><![CDATA[line-height:0.966em;]]></industrySpendDescLineHeight>
+<industrySpendDesc><![CDATA[DOLLARS<br />ANNUALLY]]></industrySpendDesc>
+
+</audiencePage>
+<!-- BENEFITS PAGE -->
+<benefitsPage>
+<benefitCopyDuration>
+	<![CDATA[
+	Users of the PPPC Live Learning Centre will spend countless hours interacting with relevant educational content. That&#8217;s valuable hours they could be looking at YOUR campaign.
+	]]>
+</benefitCopyDuration>
+<benefitCopyTablet>
+	<![CDATA[
+	The PPPC Live Learning Centre is also optimized for use with tablet devices&#8212; your message will stay in front of buyers everywhere they go!
+	]]>
+</benefitCopyTablet>
+<benefitCopyAffordable>
+	<![CDATA[
+	Interact with 5,000 qualified buyers for hours at time. The PPPC Live Learning Centre gives you unprecedented access at an unbeatable price &#8212; now you can communicate directly with these valuable customers.
+	]]>
+</benefitCopyAffordable>
+<benefitCopyMetrics>
+
+	<![CDATA[
+	The PPPC Live Learning Centre incorporates extensive reporting– this gives you the ability to easily quantify and track your ROI!
+	]]>
+</benefitCopyMetrics>
+<benefitCopyLibrary>
+	<![CDATA[
+	Comprised of over 13 hours of professionally recorded sessions from PPPC&#8217;s National Convention, the PPPC Live Learning Centre is a complete educational content resource for all promotional product professionals.
+	]]>
+</benefitCopyLibrary>
+<benefitCopyAccess>
+	<![CDATA[
+PPPC promotes the Live Learning Centre through both print and digital campaigns. Your message will be showcased in front of dedicated professionals involved in the promotional product industry year-round.
+]]>
+</benefitCopyAccess>
+<benefitCopyCredibility>
+	<![CDATA[
+Since 1956, Promotional Product Professionals of Canada has been the definitive resource for relevant information and educational opportunities in the industry. By advertising in the PPPC Live Learning Centre, your campaign will appear within the trusted network of PPPC.
+]]>
+</benefitCopyCredibility>
+<benefitCopyCreative>
+	<![CDATA[
+Our agency-quality creative team offers full design services at no additional cost. We will work with you to ensure that your campaign is engaging and drives the traffic you need.
+]]>
+
+</benefitCopyCreative>
+</benefitsPage>
+<!-- INVENTORY PAGE -->
+<inventoryPage>
+	<homeScreen><![CDATA[<img class="screen" src="/images/sites/389/mediaKit/homeScreen.jpg" width="510" height="807" alt="" />]]></homeScreen>
+	<adFullCampaign display="none"></adFullCampaign>
+	<adFullCampaignLightbox>
+		<![CDATA[  
+		full campaign html here 
+		]]>
+	</adFullCampaignLightbox>
+	<adTopLeaderboard display="none">
+		<width><![CDATA[360]]></width>
+
+		<height><![CDATA[45]]></height>
+		<left><![CDATA[75]]></left>
+		<top><![CDATA[12]]></top>
+	</adTopLeaderboard>
+	<adTopLeaderboardLightbox>
+		<![CDATA[<img src="/images/sites/389/mediaKit/ad_top_leaderboard.jpg" />]]>
+		<![CDATA[<img src="/images/sites/389/mediaKit/ad_top_leaderboard.jpg" />]]>
+	</adTopLeaderboardLightbox>
+	<adSponsoredMedia display="block">
+
+		<width><![CDATA[60]]></width>
+		<height><![CDATA[30]]></height>
+		<left><![CDATA[12]]></left>
+		<top><![CDATA[232]]></top>
+	</adSponsoredMedia>
+	<adSponsoredMediaLightbox>
+		<![CDATA[
+		<table class="title" align="left" width="300">
+			<tr><th align="left" colspan="2">Sponsored Media</th></tr>
+			<tr><td align="left">$1,500</td><td align="right"><img style="margin-top:4px;" src="/images/sites/389/mediaKit/ad_sponsored_media.jpg" /></td></tr>
+		</table><div class="spacer-10px"></div>
+		<table class="specs" align="center" width="300">
+			<tr><th colspan="2">specifications:</th></tr>
+			<tr><td>Dimensions</td><td><em>120 x 60</em></td></tr>
+			<tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
+			<tr><td>size</td><td><em>40Kb</em></td></tr>
+			  <tr><td>CYCLE</td><td><em>1 YEAR</em></td></tr>
+		</table><br>
+			<div class="lBoxInfo">Sponsored Media- Target your message by sponsoring content sessions - prominently showcase your logo throughout all content presentations. Sponsored Media appears on all sessions as well as on the homepage in a limited-inventory rotation! 
+			<br><div style="width:300px; text-align:left;  margin:5px 13px 0 0"><a href="#" onclick="return false" class="advanceLboxLink">show another</a></div>
+			</div>
+          <div class="spacer-10px"></div>
+          <div style="float:right;" class="buy"><a href="mailto:sales@multiview.com?subject=Reserve%20Media%20Sponsorship-PPPC"><img style="" src="/images/mediaKit/btn_reserve.png" alt="Reserve Now" /></a></div>
+		]]>
+	</adSponsoredMediaLightbox>
+	<adSkyscraperL display="block">
+
+		<width><![CDATA[81]]></width>
+		<height><![CDATA[298]]></height>
+		<left><![CDATA[8]]></left>
+		<top><![CDATA[285]]></top>
+	</adSkyscraperL>
+	<adSkyscraperLLightbox>
+		<![CDATA[
+		<img src="/images/sites/389/mediaKit/ad_skyscraper_L.jpg" style="float: left; margin-right: 20px;" />
+		<table class="title" style="margin-top: 0;text-align:left;" align="left" width="300">
+			<tr><th>Skyscraper Left</th></tr>
+			<tr><td align="left">$2,500</td></tr>
+		</table><br />
+		<table class="specs" align="left" width="300">
+			<tr><th colspan="2">specifications:</th></tr>
+			<tr><td>Dimensions</td><td><em>160 x 600</em></td></tr>
+			<tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
+			<tr><td>size</td><td><em>40Kb</em></td></tr>
+			  <tr><td>CYCLE</td><td><em>1 YEAR</em></td></tr>
+		</table>
+			<div class="lBoxInfo">
+			A Skyscraper is a large-format graphic ad that delivers prime real estate to sell your company's products or services to decision makers. Skyscrapers are displayed throughout the Live Learning Centre in a limited-inventory rotation.
+			<br><div style="width:300px; text-align:left;  margin:20px 3px 0 0"><a href="#" onclick="return false" class="advanceLboxLink">show another</a></div>
+			</div>
+          <div style="position:absolute; bottom:0px; right:10px;" class="buy"><a href="mailto:sales@multiview.com?subject=Reserve%20a%20Skyscraper-PPPC"><img style="" src="/images/mediaKit/btn_reserve.png" alt="Reserve Now" /></a></div>
+		]]>
+	</adSkyscraperLLightbox>
+	<adSkyscraperR display="block">
+
+		<width><![CDATA[81]]></width>
+		<height><![CDATA[298]]></height>
+		<left><![CDATA[421]]></left>
+		<top><![CDATA[285]]></top>
+	</adSkyscraperR>
+	<adSkyscraperRLightbox>
+		<![CDATA[
+		<img src="/images/sites/389/mediaKit/ad_skyscraper_R.jpg" style="float: left; margin-right: 20px;" />
+		<table class="title" style="margin-top: 0;text-align:left;" align="left" width="300">
+			<tr><th>Skyscraper Right</th></tr>
+			<tr><td align="left">$2,500</td></tr>
+		</table><br />
+		<table class="specs" align="left" width="300">
+			<tr><th colspan="2">specifications:</th></tr>
+			<tr><td>Dimensions</td><td><em>160 x 600</em></td></tr>
+			<tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
+			<tr><td>size</td><td><em>40Kb</em></td></tr>
+			  <tr><td>CYCLE</td><td><em>1 YEAR</em></td></tr>
+		</table>
+			<div class="lBoxInfo">
+			A Skyscraper is a large format graphic ad that delivers prime real estate to sell your company’s products or services to decision makers. Skyscrapers are displayed throughout the Live Learning Centre in a limited-inventory rotation.
+			<br><div style="width:300px; text-align:left;  margin:20px 3px 0 0"><a href="#" onclick="return false" class="advanceLboxLink">show another</a></div>
+			</div>
+       <div class="spacer-10px"></div>
+          <div style="position:absolute; bottom:0px; right:10px;" class="buy"><a href="mailto:sales@multiview.com?subject=Reserve%20Skyscraper-PPPC"><img style="" src="/images/mediaKit/btn_reserve.png" alt="Reserve Now" /></a></div>
+		]]>
+	</adSkyscraperRLightbox>
+	<adBusinessSpotlight display="block">
+
+		<width><![CDATA[60]]></width>
+		<height><![CDATA[30]]></height>
+		<left><![CDATA[431]]></left>
+		<top><![CDATA[610]]></top>
+	</adBusinessSpotlight>
+	<adBusinessSpotlightLightbox>
+		<![CDATA[
+		
+		<table class="title" align="left" width="300">
+			<tr><th align="left" colspan="2">Business Spotlight</th></tr>
+			<tr><td align="left">$1,250</td><td align="right"><img style="margin-top:4px;" src="/images/sites/389/mediaKit/ad_business_spotlight.jpg" /></td></tr>
+		</table><div class="spacer-10px"></div>
+		<table class="specs" align="center" width="300">
+			<tr><th colspan="2">specifications:</th></tr>
+			<tr><td>Dimensions</td><td><em>120 x 60</em></td></tr>
+			<tr><td>format</td><td><em>JPG, GIF, SWF</em></td></tr>
+			<tr><td>size</td><td><em>40Kb</em></td></tr>
+			  <tr><td>CYCLE</td><td><em>1 YEAR</em></td></tr>
+		</table><br>
+			<div class="lBoxInfo">
+			Cement your company's presence in front of the field by displaying your logo across all areas of the Live Learning Centre. Advertiser logos are highlighted throughout the site in a limited-inventory rotation.
+			<br><div style="width:300px; text-align:left;  margin:6px 3px 0 0"><a href="#" onclick="return false" class="advanceLboxLink">show another</a></div>
+			</div>
+        <div class="spacer-10px"></div>
+          <div style="float:right;" class="buy"><a href="mailto:sales@multiview.com?subject=Reserve%20Business%20Spotlight-PPPC"><img style="" src="/images/mediaKit/btn_reserve.png" alt="Reserve Now" /></a></div>
+		]]>
+	</adBusinessSpotlightLightbox>
+	<adLowLeaderboard display="block">
+
+		<width><![CDATA[360]]></width>
+		<height><![CDATA[45]]></height>
+		<left><![CDATA[75]]></left>
+		<top><![CDATA[914]]></top>
+	</adLowLeaderboard>
+	<adLowLeaderboardLightbox>
+		<![CDATA[
+		<img src="/images/sites/389/mediaKit/ad_low_leaderboard.jpg" />
+		<div style="margin: 0 auto; width: 700px; overflow: hidden;">
+			<table class="title" style="float: left;" width="300">
+			  <tr><th align="left">Bottom Leaderboard</th></tr>
+			  <tr><td align="left">$2,500</td></tr>
+			  <tr><td align="left" style="font-size:13px;">
+			<div class="lBoxInfo" style="float:left;">
+			The Bottom Leaderboard allows your company to combine text, colors and graphics into a unique sales message for qualified buyers. Bottom Leaderboards are displayed throughout the Live Learning Centre in a limited-inventory rotation.
+			<br><div style="width:300px; text-align:left;  margin:10px 3px 0 0"><a href="#" onclick="return false" class="advanceLboxLink">show another</a></div>
+			</div>
+			</td></tr>
+			</table>
+			<table class="specs" style="float: right;" width="300">
+			  <tr><th colspan="2">specifications:</th></tr>
+			  <tr><td>Dimensions</td><td><em>728 x 90</em></td></tr>
+			  <tr><td>format</td><td><em>JPG, GIF</em></td></tr>
+			  <tr><td>size</td><td><em>40Kb</em></td></tr>
+			  <tr><td>CYCLE</td><td><em>1 YEAR</em></td></tr>
+			</table>
+		</div>
+        <div class="spacer-10px"></div>
+          <div style="float:right;" class="buy"><a href="mailto:sales@multiview.com?subject=Reserve%20Bottom%20Leaderboard-PPPC"><img style="" src="/images/mediaKit/btn_reserve.png" alt="Reserve Now" /></a></div>
+		]]>
+	</adLowLeaderboardLightbox>
+</inventoryPage>
+
+<!-- PRICING PAGE -->
+<pricingPage>
+<reserveButtonLinkSkyscraper><![CDATA[mailto:sales@multiview.com?subject=Reserve%20Skyscraper-PPPC]]></reserveButtonLinkSkyscraper>
+<reserveButtonLinkSpotlight><![CDATA[mailto:sales@multiview.com?subject=Reserve%20Business%20Spotlight-PPPC]]></reserveButtonLinkSpotlight>
+<reserveButtonLinkBLeaderboard><![CDATA[mailto:sales@multiview.com?subject=Reserve%20Bottom%20Leaderboard-PPPC]]></reserveButtonLinkBLeaderboard>
+<reserveButtonLinkSponsor><![CDATA[mailto:sales@multiview.com?subject=Reserve%20Sponsored%20Media-PPPC]]></reserveButtonLinkSponsor>
+
+<skyScraperName><![CDATA[Skyscraper]]></skyScraperName>
+<skyScraperBlurb><![CDATA[
+A Skyscraper is a large-format graphic ad that delivers prime real estate to sell your company&#8217;s products or services to decision makers. Skyscrapers are displayed throughout the Live Learning Centre in a limited-inventory rotation.
+]]></skyScraperBlurb>
+<skyScraperPrice><![CDATA[$2,500]]></skyScraperPrice>
+
+<sponsorMediaName><![CDATA[SPONSORED MEDIA]]></sponsorMediaName>
+<sponsorMediaBlurb><![CDATA[
+Target your message by sponsoring content sessions - prominently showcase your logo throughout all content presentations. Sponsored Media appears on all sessions as well as on the homepage in a limited-inventory rotation! 
+]]></sponsorMediaBlurb>
+<sponsorMediaPrice><![CDATA[$1,500]]></sponsorMediaPrice>
+
+<spotlightName><![CDATA[BUSINESS SPOTLIGHT]]></spotlightName>
+<spotlightBlurb><![CDATA[
+Cement your company&#8217;s presence in front of the field by displaying your logo across all areas of the Live Learning Centre. Advertiser logos are highlighted throughout the site in a limited-inventory rotation.
+]]></spotlightBlurb>
+
+<spotlightPrice><![CDATA[$1,250]]></spotlightPrice>
+
+<lowerLeaderName><![CDATA[BOTTOM LEADERBOARD]]></lowerLeaderName>
+<lowerLeaderBlurb><![CDATA[
+The Bottom Leaderboard allows your company to combine text, colors and graphics into a unique sales message for qualified buyers. Bottom Leaderboards are displayed throughout the Live Learning Centre in a limited-inventory rotation.
+]]></lowerLeaderBlurb>
+<lowerLeaderPrice><![CDATA[$2,500]]></lowerLeaderPrice>
+
+</pricingPage>
+<!-- CONTACT PAGE -->
+<getStartedPage>
+	<salesEmailLink><![CDATA[mailto:sales@multiview.com?subject=Advertising%20Opportunities]]></salesEmailLink>
+	<multiviewLink><![CDATA[http://www.multiview.com]]></multiviewLink>
+</getStartedPage>
+</site>
